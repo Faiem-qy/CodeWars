@@ -1,47 +1,47 @@
-function numberToString(num) {
-  // Return a string of the number here!
-  return num.toString();
+// function numberToString(num) {
+//   // Return a string of the number here!
+//   return num.toString();
 
-}
+// }
 
-// or 
+// // or
 
-function numberToString(num) {
-  return '' + num;
-}
-
-
-// or
+// function numberToString(num) {
+//   return '' + num;
+// }
 
 
-function numberToString(num) {
-  // Return a string of the number here!
-  return String(num);
-}
-
-// or 
-
-function numberToString(num) {
-  // Return a string of the number here!
-  return `${num}`;
-}
+// // or
 
 
-var planetMoons = {
-  mercury: 0,
-  venus: 0,
-  earth: 1,
-  mars: 2,
-  jupiter: 67,
-  saturn: 62,
-  uranus: 27,
-  neptune: 14
-};
+// function numberToString(num) {
+//   // Return a string of the number here!
+//   return String(num);
+// }
 
-for (var planet in planetMoons) {
-  var numberOfMoons = planetMoons[planet];
-  console.log("Planet: " + planet + ", # of Moons: " + numberOfMoons);
-}
+// // or
+
+// function numberToString(num) {
+//   // Return a string of the number here!
+//   return `${num}`;
+// }
+
+
+// var planetMoons = {
+//   mercury: 0,
+//   venus: 0,
+//   earth: 1,
+//   mars: 2,
+//   jupiter: 67,
+//   saturn: 62,
+//   uranus: 27,
+//   neptune: 14
+// };
+
+// for (var planet in planetMoons) {
+//   var numberOfMoons = planetMoons[planet];
+//   console.log("Planet: " + planet + ", # of Moons: " + numberOfMoons);
+// }
 
 //Trolls are attacking your comment section!
 
@@ -56,10 +56,11 @@ for (var planet in planetMoons) {
 
 
 
-function disemvowel(str) {
-  // Define the regex pattern to match vowels (including capital vowels)
-  const vowels = /[aeiouAEIOU]/g;
+// function disemvowel(str) {
+//   // Define the regex pattern to match vowels (including capital vowels)
+//   const vowels = /[aeiouAEIOU]/g;
 
-  // Use the replace method to remove vowels from the string and return the updated string
-  return str.replace(vowels, "");
-}
+//   // Use the replace method to remove vowels from the string and return the updated string
+//   return str.replace(vowels, "");
+// }
+
