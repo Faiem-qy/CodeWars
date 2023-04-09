@@ -6,7 +6,7 @@
 
 class Pizza {
 
-  constructor() {
+  constructor(size, crust) {
     this.size = size;
     this.crust = crust;
     this.toppings = ["cheese"];
