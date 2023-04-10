@@ -84,22 +84,32 @@
 // +9 dog years for second year
 // +5 dog years for each year after that 
 
-function calculatePetAge(humanYears) {
-  let catYears = 0;
-  let dogYears = 0;
+// function calculatePetAge(humanYears) {
+//   let catYears = 0;
+//   let dogYears = 0;
 
-  for (let i = 1; i <= humanYears; i++) {
-    if (i === 1) {
-      catYears += 15;
-      dogYears += 15;
-    } else if (i === 2) {
-      catYears += 9;
-      dogYears += 9;
-    } else {
-      catYears += 4;
-      dogYears += 5;
-    }
+//   for (let i = 1; i <= humanYears; i++) {
+//     if (i === 1) {
+//       catYears += 15;
+//       dogYears += 15;
+//     } else if (i === 2) {
+//       catYears += 9;
+//       dogYears += 9;
+//     } else {
+//       catYears += 4;
+//       dogYears += 5;
+//     }
+//   }
+
+//   return [humanYears, catYears, dogYears];
+// }
+
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+var countSheep = function(num) {
+  //your code here
+  let result = '';
+  for (let i = 1; i <= num; i++) {
+    result += i + ' sheep...';
   }
-
-  return [humanYears, catYears, dogYears];
-}
+  return result;
+};
