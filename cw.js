@@ -127,13 +127,28 @@ Please keep in mind that the test cases ensure that the number of people in the 
 The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 */
 
-var number = function(busStops) {
-  // Good Luck!
-  let totalPeople = 0;
-  for (let i = 0; i < busStops.length; i++) {
-    totalPeople += busStops[i][0];
-    totalPeople -= busStops[i][1];
+// var number = function(busStops) {
+//   // Good Luck!
+//   let totalPeople = 0;
+//   for (let i = 0; i < busStops.length; i++) {
+//     totalPeople += busStops[i][0];
+//     totalPeople -= busStops[i][1];
 
+//   }
+//   return totalPeople >= 0 ? totalPeople : 0;
+// };
+/*
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+*/
+
+
+function removeChar(str) {
+  //You got this!
+  if (str.lemgth <= 2) {
+    return '';
   }
-  return totalPeople >= 0 ? totalPeople : 0;
+  return str.slice(1, -1);
 };
+
+
+
