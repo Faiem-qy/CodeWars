@@ -162,3 +162,13 @@ Return your answer as a number.
 //   }
 //   return sum;
 // }
+
+function array(string) {
+  let n = string.split(',');
+  if (n.length < 3) {
+    return null;
+  } else {
+    n = n.slice(1, -1);
+    return n.join(' ');
+  }
+}
