@@ -276,3 +276,21 @@ function getAverage(marks) {
   // Round down to the nearest integer using Math.floor()
   return Math.floor(avg);
 }
+
+// Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
+
+function duplicates(arr) {
+  const duplicates = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    const firstIndex = arr.indexOf(item);
+    const lastIndex = arr.lastIndexOf(item);
+
+    if (firstIndex !== lastIndex && !duplicates.includes(item)) {
+      duplicates.push(item);
+    }
+  }
+
+  return duplicates;
+}
