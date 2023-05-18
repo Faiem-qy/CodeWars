@@ -307,3 +307,7 @@ function count(string) {
   }
   return result;
 }
+
+function digitize(n) {
+  return n.toString().split('').map(Number).reverse();
+}
