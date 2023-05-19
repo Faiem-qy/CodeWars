@@ -311,3 +311,14 @@ function count(string) {
 function digitize(n) {
   return n.toString().split('').map(Number).reverse();
 }
+
+
+function array(string) {
+  const elements = string.split(',');
+
+  if (elements.length <= 2) {
+    return null;
+  }
+
+  return elements.slice(1, -1).join(' ');
+}
