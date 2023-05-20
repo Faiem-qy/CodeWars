@@ -322,3 +322,13 @@ function array(string) {
 
   return elements.slice(1, -1).join(' ');
 }
+
+
+
+function findOdd(A) {
+  let result = 0;
+  for (let i = 0; i < A.length; i++) {
+    result ^= A[i];
+  }
+  return result;
+}
