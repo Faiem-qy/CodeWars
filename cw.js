@@ -360,3 +360,17 @@ function findAverage(array) {
   var average = sum / array.length;
   return average;
 }
+
+function grow(x) {
+  // Initialize the result variable with 1
+  let result = 1;
+
+  // Iterate over each element in the array
+  for (let i = 0; i < x.length; i++) {
+    // Multiply the current element with the result
+    result *= x[i];
+  }
+
+  // Return the final result
+  return result;
+}
