@@ -374,3 +374,11 @@ function grow(x) {
   // Return the final result
   return result;
 }
+
+function greet() {
+  const message = "hello";
+  const world = "world";
+  const punctuation = "!";
+
+  return `${message} ${world}${punctuation}`;
+}
