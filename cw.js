@@ -403,10 +403,16 @@ function getGrade(s1, s2, s3) {
 }
 
 
-function goals(liLigaGoals, copaDelReyGoals, championsLeagueGoals) {
-  const totalGoals = liLigaGoals + copaDelReyGoals + championsLeagueGoals;
-  return totalGoals;
-}
+function findAverage(array) {
+  if (array.length === 0) {
+    return 0;
+  }
 
-const totalGoals = goals(25, 10, 5);
-console.log(totalGoals); // Output: 40
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+
+  var average = sum / array.length;
+  return average;
+}
