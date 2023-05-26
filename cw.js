@@ -401,3 +401,12 @@ function getGrade(s1, s2, s3) {
     return "F";
   }
 }
+
+
+function goals(liLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  const totalGoals = liLigaGoals + copaDelReyGoals + championsLeagueGoals;
+  return totalGoals;
+}
+
+const totalGoals = goals(25, 10, 5);
+console.log(totalGoals); // Output: 40
