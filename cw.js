@@ -416,3 +416,26 @@ function findAverage(array) {
   var average = sum / array.length;
   return average;
 }
+
+const rps = (p1, p2) => {
+  // Define the winning combinations
+  const winningCombinations = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+  };
+
+  // Check for a draw
+  if (p1 === p2) {
+    return "Draw!";
+  }
+
+  // Check if player 1 wins
+  if (winningCombinations[p1] === p2) {
+    return "Player 1 won!";
+  }
+
+  // Player 2 wins by elimination
+  return "Player 2 won!";
+};
+
