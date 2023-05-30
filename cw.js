@@ -454,3 +454,17 @@ function bmi(weight, height) {
   }
 }
 
+function findAverage(array) {
+  if (array === 0) {
+    return 0;
+  }
+
+
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+
+  let average = sum / array.length;
+  return average;
+}
