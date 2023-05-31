@@ -468,3 +468,12 @@ function findAverage(array) {
   let average = sum / array.length;
   return average;
 }
+
+function highAndLow(numbers) {
+  var numberArray = numbers.split(' ').map(Number);
+  var maxNumber = Math.max(...numberArray);
+  var minNumber = Math.min(...numberArray);
+
+  return `${maxNumber} ${minNumber}`;
+}
+
