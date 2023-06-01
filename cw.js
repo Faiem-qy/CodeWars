@@ -477,3 +477,16 @@ function highAndLow(numbers) {
   return `${maxNumber} ${minNumber}`;
 }
 
+
+function findMissingLetter(array) {
+  let firstCharCode = array[0].charCodeAt(0);
+
+  for (let i = 1; i < array.length; i++) {
+    let currentCharCode = array[i].charCodeAt(0);
+    if (currentCharCode - firstCharCode > 1) {
+      return String.fromCharCode(firstCharCode + 1);
+    }
+    firstCharCode = currentCharCode;
+  }
+  return '';
+}
