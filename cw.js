@@ -507,3 +507,11 @@ function arrayPlusArray(arr1, arr2) {
 
   return sum;
 }
+
+const reverseSeq = n => {
+  const result = [];
+  for (let i = n; i >= 1; i--) {
+    result.push(i);
+  }
+  return result;
+};
