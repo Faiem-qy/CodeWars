@@ -534,3 +534,7 @@ function arrayDiff(a, b) {
   }
   return result;
 }
+
+function square(number) {
+  return number * number;
+}
