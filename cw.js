@@ -538,3 +538,20 @@ function arrayDiff(a, b) {
 function square(number) {
   return number * number;
 }
+
+
+function betterThanAverage(classPoints, yourPoints) {
+
+  let total = yourPoints;
+  for (let i = 0; i < classPoints.length; i++) {
+    total += classPoints[i];
+  }
+
+  let average = total / (classPoints.length + 1);
+
+  if (yourPoints > average) {
+    return true;
+  } else {
+    return false;
+  }
+}
