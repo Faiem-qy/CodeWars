@@ -584,3 +584,9 @@ function countPositivesSumNegatives(input) {
 
   return [positiveCount, negativeSum];
 }
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height;
+  }
+}
