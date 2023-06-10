@@ -590,3 +590,11 @@ class Kata {
     return length * width * height;
   }
 }
+
+function mouthSize(animal) {
+  if (animal.toLowerCase() === 'alligator') {
+    return 'small';
+  } else {
+    return 'wide';
+  }
+}
