@@ -603,3 +603,8 @@ function mouthSize(animal) {
 function sayHello(name) {
   return 'Hello, ' + name;
 }
+
+function gooseFilter(birds) {
+  let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter((bird) => !geese.includes(bird));
+}
