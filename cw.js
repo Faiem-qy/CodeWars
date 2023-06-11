@@ -598,3 +598,8 @@ function mouthSize(animal) {
     return 'wide';
   }
 }
+
+
+function sayHello(name) {
+  return 'Hello, ' + name;
+}
