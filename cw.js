@@ -608,3 +608,15 @@ function gooseFilter(birds) {
   let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
   return birds.filter((bird) => !geese.includes(bird));
 }
+
+function rentalCarCost(d) {
+  const dailyRate = 40;
+  let totalAmount = d * dailyRate;
+  if (d >= 7) {
+    totalAmount -= 50;
+
+  } else if (d >= 3) {
+    totalAmount -= 20;
+  }
+  return totalAmount;
+}
