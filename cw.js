@@ -620,3 +620,7 @@ function rentalCarCost(d) {
   }
   return totalAmount;
 }
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
