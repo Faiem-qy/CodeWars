@@ -13,3 +13,11 @@ function chromosomeCheck(s) {
     return "Congratulations! You're going to have a son.";
   }
 }
+
+function calculateValue(x) {
+  if (typeof x === 'string') {
+    return "Error";
+  } else {
+    return (x * 50) + 6;
+  }
+}
