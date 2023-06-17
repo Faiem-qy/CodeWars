@@ -21,3 +21,7 @@ function calculateValue(x) {
     return (x * 50) + 6;
   }
 }
+
+function take(arr, n) {
+  return arr.slice(0, n);
+}
