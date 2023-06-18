@@ -25,3 +25,14 @@ function calculateValue(x) {
 function take(arr, n) {
   return arr.slice(0, n);
 }
+
+function nameShuffler(str) {
+  let names = str.split(" "); // Split the string into an array of names
+  let firstName = names[0];
+  let lastName = names[1];
+
+  // Swap the first and last name
+  let shuffledName = lastName + " " + firstName;
+
+  return shuffledName;
+}
