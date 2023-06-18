@@ -36,3 +36,11 @@ function nameShuffler(str) {
 
   return shuffledName;
 }
+
+
+function bugSpeed(s) {
+  // Convert km/h to cm/s
+  const speedCmPerSec = Math.floor(s * 100000 / 3600);
+
+  return speedCmPerSec;
+}
