@@ -624,3 +624,19 @@ function rentalCarCost(d) {
 function makeUpperCase(str) {
   return str.toUpperCase();
 }
+
+function pipeFix(numbers) {
+  const min = Math.min(...numbers);
+  const max = Math.max(...numbers);
+
+  const fixedList = [];
+
+  for (let i = min; i <= max; i++) {
+    if (numbers.includes(i)) {
+      fixedList.push(i);
+    }
+  }
+
+  return fixedList;
+}
+
