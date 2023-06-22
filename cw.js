@@ -656,3 +656,4 @@ function findMultiples(integer, limit) {
 
   return multiples;
 }
+
