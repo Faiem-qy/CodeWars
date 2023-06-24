@@ -661,5 +661,4 @@ function getChar(c) {
   return String.fromCharCode(c);
 }
 
-// Example usage
-console.log(getChar(65)); // Output: A
+
