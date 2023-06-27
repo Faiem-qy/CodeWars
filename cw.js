@@ -667,3 +667,7 @@ function removeUrlAnchor(url) {
 
   return parts[0];
 }
+
+function solution(str, ending) {
+  return str.endsWith(ending);
+}
