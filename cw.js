@@ -671,3 +671,14 @@ function removeUrlAnchor(url) {
 function solution(str, ending) {
   return str.endsWith(ending);
 }
+
+function dontGiveMeFive(start, end) {
+  let coundt = 0;
+
+  for (let num = start; num <= end; num++) {
+    if (num.toString().indexOf('5' === -1){
+      count++;
+    })
+  }
+  return count;
+}
