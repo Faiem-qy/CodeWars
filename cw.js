@@ -682,3 +682,14 @@ function dontGiveMeFive(start, end) {
   }
   return count;
 }
+function gimme(triplet) {
+  const [a, b, c] = triplet;
+
+  if ((a < b && a > c) || (a > b && a < c)) {
+    return 0;
+  } else if ((b < a && b > c) || (b > a && b < c)) {
+    return 1;
+  } else {
+    return 2;
+  }
+}
