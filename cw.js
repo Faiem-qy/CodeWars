@@ -693,3 +693,13 @@ function gimme(triplet) {
     return 2;
   }
 }
+
+function reverseLetter(str) {
+  // Step 1: Remove non-alphabetic characters from the string
+  let lettersOnly = str.replace(/[^a-zA-Z]/g, '');
+
+  // Step 2: Reverse the letters
+  let reversed = lettersOnly.split('').reverse().join('');
+
+  return reversed;
+}
