@@ -703,3 +703,17 @@ function reverseLetter(str) {
 
   return reversed;
 }
+
+function maxMultiple(divisor, bound) {
+  let largestMultiple = 0;
+
+  for (let i = bound; i > 0; i--) {
+    if (i % divisor === 0) {
+      largestMultiple = i;
+      break;
+    }
+  }
+
+  return largestMultiple;
+}
+
