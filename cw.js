@@ -716,4 +716,7 @@ function maxMultiple(divisor, bound) {
 
   return largestMultiple;
 }
+function getSum(a, b) {
+  return a + b;
+}
 
