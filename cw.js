@@ -720,3 +720,7 @@ function getSum(a, b) {
   return a + b;
 }
 
+function smallEnough(a, limit) {
+  return a.every((element) => element <= limit);
+}
+
