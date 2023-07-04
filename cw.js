@@ -724,3 +724,16 @@ function smallEnough(a, limit) {
   return a.every((element) => element <= limit);
 }
 
+const sequenceSum = (begin, end, step) => {
+  if (begin > end) {
+    return 0; // If the begin value is greater than the end value, the sum is 0
+  }
+
+  let sum = 0;
+
+  for (let i = begin; i <= end; i += step) {
+    sum += i; // Add each number in the sequence to the sum
+  }
+
+  return sum;
+};
