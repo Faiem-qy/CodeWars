@@ -753,3 +753,12 @@ const multiplicationTable = function(size) {
 function getEvenNumbers(numbersArray) {
   return numbersArray.filter(number => number % 2 === 0);
 }
+
+
+function angle(n) {
+  if (n < 3) {
+    return -1; // Invalid input, return -1
+  }
+
+  return (n - 2) * 180 / n; // Calculate and return the angle
+}
