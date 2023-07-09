@@ -762,3 +762,17 @@ function angle(n) {
 
   return (n - 2) * 180 / n; // Calculate and return the angle
 }
+
+function reverseWords(str) {
+  // Split the string into an array of words
+  let wordsArray = str.split(" ");
+
+  // Reverse the order of the words
+  let reversedArray = wordsArray.reverse();
+
+  // Join the reversed words back into a string
+  let reversedString = reversedArray.join(" ");
+
+  // Return the reversed string
+  return reversedString;
+}
