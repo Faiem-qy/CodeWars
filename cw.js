@@ -776,3 +776,20 @@ function reverseWords(str) {
   // Return the reversed string
   return reversedString;
 }
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  let enteredDate = new Date(currentDate);
+  let expirationDate = new Date(expirationDate);
+
+  // Check if the entered code matches the correct code
+  if (enteredCode !== correctCode) {
+    return false;
+  }
+
+  // Check if the current date is after the expiration date
+  if (enteredDate > expirationDate) {
+    return false;
+  }
+
+  return true;
+}
