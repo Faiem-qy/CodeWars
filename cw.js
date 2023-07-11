@@ -802,3 +802,9 @@ function soltuion(nums) {
     return a - b;
   });
 }
+
+function filter_list(l) {
+  return l.filter(function(item) {
+    return typeof item !== 'string';
+  });
+}
