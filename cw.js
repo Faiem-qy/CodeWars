@@ -793,3 +793,12 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
 
   return true;
 }
+
+function soltuion(nums) {
+  if (!nums || nums.length === 0) {
+    return [];
+  }
+  return nums.sort(function(a, b) {
+    return a - b;
+  });
+}
