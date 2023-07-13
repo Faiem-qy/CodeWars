@@ -161,17 +161,17 @@ Return your answer as a number.
 //     sum += Number(x[i]);
 //   }
 //   return sum;
-// }
+// // }
 
-function array(string) {
-  let n = string.split(',');
-  if (n.length < 3) {
-    return null;
-  } else {
-    n = n.slice(1, -1);
-    return n.join(' ');
-  }
-}
+// function array(string) {
+//   let n = string.split(',');
+//   if (n.length < 3) {
+//     return null;
+//   } else {
+//     n = n.slice(1, -1);
+//     return n.join(' ');
+//   }
+// }
 
 
 
@@ -187,624 +187,711 @@ function array(string) {
 
 // Return true if the number of days passed from last to today is greater than cycleLength. Otherwise, return false.
 
-function periodIsLate(last, today, cycleLength) {
-  const oneDay = 24 * 60 * 60 * 1000; // one day in milliseconds
-  const daysPassed = Math.round((today - last) / oneDay);
-  return daysPassed > cycleLength;
-}
+// function periodIsLate(last, today, cycleLength) {
+//   const oneDay = 24 * 60 * 60 * 1000; // one day in milliseconds
+//   const daysPassed = Math.round((today - last) / oneDay);
+//   return daysPassed > cycleLength;
+// }
 
-// Return the number(count) of vowels in the given string.
+// // Return the number(count) of vowels in the given string.
 
-// We will consider a, e, i, o, u as vowels for this Kata(but not y).
+// // We will consider a, e, i, o, u as vowels for this Kata(but not y).
 
-// The input string will only consist of lower case letters and / or spaces.;
+// // The input string will only consist of lower case letters and / or spaces.;
 
-function getCount(str) {
-  let count = 0;
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
+// function getCount(str) {
+//   let count = 0;
+//   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      count++;
-    }
-  }
-  return count;
-}
-
-
-// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
-
-// If you want to know more: http://en.wikipedia.org/wiki/DNA
-
-// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
-
-// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
-
-// Example: (input --> output)
-
-// "ATTGC" --> "TAACG"
-// "GTAT" --> "CATA"
-
-function DNAStrand(dna) {
-  const pairs = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
-  let complement = '';
-
-  for (let i = 0; i < dna.length; i++) {
-    complement += pairs[dna[i]];
-  }
-
-  return complement;
-}
-
-// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
-
-// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6. 
-
-function findMultiples(integer, limit) {
-  let multiples = [];
-  let multiple = integer;
-  while (multiple <= limit) {
-    multiples.push(multiple);
-    multiple += integer;
-  }
-  return multiples;
-}
-
-// Convert number to reversed array of digits
-// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
-
-function digitize(n) {
-  //code here
-  const digits = String(n).split('');
-  digits.reverse();
-  return digits.map(Number);
-}
-
-// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
-
-// Return the average of the given array rounded down to its nearest integer.
-
-// The array will never be empty. 
-
-function getAverage(marks) {
-  // Calculate the sum of the marks
-  const sum = marks.reduce((acc, curr) => acc + curr, 0);
-
-  // Calculate the average
-  const avg = sum / marks.length;
-
-  // Round down to the nearest integer using Math.floor()
-  return Math.floor(avg);
-}
-
-// Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
-
-function duplicates(arr) {
-  const duplicates = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    const item = arr[i];
-    const firstIndex = arr.indexOf(item);
-    const lastIndex = arr.lastIndexOf(item);
-
-    if (firstIndex !== lastIndex && !duplicates.includes(item)) {
-      duplicates.push(item);
-    }
-  }
-
-  return duplicates;
-}
-
-// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
-// What if the string is empty? Then the result should be empty object literal, {}.
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
 
-function count(string) {
-  let result = {};
+// // Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 
-  for (const char of string) {
-    result[char] = (result[char] || 0) + 1;
-  }
-  return result;
-}
+// // If you want to know more: http://en.wikipedia.org/wiki/DNA
 
-function digitize(n) {
-  return n.toString().split('').map(Number).reverse();
-}
+// // In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+// // More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+
+// // Example: (input --> output)
+
+// // "ATTGC" --> "TAACG"
+// // "GTAT" --> "CATA"
+
+// function DNAStrand(dna) {
+//   const pairs = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
+//   let complement = '';
+
+//   for (let i = 0; i < dna.length; i++) {
+//     complement += pairs[dna[i]];
+//   }
+
+//   return complement;
+// }
+
+// // In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+// // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6. 
+
+// function findMultiples(integer, limit) {
+//   let multiples = [];
+//   let multiple = integer;
+//   while (multiple <= limit) {
+//     multiples.push(multiple);
+//     multiple += integer;
+//   }
+//   return multiples;
+// }
+
+// // Convert number to reversed array of digits
+// // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// function digitize(n) {
+//   //code here
+//   const digits = String(n).split('');
+//   digits.reverse();
+//   return digits.map(Number);
+// }
+
+// // It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+// // Return the average of the given array rounded down to its nearest integer.
+
+// // The array will never be empty. 
+
+// function getAverage(marks) {
+//   // Calculate the sum of the marks
+//   const sum = marks.reduce((acc, curr) => acc + curr, 0);
+
+//   // Calculate the average
+//   const avg = sum / marks.length;
+
+//   // Round down to the nearest integer using Math.floor()
+//   return Math.floor(avg);
+// }
+
+// // Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
+
+// function duplicates(arr) {
+//   const duplicates = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const item = arr[i];
+//     const firstIndex = arr.indexOf(item);
+//     const lastIndex = arr.lastIndexOf(item);
+
+//     if (firstIndex !== lastIndex && !duplicates.includes(item)) {
+//       duplicates.push(item);
+//     }
+//   }
+
+//   return duplicates;
+// }
+
+// // The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+// // What if the string is empty? Then the result should be empty object literal, {}.
 
 
-function array(string) {
-  const elements = string.split(',');
+// function count(string) {
+//   let result = {};
 
-  if (elements.length <= 2) {
-    return null;
-  }
+//   for (const char of string) {
+//     result[char] = (result[char] || 0) + 1;
+//   }
+//   return result;
+// }
 
-  return elements.slice(1, -1).join(' ');
-}
-
-
-
-function findOdd(A) {
-  let result = 0;
-  for (let i = 0; i < A.length; i++) {
-    result ^= A[i];
-  }
-  return result;
-}
+// function digitize(n) {
+//   return n.toString().split('').map(Number).reverse();
+// }
 
 
-function findAverage(array) {
-  if (array.length === 0) {
-    return 0;
-  }
+// function array(string) {
+//   const elements = string.split(',');
 
-  const sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
+//   if (elements.length <= 2) {
+//     return null;
+//   }
 
-  return sum / array.length;
-}
-
-function findAverage(array) {
-  if (array.length === 0) {
-    return 0;
-  }
-
-  var sum = 0;
-  for (var i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
-
-  var average = sum / array.length;
-  return average;
-}
-
-function grow(x) {
-  // Initialize the result variable with 1
-  let result = 1;
-
-  // Iterate over each element in the array
-  for (let i = 0; i < x.length; i++) {
-    // Multiply the current element with the result
-    result *= x[i];
-  }
-
-  // Return the final result
-  return result;
-}
-
-function greet() {
-  const message = "hello";
-  const world = "world";
-  const punctuation = "!";
-
-  return `${message} ${world}${punctuation}`;
-}
+//   return elements.slice(1, -1).join(' ');
+// }
 
 
-function getGrade(s1, s2, s3) {
-  // Calculate the average score
-  const average = (s1 + s2 + s3) / 3;
 
-  // Assign the letter grade based on the average score
-  if (average >= 90 && average <= 100) {
-    return "A";
-  } else if (average >= 80 && average < 90) {
-    return "B";
-  } else if (average >= 70 && average < 80) {
-    return "C";
-  } else if (average >= 60 && average < 70) {
-    return "D";
+// function findOdd(A) {
+//   let result = 0;
+//   for (let i = 0; i < A.length; i++) {
+//     result ^= A[i];
+//   }
+//   return result;
+// }
+
+
+// function findAverage(array) {
+//   if (array.length === 0) {
+//     return 0;
+//   }
+
+//   const sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+
+//   return sum / array.length;
+// }
+
+// function findAverage(array) {
+//   if (array.length === 0) {
+//     return 0;
+//   }
+
+//   var sum = 0;
+//   for (var i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+
+//   var average = sum / array.length;
+//   return average;
+// }
+
+// function grow(x) {
+//   // Initialize the result variable with 1
+//   let result = 1;
+
+//   // Iterate over each element in the array
+//   for (let i = 0; i < x.length; i++) {
+//     // Multiply the current element with the result
+//     result *= x[i];
+//   }
+
+//   // Return the final result
+//   return result;
+// }
+
+// function greet() {
+//   const message = "hello";
+//   const world = "world";
+//   const punctuation = "!";
+
+//   return `${message} ${world}${punctuation}`;
+// }
+
+
+// function getGrade(s1, s2, s3) {
+//   // Calculate the average score
+//   const average = (s1 + s2 + s3) / 3;
+
+//   // Assign the letter grade based on the average score
+//   if (average >= 90 && average <= 100) {
+//     return "A";
+//   } else if (average >= 80 && average < 90) {
+//     return "B";
+//   } else if (average >= 70 && average < 80) {
+//     return "C";
+//   } else if (average >= 60 && average < 70) {
+//     return "D";
+//   } else {
+//     return "F";
+//   }
+// }
+
+
+// function findAverage(array) {
+//   if (array.length === 0) {
+//     return 0;
+//   }
+
+//   var sum = 0;
+//   for (var i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+
+//   var average = sum / array.length;
+//   return average;
+// }
+
+// const rps = (p1, p2) => {
+//   // Define the winning combinations
+//   const winningCombinations = {
+//     rock: "scissors",
+//     paper: "rock",
+//     scissors: "paper"
+//   };
+
+//   // Check for a draw
+//   if (p1 === p2) {
+//     return "Draw!";
+//   }
+
+//   // Check if player 1 wins
+//   if (winningCombinations[p1] === p2) {
+//     return "Player 1 won!";
+//   }
+
+//   // Player 2 wins by elimination
+//   return "Player 2 won!";
+// };
+
+
+// function bmi(weight, height) {
+//   const bmiValue = weight / (height * height);
+
+//   if (bmiValue <= 18.5) {
+//     return "Underweight";
+//   } else if (bmiValue <= 25.0) {
+//     return "Normal";
+//   } else if (bmiValue <= 30.0) {
+//     return "Overweight";
+//   } else {
+//     return "Obese";
+//   }
+// }
+
+// function findAverage(array) {
+//   if (array === 0) {
+//     return 0;
+//   }
+
+
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+//   }
+
+//   let average = sum / array.length;
+//   return average;
+// }
+
+// function highAndLow(numbers) {
+//   var numberArray = numbers.split(' ').map(Number);
+//   var maxNumber = Math.max(...numberArray);
+//   var minNumber = Math.min(...numberArray);
+
+//   return `${maxNumber} ${minNumber}`;
+// }
+
+
+// function findMissingLetter(array) {
+//   let firstCharCode = array[0].charCodeAt(0);
+
+//   for (let i = 1; i < array.length; i++) {
+//     let currentCharCode = array[i].charCodeAt(0);
+//     if (currentCharCode - firstCharCode > 1) {
+//       return String.fromCharCode(firstCharCode + 1);
+//     }
+//     firstCharCode = currentCharCode;
+//   }
+//   return '';
+// }
+
+
+// function arrayPlusArray(arr1, arr2) {
+//   let sum = 0;
+
+//   // Add elements from the first array
+//   for (let i = 0; i < arr1.length; i++) {
+//     sum += arr1[i];
+//   }
+
+//   // Add elements from the second array
+//   for (let j = 0; j < arr2.length; j++) {
+//     sum += arr2[j];
+//   }
+
+//   return sum;
+// }
+
+// const reverseSeq = n => {
+//   const result = [];
+//   for (let i = n; i >= 1; i--) {
+//     result.push(i);
+//   }
+//   return result;
+// };
+
+// function arrayDiff(a, b) {
+//   const result = [];
+
+//   for (let i = 0; i < a.length; i++) {
+//     let found = false;
+
+//     for (let j = 0; j < b.length; j++) {
+//       if (a[i] === b[j]) {
+//         found = true;
+//         break;
+//       }
+//     }
+//     if (!found) {
+//       result.push(a[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// function square(number) {
+//   return number * number;
+// }
+
+
+// function betterThanAverage(classPoints, yourPoints) {
+
+//   let total = yourPoints;
+//   for (let i = 0; i < classPoints.length; i++) {
+//     total += classPoints[i];
+//   }
+
+//   let average = total / (classPoints.length + 1);
+
+//   if (yourPoints > average) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// function getRealFloor(n) {
+//   if (n <= 0) {
+//     return n;
+//   } else if (n <= 13) {
+//     return n - 1;
+//   } else {
+//     return n - 2;
+//   }
+// }
+
+// function countPositivesSumNegatives(input) {
+//   if (!input || input.length === 0) {
+//     return [];
+//   }
+
+//   let positiveCount = 0;
+//   let negativeSum = 0;
+
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] > 0) {
+//       positiveCount++;
+//     } else if (input[i] < 0) {
+//       negativeSum += input[i];
+//     }
+//   }
+
+//   return [positiveCount, negativeSum];
+// }
+
+// class Kata {
+//   static getVolumeOfCuboid(length, width, height) {
+//     return length * width * height;
+//   }
+// }
+
+// function mouthSize(animal) {
+//   if (animal.toLowerCase() === 'alligator') {
+//     return 'small';
+//   } else {
+//     return 'wide';
+//   }
+// }
+
+
+// function sayHello(name) {
+//   return 'Hello, ' + name;
+// }
+
+// function gooseFilter(birds) {
+//   let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//   return birds.filter((bird) => !geese.includes(bird));
+// }
+
+// function rentalCarCost(d) {
+//   const dailyRate = 40;
+//   let totalAmount = d * dailyRate;
+//   if (d >= 7) {
+//     totalAmount -= 50;
+
+//   } else if (d >= 3) {
+//     totalAmount -= 20;
+//   }
+//   return totalAmount;
+// }
+
+// function makeUpperCase(str) {
+//   return str.toUpperCase();
+// }
+
+// function pipeFix(numbers) {
+//   const min = Math.min(...numbers);
+//   const max = Math.max(...numbers);
+
+//   const fixedList = [];
+
+//   for (let i = min; i <= max; i++) {
+//     if (numbers.includes(i)) {
+//       fixedList.push(i);
+//     }
+//   }
+
+//   return fixedList;
+// }
+
+// function remove(string) {
+//   if (string.endsWith("!")) {
+//     return string.slice(0, -1);
+//   }
+//   return string;
+// }
+
+// function findMultiples(integer, limit) {
+//   let multiples = [];
+
+//   for (let i = integer; i <= limit; i += integer) {
+//     multiples.push(i);
+//   }
+
+//   return multiples;
+// }
+
+// function getChar(c) {
+//   return String.fromCharCode(c);
+// }
+
+
+// function removeUrlAnchor(url) {
+//   let parts = url.split('#');
+
+//   return parts[0];
+// }
+
+// function solution(str, ending) {
+//   return str.endsWith(ending);
+// }
+
+// function dontGiveMeFive(start, end) {
+//   let coundt = 0;
+
+//   for (let num = start; num <= end; num++) {
+//     if (num.toString().indexOf('5' === -1){
+//       count++;
+//     })
+//   }
+//   return count;
+// }
+// function gimme(triplet) {
+//   const [a, b, c] = triplet;
+
+//   if ((a < b && a > c) || (a > b && a < c)) {
+//     return 0;
+//   } else if ((b < a && b > c) || (b > a && b < c)) {
+//     return 1;
+//   } else {
+//     return 2;
+//   }
+// }
+
+// function reverseLetter(str) {
+//   // Step 1: Remove non-alphabetic characters from the string
+//   let lettersOnly = str.replace(/[^a-zA-Z]/g, '');
+
+//   // Step 2: Reverse the letters
+//   let reversed = lettersOnly.split('').reverse().join('');
+
+//   return reversed;
+// }
+
+// function maxMultiple(divisor, bound) {
+//   let largestMultiple = 0;
+
+//   for (let i = bound; i > 0; i--) {
+//     if (i % divisor === 0) {
+//       largestMultiple = i;
+//       break;
+//     }
+//   }
+
+//   return largestMultiple;
+// }
+// function getSum(a, b) {
+//   return a + b;
+// }
+
+// function smallEnough(a, limit) {
+//   return a.every((element) => element <= limit);
+// }
+
+// const sequenceSum = (begin, end, step) => {
+//   if (begin > end) {
+//     return 0; // If the begin value is greater than the end value, the sum is 0
+//   }
+
+//   let sum = 0;
+
+//   for (let i = begin; i <= end; i += step) {
+//     sum += i; // Add each number in the sequence to the sum
+//   }
+
+//   return sum;
+// };
+
+// const multiplicationTable = function(size) {
+//   const table = [];
+//   for (let i = 1; i <= size; i++) {
+//     const row = [];
+//     for (let j = 1; j <= size; j++) {
+//       row.push(i * j);
+//     }
+//     table.push(row);
+//   }
+//   return table;
+// };
+
+// function getEvenNumbers(numbersArray) {
+//   return numbersArray.filter(number => number % 2 === 0);
+// }
+
+
+// function angle(n) {
+//   if (n < 3) {
+//     return -1; // Invalid input, return -1
+//   }
+
+//   return (n - 2) * 180 / n; // Calculate and return the angle
+// }
+
+// function reverseWords(str) {
+//   // Split the string into an array of words
+//   let wordsArray = str.split(" ");
+
+//   // Reverse the order of the words
+//   let reversedArray = wordsArray.reverse();
+
+//   // Join the reversed words back into a string
+//   let reversedString = reversedArray.join(" ");
+
+//   // Return the reversed string
+//   return reversedString;
+// }
+
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+//   let enteredDate = new Date(currentDate);
+//   let expirationDate = new Date(expirationDate);
+
+//   // Check if the entered code matches the correct code
+//   if (enteredCode !== correctCode) {
+//     return false;
+//   }
+
+//   // Check if the current date is after the expiration date
+//   if (enteredDate > expirationDate) {
+//     return false;
+//   }
+
+//   return true;
+// }
+
+// function soltuion(nums) {
+//   if (!nums || nums.length === 0) {
+//     return [];
+//   }
+//   return nums.sort(function(a, b) {
+//     return a - b;
+//   });
+// }
+
+// function filter_list(l) {
+//   return l.filter(function(item) {
+//     return typeof item !== 'string';
+//   });
+// }
+
+// loop fron 100 to 200;
+// let num = the current step in the loop
+// print num;
+// End loop;
+
+// loop from 100 to 200
+//   let num = the current step in the loop
+//   If num is a multiple of 3
+//     Print "loopy"
+//   Otherwise 
+//     Print num
+//   End if 
+// End loop
+
+// loop from 100 to 200
+//   let num = the current step in the loop
+//   If num % 3 is equal to 0
+//     Print "loopy"
+//   Otherwise 
+//     Print num
+//   End if 
+// End loop
+
+
+// loop from 100 to 200 
+//   let nun = the current step in the loop
+//   If num % 3 us equal to 0
+//     Print "loopy"
+//   Else if num % 4 is equal to 0
+//     Print "lighthouse"
+//   Else if num % 3 is equal to 0 and num % 4 is equal to 0
+//     Print "LoopyLighthouse"
+//   Otherwise
+//     Print num
+//   End if 
+// End loop
+
+
+// loop from 100 to 200 
+//   let num = the current step in the loop
+//   If num % 3 is equal to 0 and num % 4 is equal to 0;
+//     Print "LoopyLighthouse"
+//   Else if num % 3 is equal to 0
+//     Print "Loopy"
+//   Else if num % 4 is equal to 0
+//     Print "Lighthouse"
+//   Otherwise
+//     Print num
+//   End if 
+// End loop
+
+
+for (let num = 100; num <= 200; num++) {
+  if (num % 3 === 0 && num % 4 === 0) {
+    console.log("LoopyLighthouse");
+  } else if (num % 3 === 0) {
+    console.log("Loopy");
+  } else if (num % 4 === 0) {
+    console.log('Lighthouse');
   } else {
-    return "F";
+    console.log(num);
   }
 }
 
 
-function findAverage(array) {
-  if (array.length === 0) {
-    return 0;
+if (num % 3 === 0 && num % 4 === 0) {
+  console.log("loopyLighthouse");
+} else if (num % 3 === 0) {
+  console.log("Loopy");
+} else if (num % 4 === 0) {
+  console.log("Lighthouse");
+}
+
+let output = "";
+
+for (const num of nums) {
+  let output = '';
+
+  if (num % 3 == 0) {
+    output += "Loopy";
   }
-
-  var sum = 0;
-  for (var i = 0; i < array.length; i++) {
-    sum += array[i];
+  if (num % 4 === 0) {
+    output += "Lighthouse";
   }
-
-  var average = sum / array.length;
-  return average;
-}
-
-const rps = (p1, p2) => {
-  // Define the winning combinations
-  const winningCombinations = {
-    rock: "scissors",
-    paper: "rock",
-    scissors: "paper"
-  };
-
-  // Check for a draw
-  if (p1 === p2) {
-    return "Draw!";
-  }
-
-  // Check if player 1 wins
-  if (winningCombinations[p1] === p2) {
-    return "Player 1 won!";
-  }
-
-  // Player 2 wins by elimination
-  return "Player 2 won!";
-};
-
-
-function bmi(weight, height) {
-  const bmiValue = weight / (height * height);
-
-  if (bmiValue <= 18.5) {
-    return "Underweight";
-  } else if (bmiValue <= 25.0) {
-    return "Normal";
-  } else if (bmiValue <= 30.0) {
-    return "Overweight";
-  } else {
-    return "Obese";
-  }
-}
-
-function findAverage(array) {
-  if (array === 0) {
-    return 0;
-  }
-
-
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
-
-  let average = sum / array.length;
-  return average;
-}
-
-function highAndLow(numbers) {
-  var numberArray = numbers.split(' ').map(Number);
-  var maxNumber = Math.max(...numberArray);
-  var minNumber = Math.min(...numberArray);
-
-  return `${maxNumber} ${minNumber}`;
-}
-
-
-function findMissingLetter(array) {
-  let firstCharCode = array[0].charCodeAt(0);
-
-  for (let i = 1; i < array.length; i++) {
-    let currentCharCode = array[i].charCodeAt(0);
-    if (currentCharCode - firstCharCode > 1) {
-      return String.fromCharCode(firstCharCode + 1);
-    }
-    firstCharCode = currentCharCode;
-  }
-  return '';
-}
-
-
-function arrayPlusArray(arr1, arr2) {
-  let sum = 0;
-
-  // Add elements from the first array
-  for (let i = 0; i < arr1.length; i++) {
-    sum += arr1[i];
-  }
-
-  // Add elements from the second array
-  for (let j = 0; j < arr2.length; j++) {
-    sum += arr2[j];
-  }
-
-  return sum;
-}
-
-const reverseSeq = n => {
-  const result = [];
-  for (let i = n; i >= 1; i--) {
-    result.push(i);
-  }
-  return result;
-};
-
-function arrayDiff(a, b) {
-  const result = [];
-
-  for (let i = 0; i < a.length; i++) {
-    let found = false;
-
-    for (let j = 0; j < b.length; j++) {
-      if (a[i] === b[j]) {
-        found = true;
-        break;
-      }
-    }
-    if (!found) {
-      result.push(a[i]);
-    }
-  }
-  return result;
-}
-
-function square(number) {
-  return number * number;
-}
-
-
-function betterThanAverage(classPoints, yourPoints) {
-
-  let total = yourPoints;
-  for (let i = 0; i < classPoints.length; i++) {
-    total += classPoints[i];
-  }
-
-  let average = total / (classPoints.length + 1);
-
-  if (yourPoints > average) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function getRealFloor(n) {
-  if (n <= 0) {
-    return n;
-  } else if (n <= 13) {
-    return n - 1;
-  } else {
-    return n - 2;
-  }
-}
-
-function countPositivesSumNegatives(input) {
-  if (!input || input.length === 0) {
-    return [];
-  }
-
-  let positiveCount = 0;
-  let negativeSum = 0;
-
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] > 0) {
-      positiveCount++;
-    } else if (input[i] < 0) {
-      negativeSum += input[i];
-    }
-  }
-
-  return [positiveCount, negativeSum];
-}
-
-class Kata {
-  static getVolumeOfCuboid(length, width, height) {
-    return length * width * height;
-  }
-}
-
-function mouthSize(animal) {
-  if (animal.toLowerCase() === 'alligator') {
-    return 'small';
-  } else {
-    return 'wide';
-  }
-}
-
-
-function sayHello(name) {
-  return 'Hello, ' + name;
-}
-
-function gooseFilter(birds) {
-  let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter((bird) => !geese.includes(bird));
-}
-
-function rentalCarCost(d) {
-  const dailyRate = 40;
-  let totalAmount = d * dailyRate;
-  if (d >= 7) {
-    totalAmount -= 50;
-
-  } else if (d >= 3) {
-    totalAmount -= 20;
-  }
-  return totalAmount;
-}
-
-function makeUpperCase(str) {
-  return str.toUpperCase();
-}
-
-function pipeFix(numbers) {
-  const min = Math.min(...numbers);
-  const max = Math.max(...numbers);
-
-  const fixedList = [];
-
-  for (let i = min; i <= max; i++) {
-    if (numbers.includes(i)) {
-      fixedList.push(i);
-    }
-  }
-
-  return fixedList;
-}
-
-function remove(string) {
-  if (string.endsWith("!")) {
-    return string.slice(0, -1);
-  }
-  return string;
-}
-
-function findMultiples(integer, limit) {
-  let multiples = [];
-
-  for (let i = integer; i <= limit; i += integer) {
-    multiples.push(i);
-  }
-
-  return multiples;
-}
-
-function getChar(c) {
-  return String.fromCharCode(c);
-}
-
-
-function removeUrlAnchor(url) {
-  let parts = url.split('#');
-
-  return parts[0];
-}
-
-function solution(str, ending) {
-  return str.endsWith(ending);
-}
-
-function dontGiveMeFive(start, end) {
-  let coundt = 0;
-
-  for (let num = start; num <= end; num++) {
-    if (num.toString().indexOf('5' === -1){
-      count++;
-    })
-  }
-  return count;
-}
-function gimme(triplet) {
-  const [a, b, c] = triplet;
-
-  if ((a < b && a > c) || (a > b && a < c)) {
-    return 0;
-  } else if ((b < a && b > c) || (b > a && b < c)) {
-    return 1;
-  } else {
-    return 2;
-  }
-}
-
-function reverseLetter(str) {
-  // Step 1: Remove non-alphabetic characters from the string
-  let lettersOnly = str.replace(/[^a-zA-Z]/g, '');
-
-  // Step 2: Reverse the letters
-  let reversed = lettersOnly.split('').reverse().join('');
-
-  return reversed;
-}
-
-function maxMultiple(divisor, bound) {
-  let largestMultiple = 0;
-
-  for (let i = bound; i > 0; i--) {
-    if (i % divisor === 0) {
-      largestMultiple = i;
-      break;
-    }
-  }
-
-  return largestMultiple;
-}
-function getSum(a, b) {
-  return a + b;
-}
-
-function smallEnough(a, limit) {
-  return a.every((element) => element <= limit);
-}
-
-const sequenceSum = (begin, end, step) => {
-  if (begin > end) {
-    return 0; // If the begin value is greater than the end value, the sum is 0
-  }
-
-  let sum = 0;
-
-  for (let i = begin; i <= end; i += step) {
-    sum += i; // Add each number in the sequence to the sum
-  }
-
-  return sum;
-};
-
-const multiplicationTable = function(size) {
-  const table = [];
-  for (let i = 1; i <= size; i++) {
-    const row = [];
-    for (let j = 1; j <= size; j++) {
-      row.push(i * j);
-    }
-    table.push(row);
-  }
-  return table;
-};
-
-function getEvenNumbers(numbersArray) {
-  return numbersArray.filter(number => number % 2 === 0);
-}
-
-
-function angle(n) {
-  if (n < 3) {
-    return -1; // Invalid input, return -1
-  }
-
-  return (n - 2) * 180 / n; // Calculate and return the angle
-}
-
-function reverseWords(str) {
-  // Split the string into an array of words
-  let wordsArray = str.split(" ");
-
-  // Reverse the order of the words
-  let reversedArray = wordsArray.reverse();
-
-  // Join the reversed words back into a string
-  let reversedString = reversedArray.join(" ");
-
-  // Return the reversed string
-  return reversedString;
-}
-
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
-  let enteredDate = new Date(currentDate);
-  let expirationDate = new Date(expirationDate);
-
-  // Check if the entered code matches the correct code
-  if (enteredCode !== correctCode) {
-    return false;
-  }
-
-  // Check if the current date is after the expiration date
-  if (enteredDate > expirationDate) {
-    return false;
-  }
-
-  return true;
-}
-
-function soltuion(nums) {
-  if (!nums || nums.length === 0) {
-    return [];
-  }
-  return nums.sort(function(a, b) {
-    return a - b;
-  });
-}
-
-function filter_list(l) {
-  return l.filter(function(item) {
-    return typeof item !== 'string';
-  });
+  console.log(output === "" ? num : output);
 }
