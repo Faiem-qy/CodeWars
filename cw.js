@@ -895,3 +895,8 @@ for (const num of nums) {
   }
   console.log(output === "" ? num : output);
 }
+
+function numberToString(num) {
+  // Return a string of the number here!
+  return num.toString();
+}
