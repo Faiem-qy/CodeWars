@@ -900,3 +900,15 @@ function numberToString(num) {
   // Return a string of the number here!
   return num.toString();
 }
+
+function greet(language) {
+  if (language === 'English') {
+    return 'Hello!';
+  } else if (language === 'Spanish') {
+    return '¡Hola!';
+  } else if (language === 'French') {
+    return 'Bonjour!';
+  } else {
+    return 'Language not supported.';
+  }
+}
