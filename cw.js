@@ -911,3 +911,18 @@ const volume = Kata.getVolumeOfCuboid(5, 3, 2);
 console.log(volume); 
 
 // Testing a new line
+function greet(language) {
+  if (language === 'English') {
+    return 'Hello!';
+  } else if (language === 'Spanish') {
+    return '¡Hola!';
+  } else if (language === 'French') {
+    return 'Bonjour!';
+  } else {
+    return 'Language not supported.';
+  }
+}
+
+
+const volumee = Kata.getVolumeOfCuboid(5, 3, 2);
+console.log(volume); // Output: 30
