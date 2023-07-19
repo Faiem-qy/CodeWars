@@ -912,3 +912,7 @@ function greet(language) {
     return 'Language not supported.';
   }
 }
+
+
+const volume = Kata.getVolumeOfCuboid(5, 3, 2);
+console.log(volume); // Output: 30
