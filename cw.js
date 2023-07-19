@@ -909,3 +909,5 @@ class Kata {
 
 const volume = Kata.getVolumeOfCuboid(5, 3, 2);
 console.log(volume); 
+
+// Testing a new line
