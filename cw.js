@@ -900,3 +900,12 @@ function numberToString(num) {
   // Return a string of the number here!
   return num.toString();
 }
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height;
+  }
+}
+
+const volume = Kata.getVolumeOfCuboid(5, 3, 2);
+console.log(volume); 
