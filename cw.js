@@ -861,68 +861,86 @@ Return your answer as a number.
 // End loop
 
 
-for (let num = 100; num <= 200; num++) {
-  if (num % 3 === 0 && num % 4 === 0) {
-    console.log("LoopyLighthouse");
-  } else if (num % 3 === 0) {
-    console.log("Loopy");
-  } else if (num % 4 === 0) {
-    console.log('Lighthouse');
-  } else {
-    console.log(num);
+// for (let num = 100; num <= 200; num++) {
+//   if (num % 3 === 0 && num % 4 === 0) {
+//     console.log("LoopyLighthouse");
+//   } else if (num % 3 === 0) {
+//     console.log("Loopy");
+//   } else if (num % 4 === 0) {
+//     console.log('Lighthouse');
+//   } else {
+//     console.log(num);
+//   }
+// }
+
+
+// if (num % 3 === 0 && num % 4 === 0) {
+//   console.log("loopyLighthouse");
+// } else if (num % 3 === 0) {
+//   console.log("Loopy");
+// } else if (num % 4 === 0) {
+//   console.log("Lighthouse");
+// }
+
+// let output = "";
+
+// for (const num of nums) {
+//   let output = '';
+
+//   if (num % 3 == 0) {
+//     output += "Loopy";
+//   }
+//   if (num % 4 === 0) {
+//     output += "Lighthouse";
+//   }
+//   console.log(output === "" ? num : output);
+// }
+
+// function numberToString(num) {
+//   // Return a string of the number here!
+//   return num.toString();
+// }
+
+// class Kata {
+//   static getVolumeOfCuboid(length, width, height) {
+//     return length * width * height;
+//   }
+// }
+
+// const volume = Kata.getVolumeOfCuboid(5, 3, 2);
+// console.log(volume); 
+
+// // Testing a new line
+// function greet(language) {
+//   if (language === 'English') {
+//     return 'Hello!';
+//   } else if (language === 'Spanish') {
+//     return '¡Hola!';
+//   } else if (language === 'French') {
+//     return 'Bonjour!';
+//   } else {
+//     return 'Language not supported.';
+//   }
+// }
+
+
+
+
+// const volumee = Kata.getVolumeOfCuboid(5, 3, 2);
+// console.log(volume); // Output: 30
+
+
+
+function distinct(a) {
+  const uniqueSet = new Set();
+  const newArray = [];
+
+  for (const num of a) {
+    if (!uniqueSet.has(num)) {
+      uniqueSet.add(num);
+      newArray.push(num);
+    }
   }
+
+  return newArray;
 }
-
-
-if (num % 3 === 0 && num % 4 === 0) {
-  console.log("loopyLighthouse");
-} else if (num % 3 === 0) {
-  console.log("Loopy");
-} else if (num % 4 === 0) {
-  console.log("Lighthouse");
-}
-
-let output = "";
-
-for (const num of nums) {
-  let output = '';
-
-  if (num % 3 == 0) {
-    output += "Loopy";
-  }
-  if (num % 4 === 0) {
-    output += "Lighthouse";
-  }
-  console.log(output === "" ? num : output);
-}
-
-function numberToString(num) {
-  // Return a string of the number here!
-  return num.toString();
-}
-
-class Kata {
-  static getVolumeOfCuboid(length, width, height) {
-    return length * width * height;
-  }
-}
-
-const volume = Kata.getVolumeOfCuboid(5, 3, 2);
-console.log(volume); 
-
-// Testing a new line
-function greet(language) {
-  if (language === 'English') {
-    return 'Hello!';
-  } else if (language === 'Spanish') {
-    return '¡Hola!';
-  } else if (language === 'French') {
-    return 'Bonjour!';
-  } else {
-    return 'Language not supported.';
-  }
-}
-
-
-const volumee = Kata.getVolumeOfCuboid(5, 3, 2);
-console.log(volume); // Output: 30
