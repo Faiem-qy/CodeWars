@@ -924,6 +924,7 @@ Return your answer as a number.
 // }
 
 
+<<<<<<< HEAD
 
 
 // const volumee = Kata.getVolumeOfCuboid(5, 3, 2);
@@ -957,3 +958,23 @@ function drawStairs(n) {
 console.log(result);
 }
 drawStairs(20);
+=======
+// const volumee = Kata.getVolumeOfCuboid(5, 3, 2);
+// console.log(volume); // Output: 30
+
+// function distinct(a) {
+//   const uniqueSet = new Set();
+//   const newArray = [];
+
+//   for (const num of a) {
+//     if (!uniqueSet.has(num)) {
+//       uniqueSet.add(num);
+//       newArray.push(num);
+//     }
+//   }
+
+//   return newArray;
+// }
+
+
+>>>>>>> 20bc15eb6994edeeb3b3b3000e330cf6d0cd63b3
