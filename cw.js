@@ -238,7 +238,7 @@ Return your answer as a number.
 
 // // In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
 
-// // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6. 
+// // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 
 // function findMultiples(integer, limit) {
 //   let multiples = [];
@@ -264,7 +264,7 @@ Return your answer as a number.
 
 // // Return the average of the given array rounded down to its nearest integer.
 
-// // The array will never be empty. 
+// // The array will never be empty.
 
 // function getAverage(marks) {
 //   // Calculate the sum of the marks
@@ -818,22 +818,22 @@ Return your answer as a number.
 //   let num = the current step in the loop
 //   If num is a multiple of 3
 //     Print "loopy"
-//   Otherwise 
+//   Otherwise
 //     Print num
-//   End if 
+//   End if
 // End loop
 
 // loop from 100 to 200
 //   let num = the current step in the loop
 //   If num % 3 is equal to 0
 //     Print "loopy"
-//   Otherwise 
+//   Otherwise
 //     Print num
-//   End if 
+//   End if
 // End loop
 
 
-// loop from 100 to 200 
+// loop from 100 to 200
 //   let nun = the current step in the loop
 //   If num % 3 us equal to 0
 //     Print "loopy"
@@ -843,11 +843,11 @@ Return your answer as a number.
 //     Print "LoopyLighthouse"
 //   Otherwise
 //     Print num
-//   End if 
+//   End if
 // End loop
 
 
-// loop from 100 to 200 
+// loop from 100 to 200
 //   let num = the current step in the loop
 //   If num % 3 is equal to 0 and num % 4 is equal to 0;
 //     Print "LoopyLighthouse"
@@ -857,7 +857,7 @@ Return your answer as a number.
 //     Print "Lighthouse"
 //   Otherwise
 //     Print num
-//   End if 
+//   End if
 // End loop
 
 
@@ -908,7 +908,7 @@ Return your answer as a number.
 // }
 
 // const volume = Kata.getVolumeOfCuboid(5, 3, 2);
-// console.log(volume); 
+// console.log(volume);
 
 // // Testing a new line
 // function greet(language) {
@@ -923,7 +923,7 @@ Return your answer as a number.
 //   }
 // }
 
-
+/*
 <<<<<<< HEAD
 
 
@@ -990,3 +990,133 @@ function distinct(a) {
   }
   return newArr;
 }
+
+*/
+
+/*
+const sum = function(arr) {
+  // declare variable
+  let total = 0;
+  // iterate over array
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    total += arr[i];
+    // console.log(total);
+  }
+  return total;
+};
+
+console.log(sum([3, 7, 5, 9, 4, 2]));
+*/
+
+/*
+const round = function(number) {
+  return Math.round(number * 100) / 100;
+};
+
+
+const mean = function(arr) {
+  // if the array is empty return null
+  if (arr.length === 0) {
+    return null;
+  }
+
+  let total = 0;
+
+  //iterate over arr
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return round(total / arr.length);
+};
+
+
+console.log(mean([6, 2, 3, 4, 5]));
+*/
+
+
+/*
+
+* MIN - the lowest value in a list
+*
+* For example:
+*
+*    min([6,2,3,4,9,6,1,0,5])
+*
+* Returns:
+*
+*    0
+*/
+
+/*
+const min = function(arr) {
+  let minValue = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < minValue) {
+      minValue = arr[i];
+    }
+  }
+  return minValue;
+};
+
+console.log(min([6, 2, 3, 4, 9]));
+
+const max = function(arr) {
+  let maxValue = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > maxValue) {
+      maxValue = arr[i];
+    }
+  }
+  return maxValue;
+};
+
+console.log(max([6, 2, 3, 4, 9]));
+
+const range = function(arr) {
+  const minValue = min(arr);
+  const maxValue = max(arr);
+  return maxValue - minValue;
+
+};
+
+
+console.log(range([3, 7, 1, 6, 2, 3, 4, 9]));// 9 - 1 = 8
+*/
+
+const round = function(number) {
+  return Math.round(number * 100) / 100;
+};
+
+/* ===========================================================================
+ * MEDIAN - the middle number of a list (when sorted)
+ *        - if the list length is even, then the median is the average of the two middle values
+ *        - use the provided 'round' function before returning your value
+ *
+ * For example:
+ *
+ *    median([6,2,3,4,9,6,1,0,5]);
+ *
+ * Returns:
+ *
+ *    4
+ */
+
+// const median = function(arr) {
+//   /* IMPLEMENT ME */
+//   if (arr.length === 0) {
+//     return null;
+//   }
+//   arr.sort((a, b) => a - b);
+//   const middle = Math.floor(arr.length / 2);
+
+//   if (arr.length % 2 === 1) {
+//     return [arr[middle]];
+//   } else {
+//     const averageOfMiddle = (arr[middle - 1] + arr[middle] / 2);
+//     return (round(averageOfMiddle));
+//   }
+
+// };
+// console.log(median([6, 2, 3, 4, 9, 3, 6, 1, 0]));
+
