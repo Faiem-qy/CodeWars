@@ -952,10 +952,10 @@ function drawStairs(n) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < i; j++) {
       result += ' ';
+    }
+    result += 'I\n';
   }
-  result += 'I\n';
-}
-console.log(result);
+  console.log(result);
 }
 drawStairs(20);
 =======
@@ -980,3 +980,13 @@ drawStairs(20);
 >>>>>>> 20bc15eb6994edeeb3b3b3000e330cf6d0cd63b3
 
 
+function distinct(a) {
+  let newArr = [];
+
+  for (let i = 0; i < a.length; i++) {
+    if (!newArr.includes(a[i])) {
+      newArr.push(a[i]);
+    }
+  }
+  return newArr;
+}
