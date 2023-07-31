@@ -1120,3 +1120,30 @@ const round = function(number) {
 // };
 // console.log(median([6, 2, 3, 4, 9, 3, 6, 1, 0]));
 
+
+class Sandwich {
+
+  constructor(slices, toasted) {
+    this.slices = slices;
+    this.toasted = toasted;
+    this.ingredients = ['cheese'];
+  }
+
+  addIngredient(ingredient) {
+    this.ingredients.push(ingredient);
+  }
+}
+
+let sandwich1 = new Sandwich('two', 'yes');
+console.log(sandwich1);
+console.log(sandwich1.ingredients, 'sandwich1');
+
+sandwich1.addIngredient('pimento');
+sandwich1.addIngredient('olives');
+console.log(sandwich1.ingredients, 'sandwich1');
+
+
+let sandwich2 = new Sandwich();
+console.log(sandwich2.ingredients);
+sandwich2.addIngredient('sausage');
+console.log(sandwich2.ingredients, 'sandwich 2');
