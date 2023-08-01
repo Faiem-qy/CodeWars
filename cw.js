@@ -1084,9 +1084,9 @@ const range = function(arr) {
 console.log(range([3, 7, 1, 6, 2, 3, 4, 9]));// 9 - 1 = 8
 */
 
-const round = function(number) {
-  return Math.round(number * 100) / 100;
-};
+// const round = function(number) {
+//   return Math.round(number * 100) / 100;
+// };
 
 /* ===========================================================================
  * MEDIAN - the middle number of a list (when sorted)
@@ -1121,29 +1121,77 @@ const round = function(number) {
 // console.log(median([6, 2, 3, 4, 9, 3, 6, 1, 0]));
 
 
-class Sandwich {
+// class Sandwich {
 
-  constructor(slices, toasted) {
-    this.slices = slices;
-    this.toasted = toasted;
-    this.ingredients = ['cheese'];
+//   constructor(slices, toasted) {
+//     this.slices = slices;
+//     this.toasted = toasted;
+//     this.ingredients = ['cheese'];
+//   }
+
+//   addIngredient(ingredient) {
+//     this.ingredients.push(ingredient);
+//   }
+// }
+
+// let sandwich1 = new Sandwich('two', 'yes');
+// console.log(sandwich1);
+// console.log(sandwich1.ingredients, 'sandwich1');
+
+// sandwich1.addIngredient('pimento');
+// sandwich1.addIngredient('olives');
+// console.log(sandwich1.ingredients, 'sandwich1');
+
+
+// let sandwich2 = new Sandwich();
+// console.log(sandwich2.ingredients);
+// sandwich2.addIngredient('sausage');
+// console.log(sandwich2.ingredients, 'sandwich 2');
+
+
+// Both student and mentor
+class Person {
+  constructor(name, quirkyFact) {
+    this.name = name;
+    this.quirkyFact = quirkyFact;
   }
 
-  addIngredient(ingredient) {
-    this.ingredients.push(ingredient);
+  bio() {
+    return `My name is ${this.name} and here's my quirky fact: ${this.quirkyFact}`;
   }
 }
 
-let sandwich1 = new Sandwich('two', 'yes');
-console.log(sandwich1);
-console.log(sandwich1.ingredients, 'sandwich1');
+// employer only
+class Employer extends Person {
+  enroll(startedJob) {
+    this.job = startedJob;
+  }
+}
 
-sandwich1.addIngredient('pimento');
-sandwich1.addIngredient('olives');
-console.log(sandwich1.ingredients, 'sandwich1');
+// employee only
+class Employee extends Person {
+  goOnShift() {
+    this.onShift = true;
+  }
+  goOffShift() {
+    this.offShift = false;
+  }
+}
 
+// wmployer
+let employer1 = new Employer("Fred","bald")
+console.log('employer1 - ',employer1.bio());
 
-let sandwich2 = new Sandwich();
-console.log(sandwich2.ingredients);
-sandwich2.addIngredient('sausage');
-console.log(sandwich2.ingredients, 'sandwich 2');
+employer1.enroll("Jan 2023")
+console.log('Started Job -',employer1.job);
+
+//employee
+let employee1 = new Employee("Jeff", "I can drum for 6 hours")
+console.log(employee1.bio());
+
+employee1.goOnShift()
+console.log(employee1.onShift);
+
+employee1.goOffShift()
+console.log(employee1.offShift);
+
