@@ -1148,7 +1148,7 @@ console.log(range([3, 7, 1, 6, 2, 3, 4, 9]));// 9 - 1 = 8
 // sandwich2.addIngredient('sausage');
 // console.log(sandwich2.ingredients, 'sandwich 2');
 
-
+/*
 // Both student and mentor
 class Person {
   constructor(name, quirkyFact) {
@@ -1195,3 +1195,4 @@ console.log(employee1.onShift);
 employee1.goOffShift()
 console.log(employee1.offShift);
 
+*/
