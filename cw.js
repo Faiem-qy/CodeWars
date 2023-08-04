@@ -1196,7 +1196,7 @@ employee1.goOffShift()
 console.log(employee1.offShift);
 
 */
-
+/*
 function findMultiples(integer, limit) {
   let multiples = [];
 
@@ -1206,3 +1206,51 @@ function findMultiples(integer, limit) {
 
   return multiples;
 }
+*/
+
+
+class Sandwich {
+
+  constructor(slices, toasted) {
+    this.slices = slices;
+    this.toasted = toasted;
+    this.ingredients = ['cheese'];
+  }
+
+  addIngredient(ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  get price() {
+    const basePrice = 10;
+    const toppingPrice = 2;
+    return basePrice + this.toppings.length * toppingPrice;
+  }
+
+  set size(size) {
+    if (size === 's' || size === 'm' || size === 'l') {
+      this._size = size;
+    }
+  }
+}
+
+let sandwich3 = new Sandwich();
+sandwich3.price  // instead of getPrice()
+sandwich3.size = 's'// instead of setSize(size)
+
+
+
+// let sandwich1 = new Sandwich('two', 'yes');
+// console.log(sandwich1);
+// console.log(sandwich1.ingredients, 'sandwich1');
+
+// sandwich1.addIngredient('pimento');
+// sandwich1.addIngredient('olives');
+// console.log(sandwich1.ingredients, 'sandwich1');
+
+
+// let sandwich2 = new Sandwich();
+// console.log(sandwich2.ingredients);
+// sandwich2.addIngredient('sausage');
+// console.log(sandwich2.ingredients, 'sandwich 2');
+
