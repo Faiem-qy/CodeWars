@@ -1254,3 +1254,18 @@ sandwich3.size = 's'// instead of setSize(size)
 // sandwich2.addIngredient('sausage');
 // console.log(sandwich2.ingredients, 'sandwich 2');
 
+
+// Sum Numbers
+function sum(numbers) {
+    
+    let total = 0;
+    for (const number of numbers) {
+        total += number;
+    }
+    
+    return total;
+}
+
+const numbersArray = [1, 2, 3, 4, 5];
+console.log("Sum:", sum(numbersArray)); // Output: Sum: 15
+
