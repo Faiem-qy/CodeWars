@@ -1269,3 +1269,11 @@ function sum(numbers) {
 const numbersArray = [1, 2, 3, 4, 5];
 console.log("Sum:", sum(numbersArray)); // Output: Sum: 15
 
+
+
+function greet(name){
+  if(name === "Johnny"){
+    return "Hello, my love!";
+ }
+  return "Hello, " + name + "!";
+}
