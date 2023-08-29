@@ -1208,7 +1208,7 @@ function findMultiples(integer, limit) {
 }
 */
 
-
+/*
 class Sandwich {
 
   constructor(slices, toasted) {
@@ -1235,8 +1235,8 @@ class Sandwich {
 }
 
 let sandwich3 = new Sandwich();
-sandwich3.price  // instead of getPrice()
-sandwich3.size = 's'// instead of setSize(size)
+sandwich3.price;  // instead of getPrice()
+sandwich3.size = 's';// instead of setSize(size)
 
 
 
@@ -1257,13 +1257,13 @@ sandwich3.size = 's'// instead of setSize(size)
 
 // Sum Numbers
 function sum(numbers) {
-    
-    let total = 0;
-    for (const number of numbers) {
-        total += number;
-    }
-    
-    return total;
+
+  let total = 0;
+  for (const number of numbers) {
+    total += number;
+  }
+
+  return total;
 }
 
 const numbersArray = [1, 2, 3, 4, 5];
@@ -1271,9 +1271,23 @@ console.log("Sum:", sum(numbersArray)); // Output: Sum: 15
 
 
 
-function greet(name){
-  if(name === "Johnny"){
+function greet(name) {
+  if (name === "Johnny") {
     return "Hello, my love!";
- }
+  }
   return "Hello, " + name + "!";
 }
+*/
+
+function evenOrOdd(number) {
+  if(number % 2 === 0){
+    return "Even"
+  }else{
+    return "Odd"
+  }
+  
+  // or ternary operator
+
+  return number % 2 === 0 ? "Even" : "Odd"
+}
+
