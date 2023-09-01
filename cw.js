@@ -1280,14 +1280,20 @@ function greet(name) {
 */
 
 function evenOrOdd(number) {
-  if(number % 2 === 0){
-    return "Even"
-  }else{
-    return "Odd"
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
   }
-  
+
   // or ternary operator
 
-  return number % 2 === 0 ? "Even" : "Odd"
+  return number % 2 === 0 ? "Even" : "Odd";
 }
 
+function paperwork(n, m) {
+  if (n < 0 || m < 0) {
+    return0;
+  }
+  return n * m;
+}
