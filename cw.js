@@ -1297,3 +1297,12 @@ function paperwork(n, m) {
   }
   return n * m;
 }
+
+
+function repeatStr(n, s) {
+  if (n <= 0) {
+    return ''; // Return an empty string if n is zero or negative
+  } else {
+    return s.repeat(n); // Use the repeat method to repeat the string s n times
+  }
+}
