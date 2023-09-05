@@ -1318,3 +1318,9 @@ function chromosomeCheck(sperm) {
     return "Invalid input. Please provide 'X' or 'Y' for sperm.";
   }
 }
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  // code goes here
+  let total = laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+  return total;
+}
