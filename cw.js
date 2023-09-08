@@ -1324,3 +1324,14 @@ function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   let total = laLigaGoals + copaDelReyGoals + championsLeagueGoals;
   return total;
 }
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  // Calculate how many years ago the father was twice as old as his son
+  const ageDifference = Math.abs(dadYearsOld - 2 * sonYearsOld);
+  return ageDifference;
+}
+
+const dadAge1 = 40;
+const sonAge1 = 10;
+const yearsAgoOrFuture1 = twiceAsOld(dadAge1, sonAge1);
+console.log(`Years ago or in the future: ${yearsAgoOrFuture1}`);
