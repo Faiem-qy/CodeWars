@@ -1335,3 +1335,12 @@ const dadAge1 = 40;
 const sonAge1 = 10;
 const yearsAgoOrFuture1 = twiceAsOld(dadAge1, sonAge1);
 console.log(`Years ago or in the future: ${yearsAgoOrFuture1}`);
+
+function areYouPlayingBanjo(name) {
+  // Implement me
+  if(name[0] === "R" || name[0] === "r"){
+  return `${name} plays banjo`
+  }else{
+  return `${name} does not play banjo`
+  }
+}
