@@ -1338,9 +1338,43 @@ console.log(`Years ago or in the future: ${yearsAgoOrFuture1}`);
 
 function areYouPlayingBanjo(name) {
   // Implement me
-  if(name[0] === "R" || name[0] === "r"){
-  return `${name} plays banjo`
-  }else{
-  return `${name} does not play banjo`
+  if (name[0] === "R" || name[0] === "r") {
+    return `${name} plays banjo`;
+  } else {
+    return `${name} does not play banjo`;
   }
+}
+
+function getPlanetName(id) {
+  let name;
+  switch (id) {
+    case 1:
+      name = 'Mercury';
+      break;
+    case 2:
+      name = 'Venus';
+      break;
+    case 3:
+      name = 'Earth';
+      break;
+    case 4:
+      name = 'Mars';
+      break;
+    case 5:
+      name = 'Jupiter';
+      break;
+    case 6:
+      name = 'Saturn';
+      break;
+    case 7:
+      name = 'Uranus';
+      break;
+    case 8:
+      name = 'Neptune';
+      break;
+    default:
+      name = "Unknown";
+  }
+
+  return name;
 }
