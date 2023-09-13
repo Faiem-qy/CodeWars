@@ -1279,6 +1279,7 @@ function greet(name) {
 }
 */
 
+/*
 function evenOrOdd(number) {
   if (number % 2 === 0) {
     return "Even";
@@ -1378,3 +1379,37 @@ function getPlanetName(id) {
 
   return name;
 }
+*/
+
+/*
+function smash(words) {
+  return words.join(' ');
+};
+
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));  //=> 'hello world this is great'
+
+
+function greet(name) {
+  if (greet) {
+    return `Hello, ${name} how are you doing today?`;
+  }
+}
+
+console.log(greet("Ben"));
+*/
+
+function removeEveryOther(arr) {
+  //your code here
+  const result = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i]);
+  }
+  return result
+}
+/*
+function removeEveryOther(arr) {
+  return arr.filter((_, index) => index % 2 === 0);
+}
+*/
+
+console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
