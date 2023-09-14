@@ -1398,6 +1398,7 @@ function greet(name) {
 console.log(greet("Ben"));
 */
 
+/*
 function removeEveryOther(arr) {
   //your code here
   const result = [];
@@ -1410,7 +1411,8 @@ function removeEveryOther(arr) {
 function removeEveryOther(arr) {
   return arr.filter((_, index) => index % 2 === 0);
 }
-*/
+
+
 
 console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
 
@@ -1425,15 +1427,29 @@ console.log(result); // Output will be 54421
 
 
 function fakeBin(x) {
-  let answer = ""
+  let answer = "";
   for (let i = 0; i < x.length; i++) {
     if (x[i] < 5) {
       answer += "0";
     } else {
-      answer +=  "1";
+      answer += "1";
     }
   }
-  return answer
+  return answer;
 }
 
 console.log(fakeBin('65454654231654'));
+
+*/
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  let enoughFuel = distanceToPump / mpg;
+  if (fuelLeft >= enoughFuel) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(zeroFuel(50, 25, 2));
+console.log(zeroFuel(100, 50, 1));
