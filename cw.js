@@ -1404,7 +1404,7 @@ function removeEveryOther(arr) {
   for (let i = 0; i < arr.length; i += 2) {
     result.push(arr[i]);
   }
-  return result
+  return result;
 }
 /*
 function removeEveryOther(arr) {
@@ -1413,3 +1413,27 @@ function removeEveryOther(arr) {
 */
 
 console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
+
+
+
+function descendingOrder(n) {
+  return parseInt(n.toString().split('').sort().reverse().join(''), 10);
+}
+
+const result = descendingOrder(42145);
+console.log(result); // Output will be 54421
+
+
+function fakeBin(x) {
+  let answer = ""
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] < 5) {
+      answer += "0";
+    } else {
+      answer +=  "1";
+    }
+  }
+  return answer
+}
+
+console.log(fakeBin('65454654231654'));
