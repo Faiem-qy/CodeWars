@@ -1442,6 +1442,7 @@ console.log(fakeBin('65454654231654'));
 
 */
 
+/*
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   let enoughFuel = distanceToPump / mpg;
   if (fuelLeft >= enoughFuel) {
@@ -1453,3 +1454,9 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 console.log(zeroFuel(50, 25, 2));
 console.log(zeroFuel(100, 50, 1));
+*/
+
+function removeExclamationMarks(s) {
+  // Use the replace method with a regular expression to remove exclamation marks (!)
+  return s.replace(/!/g, '');
+}
