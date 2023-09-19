@@ -1460,3 +1460,20 @@ function removeExclamationMarks(s) {
   // Use the replace method with a regular expression to remove exclamation marks (!)
   return s.replace(/!/g, '');
 }
+
+
+function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  if (typeof i === 'number') {
+    return i * 2;
+  }else{
+    return "NaN"
+  }
+}
+
+console.log(doubleInteger(1));
+console.log(doubleInteger('bob'));
+console.log(doubleInteger(3));
+console.log(doubleInteger(4));
+console.log(doubleInteger(5));
+console.log(doubleInteger(6));
