@@ -1456,6 +1456,8 @@ console.log(zeroFuel(50, 25, 2));
 console.log(zeroFuel(100, 50, 1));
 */
 
+/*
+
 function removeExclamationMarks(s) {
   // Use the replace method with a regular expression to remove exclamation marks (!)
   return s.replace(/!/g, '');
@@ -1466,8 +1468,8 @@ function doubleInteger(i) {
   // i will be an integer. Double it and return it.
   if (typeof i === 'number') {
     return i * 2;
-  }else{
-    return "NaN"
+  } else {
+    return "NaN";
   }
 }
 
@@ -1477,3 +1479,21 @@ console.log(doubleInteger(3));
 console.log(doubleInteger(4));
 console.log(doubleInteger(5));
 console.log(doubleInteger(6));
+*/
+
+function setAlarm(employed, vacation) {
+  // if employed is true and vacation is true return false
+  // if employed is true and vacation is false return true
+  // if employed is false and vacation is true return false
+  // if employed is false anf vacation is false return false
+
+  if (employed && !vacation) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(setAlarm(true, true));
+console.log(setAlarm(false, true));
+console.log(setAlarm(true, false));
