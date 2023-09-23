@@ -26,3 +26,8 @@ swapper("c", { a: 1, b: 3, c: 3, d: 7 }, "c", { a: 4, b: 0, c: 5 });
 // Swap!
 // object1: { a: 1 , b: 3, c: 5, d: 7 }
 // object2: { a: 4, b: 0, c: 3 }
+
+
+INSERT INTO famous_people (first_name, last_name, birthdate) VALUES ('Paul', 'Giamatti', '1967-06-06');
+
+

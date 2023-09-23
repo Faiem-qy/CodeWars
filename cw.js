@@ -1497,3 +1497,29 @@ function setAlarm(employed, vacation) {
 console.log(setAlarm(true, true));
 console.log(setAlarm(false, true));
 console.log(setAlarm(true, false));
+
+
+
+// Write a function "greet" that returns "hello world!"
+
+function greet(){
+  return 'hello world!'
+}
+
+function SeriesSum(n) {
+  if(n === 0) {
+    return "0.00"
+  }
+
+  let sumSeries = 0;
+  let denominator = 1;
+
+  for (let i = 0; i < n; i ++) {
+    sumSeries += 1 / denominator
+    denominator += 3
+  }
+
+return sumSeries.toFixed(2)
+}
+
+console.log(sumSeries(1));
