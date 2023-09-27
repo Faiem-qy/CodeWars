@@ -1481,6 +1481,8 @@ console.log(doubleInteger(5));
 console.log(doubleInteger(6));
 */
 
+
+/*
 function setAlarm(employed, vacation) {
   // if employed is true and vacation is true return false
   // if employed is true and vacation is false return true
@@ -1523,3 +1525,22 @@ return sumSeries.toFixed(2)
 }
 
 console.log(sumSeries(1));
+
+
+*/
+function squareSum(numbers) {
+  // Initialize a variable to store the sum of squared numbers
+  let sum = 0;
+
+  // Loop through the array of numbers
+  for (let i = 0; i < numbers.length; i++) {
+    // Square the current number and add it to the sum
+    sum += numbers[i] * numbers[i];
+  }
+
+  // Return the final sum
+  return sum;
+}
+
+// Example usage:
+console.log(squareSum([1, 2, 2]));// Output: 9
