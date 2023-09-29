@@ -1544,3 +1544,13 @@ function squareSum(numbers) {
 
 // Example usage:
 console.log(squareSum([1, 2, 2]));// Output: 9
+
+
+
+function addBinary(a, b) {
+  const sum = a + b; // Calculate the sum in decimal
+  return sum.toString(2); // Convert the sum to binary and return as a string
+}
+
+console.log(addBinary(1, 1)); // Output: '10'
+console.log(addBinary(5, 9)); // Output: '1110'
