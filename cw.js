@@ -1528,6 +1528,7 @@ console.log(sumSeries(1));
 
 
 */
+/*
 function squareSum(numbers) {
   // Initialize a variable to store the sum of squared numbers
   let sum = 0;
@@ -1554,3 +1555,16 @@ function addBinary(a, b) {
 
 console.log(addBinary(1, 1)); // Output: '10'
 console.log(addBinary(5, 9)); // Output: '1110'
+*/
+
+function doubleChar(str) {
+  // Your code here
+let result = '';
+  for (let i = 0; i < str.length; i++){
+    result += str[i] + str[i]
+  }
+  return result
+}
+
+
+console.log(doubleChar("This is fun!!"));
