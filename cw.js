@@ -1559,12 +1559,56 @@ console.log(addBinary(5, 9)); // Output: '1110'
 
 function doubleChar(str) {
   // Your code here
-let result = '';
-  for (let i = 0; i < str.length; i++){
-    result += str[i] + str[i]
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    result += str[i] + str[i];
   }
-  return result
+  return result;
 }
 
 
 console.log(doubleChar("This is fun!!"));
+
+
+
+const allPlayerNames = function(outcomes) {
+  const results = [];
+
+  for (const game of outcomes) {
+
+    if (!results.includes(game.winner)) {
+      results.push(game.winner);
+    }
+
+    if (!results.includes(game.loser)) {
+      results.push(game.loser);
+    }
+  }
+  return results;
+};
+
+
+const fs = require('fs');
+
+const sumFileData = function(filePath1, filePath2, callback) {
+  // IMPLEMENT ME
+
+  fs.readFile(filePath1, 'utf8', (err1, data1) => {
+    if (err1) {
+      callback(err1, null);
+    }
+
+    const number1 = Number(data);
+    fs.readFile(filePath2, 'utf8', (err2, data2) => {
+      if (err2) {
+        callback(err2, null);
+      }
+
+      const number2 = Number(data);
+      callback(null, number1 + number2);
+    });
+  });
+
+};
+
+
