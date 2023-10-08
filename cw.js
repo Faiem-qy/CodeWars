@@ -1611,4 +1611,23 @@ const sumFileData = function(filePath1, filePath2, callback) {
 
 };
 
+const binaryArrayToNumber = arr=> {
+  let result = 0
 
+  for ( const bit of arr) {
+     // Shift the current result left by 1 and add the current bit
+    result = (result << 1) | bit
+  }
+  return result
+}
+
+
+// Test cases
+console.log("Testing:", [0, 0, 0, 1], "==> ", binaryArrayToNumber([0, 0, 0, 1]));
+console.log("Testing:", [0, 0, 1, 0], "==> ", binaryArrayToNumber([0, 0, 1, 0]));
+console.log("Testing:", [0, 1, 0, 1], "==> ", binaryArrayToNumber([0, 1, 0, 1]));
+console.log("Testing:", [1, 0, 0, 1], "==> ", binaryArrayToNumber([1, 0, 0, 1]));
+console.log("Testing:", [0, 0, 1, 0], "==> ", binaryArrayToNumber([0, 0, 1, 0]));
+console.log("Testing:", [0, 1, 1, 0], "==> ", binaryArrayToNumber([0, 1, 1, 0]));
+console.log("Testing:", [1, 1, 1, 1], "==> ", binaryArrayToNumber([1, 1, 1, 1]));
+console.log("Testing:", [1, 0, 1, 1], "==> ", binaryArrayToNumber([1, 0, 1, 1]));
