@@ -1631,3 +1631,13 @@ console.log("Testing:", [0, 0, 1, 0], "==> ", binaryArrayToNumber([0, 0, 1, 0]))
 console.log("Testing:", [0, 1, 1, 0], "==> ", binaryArrayToNumber([0, 1, 1, 0]));
 console.log("Testing:", [1, 1, 1, 1], "==> ", binaryArrayToNumber([1, 1, 1, 1]));
 console.log("Testing:", [1, 0, 1, 1], "==> ", binaryArrayToNumber([1, 0, 1, 1]));
+
+function DNAtoRNA(dna) {
+  // Use the replace() method with a regular expression to replace 'T' with 'U'
+  return dna.replace(/T/g, 'U');
+}
+
+// Example usage:
+const dnaString = "GCAT";
+const rnaString = DNAtoRNA(dnaString);
+console.log(rnaString); // Output: "GCAU"
