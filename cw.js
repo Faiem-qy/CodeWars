@@ -1641,3 +1641,20 @@ function DNAtoRNA(dna) {
 const dnaString = "GCAT";
 const rnaString = DNAtoRNA(dnaString);
 console.log(rnaString); // Output: "GCAU"
+
+
+function calculateOriginalPrice(finalPrice) {
+  // Check if the input value is null or not a number
+  if (finalPrice === null || isNaN(finalPrice)) {
+    return -1;
+  }
+
+  // Calculate the original price without VAT
+  const originalPrice = finalPrice / 1.15; // 15% VAT means 115% of the original price
+  return parseFloat(originalPrice.toFixed(2)); // Round to 2 decimal places
+}
+
+// Example usage:
+const finalPrice = 230.00;
+const originalPrice = calculateOriginalPrice(finalPrice);
+console.log("Original Price: " + originalPrice); // Output: Original Price: 200.00
