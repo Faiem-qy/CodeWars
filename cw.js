@@ -1611,15 +1611,15 @@ const sumFileData = function(filePath1, filePath2, callback) {
 
 };
 
-const binaryArrayToNumber = arr=> {
-  let result = 0
+const binaryArrayToNumber = arr => {
+  let result = 0;
 
-  for ( const bit of arr) {
-     // Shift the current result left by 1 and add the current bit
-    result = (result << 1) | bit
+  for (const bit of arr) {
+    // Shift the current result left by 1 and add the current bit
+    result = (result << 1) | bit;
   }
-  return result
-}
+  return result;
+};
 
 
 // Test cases
@@ -1658,3 +1658,32 @@ function calculateOriginalPrice(finalPrice) {
 const finalPrice = 230.00;
 const originalPrice = calculateOriginalPrice(finalPrice);
 console.log("Original Price: " + originalPrice); // Output: Original Price: 200.00
+
+
+
+// Given a list of directions to spin, "left" or "right", return an integer of how many full 360° rotations were made. Note that each word in the array counts as a 90° rotation in that direction.
+
+function spinaround(turns) {
+  let orientation = 0;
+  let fullRotations = 0;
+
+  for (const direction of turns) {
+    if (direction === "right") {
+      orientation += 90;
+    } else if (direction === "left") {
+      orientation -= 90;
+    }
+    if (orienttion >= 360) {
+      fullRotations++;
+      orientation -= 360;
+    }
+
+  }
+  return fullRotations;
+}
+
+
+console.log(spinAround(["right", "right", "right", "right", "left", "right"])); // Output: 1
+console.log(spinAround(["left", "right", "left", "right"])); // Output: 0
+console.log(spinAround(["right", "right", "right", "right", "right", "right", "right", "right"])); // Output: 2
+console.log(spinAround(["left", "left", "left", "left"])); // Output: 1
