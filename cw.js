@@ -1557,6 +1557,7 @@ console.log(addBinary(1, 1)); // Output: '10'
 console.log(addBinary(5, 9)); // Output: '1110'
 */
 
+/*
 function doubleChar(str) {
   // Your code here
   let result = '';
@@ -1663,7 +1664,7 @@ console.log("Original Price: " + originalPrice); // Output: Original Price: 200.
 
 // Given a list of directions to spin, "left" or "right", return an integer of how many full 360° rotations were made. Note that each word in the array counts as a 90° rotation in that direction.
 
-function spinaround(turns) {
+function spinAround(turns) {
   let orientation = 0;
   let fullRotations = 0;
 
@@ -1673,7 +1674,7 @@ function spinaround(turns) {
     } else if (direction === "left") {
       orientation -= 90;
     }
-    if (orienttion >= 360) {
+    if (orientation >= 360) {
       fullRotations++;
       orientation -= 360;
     }
@@ -1687,3 +1688,41 @@ console.log(spinAround(["right", "right", "right", "right", "left", "right"])); 
 console.log(spinAround(["left", "right", "left", "right"])); // Output: 0
 console.log(spinAround(["right", "right", "right", "right", "right", "right", "right", "right"])); // Output: 2
 console.log(spinAround(["left", "left", "left", "left"])); // Output: 1
+*/
+
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+// Mind the input validation.
+
+function sumArray(array) {
+  if (!Array.isArray(array) || array.length <= 2) {
+    return 0;
+  }
+
+  let highest = array[0];
+  let lowest = array[0];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > highest) {
+      highest = array[i];
+    }
+    if (array[i] < lowest) {
+      lowest = array[i];
+    }
+  }
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== highest && array[i] !== lowest) {
+      sum += array[i];
+    }
+  }
+  return sum;
+}
+
+console.log(sumArray([6, 2, 1, 8, 10])); // Output: 16
+console.log(sumArray([1, 1, 11, 2, 3])); // Output: 6
+console.log(sumArray([])); // Output: 0 (input validation)
+console.log(sumArray([7])); // Output: 0 (input validation)
