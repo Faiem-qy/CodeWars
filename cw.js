@@ -1690,6 +1690,7 @@ console.log(spinAround(["right", "right", "right", "right", "right", "right", "r
 console.log(spinAround(["left", "left", "left", "left"])); // Output: 1
 */
 
+/*
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
 
 // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
@@ -1726,3 +1727,24 @@ console.log(sumArray([6, 2, 1, 8, 10])); // Output: 16
 console.log(sumArray([1, 1, 11, 2, 3])); // Output: 6
 console.log(sumArray([])); // Output: 0 (input validation)
 console.log(sumArray([7])); // Output: 0 (input validation)
+*/
+
+// Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+
+function powersOfTwo(n) {
+  if (n < 0) {
+    return [];
+  }
+
+  const result = [];
+  for (let i = 0; i <= n; i++) {
+    result.push(2 ** i);
+  }
+
+  return result;
+}
+
+console.log(powersOfTwo(0));  // [1]
+console.log(powersOfTwo(1));  // [1, 2]
+console.log(powersOfTwo(2));  // [1, 2, 4]
+
