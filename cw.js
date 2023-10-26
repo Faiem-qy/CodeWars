@@ -1748,3 +1748,16 @@ console.log(powersOfTwo(0));  // [1]
 console.log(powersOfTwo(1));  // [1, 2]
 console.log(powersOfTwo(2));  // [1, 2, 4]
 
+
+function stringToArray(string) {
+  // Use the split method to split the string by spaces
+  const words = string.split(" ");
+  return words;
+}
+
+// Example usage:
+const input1 = "Robin Singh";
+const input2 = "I love arrays they are my favorite";
+
+console.log(stringToArray(input1)); // Output: ["Robin", "Singh"]
+console.log(stringToArray(input2)); // Output: ["I", "love", "arrays", "they", "are", "my", "favorite"]
