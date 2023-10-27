@@ -1761,3 +1761,25 @@ const input2 = "I love arrays they are my favorite";
 
 console.log(stringToArray(input1)); // Output: ["Robin", "Singh"]
 console.log(stringToArray(input2)); // Output: ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+
+function howMuchILoveYou(nbPetals) {
+  const phrases = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all",
+  ];
+
+  // Calculate the index of the phrase for the last petal
+  const lastIndex = (nbPetals - 1) % phrases.length;
+
+  return phrases[lastIndex];
+}
+
+// Example usage:
+const nbPetals = 7;
+const result = howMuchILoveYou(nbPetals);
+console.log(result); // This will print "I love you"
