@@ -1783,3 +1783,9 @@ function howMuchILoveYou(nbPetals) {
 const nbPetals = 7;
 const result = howMuchILoveYou(nbPetals);
 console.log(result); // This will print "I love you"
+
+// Write a function that removes the spaces from the string, then return the resultant string.
+
+function noSpace(x) {
+  return x.replace(/\s/g, "");
+}
