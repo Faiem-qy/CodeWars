@@ -1789,3 +1789,12 @@ console.log(result); // This will print "I love you"
 function noSpace(x) {
   return x.replace(/\s/g, "");
 }
+
+
+function powersOfTwo(n) {
+  const result = [];
+  for (let i = 0; i <= n; i++) {
+    result.push(2 ** i);
+  }
+  return result;
+}
