@@ -1809,3 +1809,15 @@ function maps(x) {
 const originalArray = [1, 2, 3];
 const doubledArray = maps(originalArray);
 console.log(doubledArray); // Output: [2, 4, 6]
+
+
+function sumStr(a, b) {
+  const sum = (Number(a) || 0) + (Number(b) || 0);
+  return String(sum);
+}
+// Examples:
+console.log(sumStr("4", "5"));  // Output: "9"
+console.log(sumStr("34", "5")); // Output: "39"
+console.log(sumStr("", ""));    // Output: "0"
+console.log(sumStr("2", ""));   // Output: "2"
+console.log(sumStr("-5", "3"));  // Output: "-2"
