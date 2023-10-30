@@ -1798,3 +1798,14 @@ function powersOfTwo(n) {
   }
   return result;
 }
+
+function maps(x) {
+  // Use the map method to create a new array with each value doubled
+  const doubledArray = x.map((value) => value * 2);
+  
+  return doubledArray;
+}
+
+const originalArray = [1, 2, 3];
+const doubledArray = maps(originalArray);
+console.log(doubledArray); // Output: [2, 4, 6]
