@@ -1848,3 +1848,19 @@ console.log(getGrade(70, 75, 80));  // 'C'
 console.log(getGrade(60, 65, 55));  // 'D'
 console.log(getGrade(45, 50, 35));  // 'F'
 console.log(getGrade(100, 100, 100));  // 'A'
+
+// In this kata you should simply determine, whether a given year is a leap year or not. In case you don't know the rules, here they are:
+
+// Years divisible by 4 are leap years,
+// but years divisible by 100 are not leap years,
+// but years divisible by 400 are leap years.
+
+function isLeapYear(year) {
+  // TODO
+  if(year % 4 === 0){
+    if(year % 100 !== 0 || year % 400 === 0){
+ return true
+}
+}
+return false
+}
