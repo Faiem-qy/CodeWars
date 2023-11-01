@@ -1821,3 +1821,30 @@ console.log(sumStr("34", "5")); // Output: "39"
 console.log(sumStr("", ""));    // Output: "0"
 console.log(sumStr("2", ""));   // Output: "2"
 console.log(sumStr("-5", "3"));  // Output: "-2"
+
+
+
+function getGrade(s1, s2, s3) {
+    // Calculate the average of the three scores
+    const average = (s1 + s2 + s3) / 3;
+
+    // Determine the letter grade based on the average
+    if (average >= 90 && average <= 100) {
+        return 'A';
+    } else if (average >= 80 && average < 90) {
+        return 'B';
+    } else if (average >= 70 && average < 80) {
+        return 'C';
+    } else if (average >= 60 && average < 70) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+// Test cases
+console.log(getGrade(95, 85, 75));  // 'B'
+console.log(getGrade(70, 75, 80));  // 'C'
+console.log(getGrade(60, 65, 55));  // 'D'
+console.log(getGrade(45, 50, 35));  // 'F'
+console.log(getGrade(100, 100, 100));  // 'A'
