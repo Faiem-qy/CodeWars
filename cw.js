@@ -1802,7 +1802,7 @@ function powersOfTwo(n) {
 function maps(x) {
   // Use the map method to create a new array with each value doubled
   const doubledArray = x.map((value) => value * 2);
-  
+
   return doubledArray;
 }
 
@@ -1825,21 +1825,21 @@ console.log(sumStr("-5", "3"));  // Output: "-2"
 
 
 function getGrade(s1, s2, s3) {
-    // Calculate the average of the three scores
-    const average = (s1 + s2 + s3) / 3;
+  // Calculate the average of the three scores
+  const average = (s1 + s2 + s3) / 3;
 
-    // Determine the letter grade based on the average
-    if (average >= 90 && average <= 100) {
-        return 'A';
-    } else if (average >= 80 && average < 90) {
-        return 'B';
-    } else if (average >= 70 && average < 80) {
-        return 'C';
-    } else if (average >= 60 && average < 70) {
-        return 'D';
-    } else {
-        return 'F';
-    }
+  // Determine the letter grade based on the average
+  if (average >= 90 && average <= 100) {
+    return 'A';
+  } else if (average >= 80 && average < 90) {
+    return 'B';
+  } else if (average >= 70 && average < 80) {
+    return 'C';
+  } else if (average >= 60 && average < 70) {
+    return 'D';
+  } else {
+    return 'F';
+  }
 }
 
 // Test cases
@@ -1857,10 +1857,34 @@ console.log(getGrade(100, 100, 100));  // 'A'
 
 function isLeapYear(year) {
   // TODO
-  if(year % 4 === 0){
-    if(year % 100 !== 0 || year % 400 === 0){
- return true
+  if (year % 4 === 0) {
+    if (year % 100 !== 0 || year % 400 === 0) {
+      return true;
+    }
+  }
+  return false;
 }
+
+function ticketKiosk(age) {
+  if (age <= 12) {
+    console.log('Here is your free ticket');
+  } else if (age >= 13 && age <= 17) {
+    console.log('Here is our discounted ticket');
+  } else if (age >= 18 && age <= 64) {
+    console.log('Here is your adult ticket');
+  } else {
+    console.log('Here is your discounted senior ticket');
+  }
 }
-return false
+
+// using shortcircuit
+
+function ticketKiosk(customerAge) {
+  return customerAge <= 12
+    ? "Here is your free ticket"
+    : customerAge <= 17
+      ? "Here is your discounted teen ticket"
+      : customerAge <= 64
+        ? "Here is your adult ticket"
+        : "Here is your discounted senior ticket";
 }
