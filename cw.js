@@ -1888,3 +1888,29 @@ function ticketKiosk(customerAge) {
         ? "Here is your adult ticket"
         : "Here is your discounted senior ticket";
 }
+
+// Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+
+function getGrade(s1, s2, s3) {
+  // Code here
+  const average = (s1 + s2 + s3) / 3;
+
+  if (average >= 90 && average <= 100) {
+    return "A";
+  } else if (average >= 80 && average < 90) {
+    return "B";
+  } else if (average >= 70 && average < 80) {
+    return "C";
+  } else if (average >= 60 && average < 70) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+console.log(getGrade(95, 85, 75)); // Expected output: 'B' (Average is 85)
+console.log(getGrade(70, 68, 75)); // Expected output: 'C' (Average is 71)
+console.log(getGrade(60, 62, 59)); // Expected output: 'D' (Average is 60.333...)
+console.log(getGrade(45, 30, 20)); // Expected output: 'F' (Average is 31.666...)
+console.log(getGrade(100, 100, 100)); // Expected output: 'A' (Average is 100)
