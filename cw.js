@@ -1731,6 +1731,7 @@ console.log(sumArray([7])); // Output: 0 (input validation)
 
 // Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 
+/*
 function powersOfTwo(n) {
   if (n < 0) {
     return [];
@@ -1921,3 +1922,33 @@ console.log(getGrade(100, 100, 100)); // Expected output: 'A' (Average is 100)
 function square(number) {
   return number * number;
 }
+*/
+
+/*
+All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+*/
+
+
+function feast(beast, dish) {
+  //your function here
+
+  // the dish must start and end witht the same letters of the Animal's name
+  // compare first and last letter of animal's name and dish.
+  const firstLetterBeast = beast[0].toLowerCase();
+  const lastLetterBeast = beast[beast.length - 1].toLowerCase();
+  const firstLetterDish = dish[0].toLowerCase();
+  const lastLetterDish = dish[dish.length - 1].toLowerCase();
+
+  console.log(firstLetterBeast, lastLetterBeast);
+  console.log(firstLetterDish, lastLetterDish);
+  console.log(beast, dish);
+  
+  return firstLetterBeast === firstLetterDish && lastLetterBeast === lastLetterDish
+
+}
+
+console.log(feast("great blue heron", "garlic naan"));
