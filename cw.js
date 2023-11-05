@@ -1914,3 +1914,10 @@ console.log(getGrade(70, 68, 75)); // Expected output: 'C' (Average is 71)
 console.log(getGrade(60, 62, 59)); // Expected output: 'D' (Average is 60.333...)
 console.log(getGrade(45, 30, 20)); // Expected output: 'F' (Average is 31.666...)
 console.log(getGrade(100, 100, 100)); // Expected output: 'A' (Average is 100)
+
+
+// Now you have to write a function that takes an argument and returns the square of it.
+
+function square(number) {
+  return number * number;
+}
