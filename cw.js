@@ -1952,3 +1952,16 @@ function feast(beast, dish) {
 }
 
 console.log(feast("great blue heron", "garlic naan"));
+
+Implement a function which convert the given boolean value into its string representation.
+
+Note: Only valid inputs will be given.
+
+function booleanToString(b){
+  //your code here
+  if (b) {
+    return "true"
+  } else {
+    return "false"
+  }
+}
