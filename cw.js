@@ -1932,7 +1932,7 @@ Write a function feast that takes the animal's name and dish as arguments and re
 Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 */
 
-
+/*
 function feast(beast, dish) {
   //your function here
 
@@ -1971,7 +1971,7 @@ altERnaTIng cAsE <=> ALTerNAtiNG CaSe
 Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. 
 */
 
-
+/*
 String.prototype.toAlternatingCase = function () {
   return this.split('').map(char => {
     if (char === char.toLowerCase()) {
@@ -1990,3 +1990,27 @@ console.log("12345".toAlternatingCase());       // "12345"
 console.log("1a2b3c4d5e".toAlternatingCase());  // "1A2B3C4D5E"
 console.log("String.prototype.toAlternatingCase".toAlternatingCase()); // "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 
+
+const inputArray = ['banana', 'apple', 'orange', 'grape'];
+const output = twoSort(inputArray);
+console.log(output);
+*/
+
+
+function minMax(arr) {
+  let min = arr[0];
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    } else if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return [min, max];
+}
+
+const inputArray = [3, 1, 9, 5, 7];
+const result = minMax(inputArray);
+console.log(result); 
