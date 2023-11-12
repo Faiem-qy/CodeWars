@@ -2031,3 +2031,14 @@ const testString = "A man, a plan, a canal, Panama!";
 const resultt = isPalindrome(testString);
 
 console.log(resultt)
+
+function stray(numbers) {
+  let result = 0;
+
+  for (let i = 0; i < numbers.length; i ++) {
+    result ^= numbers[i]
+  }
+  return result
+}
+
+console.log(stray([1,1,2,1,1]));
