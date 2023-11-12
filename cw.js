@@ -2014,3 +2014,20 @@ function minMax(arr) {
 const inputArray = [3, 1, 9, 5, 7];
 const result = minMax(inputArray);
 console.log(result); 
+
+
+function isPalindrome(str) {
+  // Convert the string to lowercase
+  const lowerCaseStr = str.toLowerCase();
+
+  // Remove non-alphanumeric characters using a regular expression
+  const cleanStr = lowerCaseStr.replace(/[^a-z0-9]/g, '');
+
+  // Compare the clean string with its reverse
+  return cleanStr === cleanStr.split('').reverse().join('');
+}
+
+const testString = "A man, a plan, a canal, Panama!";
+const resultt = isPalindrome(testString);
+
+console.log(resultt)
