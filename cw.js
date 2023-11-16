@@ -2067,4 +2067,29 @@ function anyArrows(arrows) {
   return arrows.some(arrow => !arrow.damaged);
 }
 
-console.log(anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}]));
+console.log(anyArrows([{ range: 5 }, { range: 10, damaged: true }, { damaged: true }]));
+
+// Write a method, that will get an integer array as parameter and will process every number from this array.
+// Return a new array with processing every number of the input-array like this:
+// If the number has an integer square root, take this, otherwise square the number.
+
+function squareOrSquareRoot(array) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    // Check if the number has an integer square root
+    if (Math.sqrt(array[i]) % 1 === 0) {
+      // If yes, take the square root
+      newArray.push(Math.sqrt(array[i]));
+    } else {
+      // Otherwise, square the number
+      newArray.push(array[i] * array[i]);
+    }
+  }
+
+  return newArray;
+}
+
+const iArray = [4, 3, 9, 7, 2, 1];
+const resultArray = squareOrSquareRoot(iArray);
+console.log(resultArray); // Output: [2, 9, 3, 49, 4, 1]
