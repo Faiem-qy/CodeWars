@@ -2093,3 +2093,17 @@ function squareOrSquareRoot(array) {
 const iArray = [4, 3, 9, 7, 2, 1];
 const resultArray = squareOrSquareRoot(iArray);
 console.log(resultArray); // Output: [2, 9, 3, 49, 4, 1]
+
+
+
+function isTriangle(a, b, c) {
+  if (a > 0 && b > 0 && c > 0) {
+    if (a + b > c && b + c > a && c + a > b) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
