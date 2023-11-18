@@ -2107,3 +2107,21 @@ function isTriangle(a, b, c) {
     return false;
   }
 }
+
+function findOdd(A) {
+  let counts = {};
+
+  for (let i = 0; i < A.length; i++) {
+    if (counts[A[i]] === undefined) {
+      counts[A[i]] = 1;
+    } else {
+      counts[A[i]]++;
+    }
+  }
+
+  for (const num in counts) {
+    if (counts[num] % 2 !== 0) {
+      return parseInt(num); 
+    }
+  }
+}
