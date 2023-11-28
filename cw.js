@@ -2121,7 +2121,30 @@ function findOdd(A) {
 
   for (const num in counts) {
     if (counts[num] % 2 !== 0) {
-      return parseInt(num); 
+      return parseInt(num);
     }
   }
+}
+
+function accum(s) {
+  // Check if the input is a string
+  if (typeof s !== 'string') {
+    return "Invalid input. String required";
+  }
+
+  let result = '';
+  // Iterate through each character in the input string
+  for (let i = 0; i < s.length; i++) {
+    result += s[i].toUpperCase();
+    // Append the lowercase version of the current character repeated (i) times
+
+    result += s[i].toLowerCase().repeat(i);
+    
+    // Add a hyphen between characters unless it's the last character
+
+    if (i < s.length - 1) {
+      result += '-';
+    }
+  }
+
 }
