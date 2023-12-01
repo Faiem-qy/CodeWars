@@ -2139,7 +2139,7 @@ function accum(s) {
     // Append the lowercase version of the current character repeated (i) times
 
     result += s[i].toLowerCase().repeat(i);
-    
+
     // Add a hyphen between characters unless it's the last character
 
     if (i < s.length - 1) {
@@ -2148,3 +2148,9 @@ function accum(s) {
   }
 
 }
+/*There are some columns of toy cubes in the box arranged in a line. The i-th column contains a_i cubes. At first, the gravity in the box is pulling the cubes downwards. When Bob switches the gravity, it begins to pull all the cubes to a certain side of the box, d, which can be either 'L' or 'R' (left or right). Below is an example of what a box of cubes might look like before and after switching gravity.*/
+
+const flip = (d, a) => {
+  return d === 'R' ? a.sort((x, y) => x - y) : a.sort((x, y) => y - x);
+}
+
