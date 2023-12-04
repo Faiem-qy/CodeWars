@@ -2164,3 +2164,11 @@ Note: Don't worry, all inputs will be strings, and every string is a perfectly v
 const stringToNumber = function(str){
   return parseInt(str, 10);
 }
+
+/*
+You must return false without ever actually using the word false...
+*/
+
+function ifChuckSaysSo(){
+return !true
+}
