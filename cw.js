@@ -1996,7 +1996,7 @@ const output = twoSort(inputArray);
 console.log(output);
 */
 
-
+/*
 function minMax(arr) {
   let min = arr[0];
   let max = arr[0];
@@ -2043,7 +2043,8 @@ function stray(numbers) {
 
 console.log(stray([1, 1, 2, 1, 1]));
 
-
+*/
+/*
 function findNeedle(haystack) {
   // your code here
   const index = haystack.indexOf("needle");
@@ -2068,7 +2069,8 @@ function anyArrows(arrows) {
 }
 
 console.log(anyArrows([{ range: 5 }, { range: 10, damaged: true }, { damaged: true }]));
-
+*/
+/*
 // Write a method, that will get an integer array as parameter and will process every number from this array.
 // Return a new array with processing every number of the input-array like this:
 // If the number has an integer square root, take this, otherwise square the number.
@@ -2107,7 +2109,8 @@ function isTriangle(a, b, c) {
     return false;
   }
 }
-
+*/
+/*
 function findOdd(A) {
   let counts = {};
 
@@ -2148,11 +2151,13 @@ function accum(s) {
   }
 
 }
+*/
+
 /*There are some columns of toy cubes in the box arranged in a line. The i-th column contains a_i cubes. At first, the gravity in the box is pulling the cubes downwards. When Bob switches the gravity, it begins to pull all the cubes to a certain side of the box, d, which can be either 'L' or 'R' (left or right). Below is an example of what a box of cubes might look like before and after switching gravity.*/
 
 const flip = (d, a) => {
   return d === 'R' ? a.sort((x, y) => x - y) : a.sort((x, y) => y - x);
-}
+};
 
 /*Note: This kata is inspired by Convert a Number to a String!. Try that one too.
 
@@ -2161,14 +2166,32 @@ We need a function that can transform a string into a number. What ways of achie
 
 Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.*/
 
-const stringToNumber = function(str){
+const stringToNumber = function(str) {
   return parseInt(str, 10);
-}
+};
 
 /*
 You must return false without ever actually using the word false...
 */
 
-function ifChuckSaysSo(){
-return !true
+function ifChuckSaysSo() {
+  return !true;
 }
+
+
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+function isPangram(string) {
+  const toLowerCase = string.toLowerCase();
+
+  for (let charCode = 97; charCode <= 122; charCode++) {
+    const letter = String.fromCharCode(charCode);
+
+    if (!toLowerCase.includes(letter)) {
+      return false;
+    }
+  }
+  return true;
+} 
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog")); 
