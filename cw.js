@@ -2195,3 +2195,24 @@ function isPangram(string) {
 } 
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog")); 
+
+function persistence(num) {
+  let count = 0;
+
+  // Continue multiplying until num is a single digit
+  while (num >= 10) {
+    // Convert the number to an array of digits
+    const digits = Array.from(String(num), Number);
+    
+    // Multiply the digits
+    num = digits.reduce((product, digit) => product * digit, 1);
+    
+    // Increment the persistence count
+    count++;
+  }
+
+  return count;
+}
+
+
+console.log(persistence(39));  // Output: 3
