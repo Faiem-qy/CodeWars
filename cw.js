@@ -2196,6 +2196,8 @@ function isPangram(string) {
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog")); 
 
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
 function persistence(num) {
   let count = 0;
 
@@ -2215,4 +2217,34 @@ function persistence(num) {
 }
 
 
-console.log(persistence(39));  // Output: 3
+console.log(persistence(39));  
+
+function order(words) {
+  if (!words) {
+    return ''; 
+  }
+
+  // Split the input string into an array of words
+  const wordArray = words.split(' ');
+
+  // Create an array to store words in their correct positions
+  const resultArray = [];
+
+  // Iterate over each word and place it in the correct position
+  for (let i = 0; i < wordArray.length; i++) {
+    const word = wordArray[i];
+    const num = parseInt(word.match(/\d+/)[0]); // Extract the numeric value
+
+    // Place the word in its correct position
+    resultArray[num - 1] = word;
+  }
+
+  // Join the result array back into a string
+  const result = resultArray.join(' ');
+
+  return result;
+}
+
+
+console.log(order("is2 Thi1s T4est 3a")); // Output: "Thi1s is2 3a T4est"
+
