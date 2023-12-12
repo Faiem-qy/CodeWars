@@ -2181,70 +2181,93 @@ function ifChuckSaysSo() {
 
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
-function isPangram(string) {
-  const toLowerCase = string.toLowerCase();
+// function isPangram(string) {
+//   const toLowerCase = string.toLowerCase();
 
-  for (let charCode = 97; charCode <= 122; charCode++) {
-    const letter = String.fromCharCode(charCode);
+//   for (let charCode = 97; charCode <= 122; charCode++) {
+//     const letter = String.fromCharCode(charCode);
 
-    if (!toLowerCase.includes(letter)) {
-      return false;
-    }
-  }
-  return true;
-} 
+//     if (!toLowerCase.includes(letter)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog")); 
+// console.log(isPangram("The quick brown fox jumps over the lazy dog"));
 
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
-function persistence(num) {
-  let count = 0;
+// function persistence(num) {
+//   let count = 0;
 
-  // Continue multiplying until num is a single digit
-  while (num >= 10) {
-    // Convert the number to an array of digits
-    const digits = Array.from(String(num), Number);
-    
-    // Multiply the digits
-    num = digits.reduce((product, digit) => product * digit, 1);
-    
-    // Increment the persistence count
-    count++;
+//   // Continue multiplying until num is a single digit
+//   while (num >= 10) {
+//     // Convert the number to an array of digits
+//     const digits = Array.from(String(num), Number);
+
+//     // Multiply the digits
+//     num = digits.reduce((product, digit) => product * digit, 1);
+
+//     // Increment the persistence count
+//     count++;
+//   }
+
+//   return count;
+// }
+
+
+// console.log(persistence(39));
+
+// function order(words) {
+//   if (!words) {
+//     return '';
+//   }
+
+//   // Split the input string into an array of words
+//   const wordArray = words.split(' ');
+
+//   // Create an array to store words in their correct positions
+//   const resultArray = [];
+
+//   // Iterate over each word and place it in the correct position
+//   for (let i = 0; i < wordArray.length; i++) {
+//     const word = wordArray[i];
+//     const num = parseInt(word.match(/\d+/)[0]); // Extract the numeric value
+
+//     // Place the word in its correct position
+//     resultArray[num - 1] = word;
+//   }
+
+//   // Join the result array back into a string
+//   const result = resultArray.join(' ');
+
+//   return result;
+// }
+
+
+// console.log(order("is2 Thi1s T4est 3a")); // Output: "Thi1s is2 3a T4est"
+
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+function likes(names) {
+
+  if (names === null || names.length === 0) {
+    return `no one likes this`;
+  } else if (names.length === 1) {
+    return `${names[0]} likes this`;
+  } else if (names.length === 2) {
+    return `${names[0]} and ${names[1]} likes this`;
+  } else if (names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} likes this`;
+  } else if (names.length === 4) {
+    return `${names[0]}, ${names[1]}, and 2 others like this`;
   }
-
-  return count;
 }
 
-
-console.log(persistence(39));  
-
-function order(words) {
-  if (!words) {
-    return ''; 
-  }
-
-  // Split the input string into an array of words
-  const wordArray = words.split(' ');
-
-  // Create an array to store words in their correct positions
-  const resultArray = [];
-
-  // Iterate over each word and place it in the correct position
-  for (let i = 0; i < wordArray.length; i++) {
-    const word = wordArray[i];
-    const num = parseInt(word.match(/\d+/)[0]); // Extract the numeric value
-
-    // Place the word in its correct position
-    resultArray[num - 1] = word;
-  }
-
-  // Join the result array back into a string
-  const result = resultArray.join(' ');
-
-  return result;
-}
-
-
-console.log(order("is2 Thi1s T4est 3a")); // Output: "Thi1s is2 3a T4est"
-
+console.log(likes(''));
+console.log(likes(['Peter']));
+console.log(likes(['Jacob', "Alex"]));
+console.log(likes(['Jacob', "Alex", "Mark"]));
+console.log(likes(['Jacob', "Alex", "Mark", "Max"]));
