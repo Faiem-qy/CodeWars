@@ -2252,22 +2252,43 @@ function ifChuckSaysSo() {
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
 
 function likes(names) {
-
   if (names === null || names.length === 0) {
     return `no one likes this`;
   } else if (names.length === 1) {
     return `${names[0]} likes this`;
   } else if (names.length === 2) {
-    return `${names[0]} and ${names[1]} likes this`;
+    return `${names[0]} and ${names[1]} like this`;
   } else if (names.length === 3) {
-    return `${names[0]}, ${names[1]} and ${names[2]} likes this`;
-  } else if (names.length === 4) {
-    return `${names[0]}, ${names[1]}, and 2 others like this`;
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  } else {
+    return `${names.slice(0, 2).join(', ')} and ${names.length - 2} others like this`;
   }
 }
+
+console.log(likes(['Yt5RgyOfkQk', 'slBqetMt', 'A', 'B', 'C'])); // Should return "Yt5RgyOfkQk, slBqetMt and 3 others like this"
 
 console.log(likes(''));
 console.log(likes(['Peter']));
 console.log(likes(['Jacob', "Alex"]));
 console.log(likes(['Jacob', "Alex", "Mark"]));
 console.log(likes(['Jacob', "Alex", "Mark", "Max"]));
+
+
+
+function past(h, m, s) {
+  const millisecondsPerHour = 3600000;
+  const millisecondsPerMinute = 60000;
+  const millisceondsPerSecond = 1000;
+
+  const totalmilliseconds = (h * millisecondsPerHour) + (m * millisecondsPerMinute) + (s * millisceondsPerSecond);
+
+  return totalmilliseconds;
+}
+
+const h = 0;
+const m = 1;
+const s = 1;
+const result = past(h, m, s);
+
+
+console.log(`Time since midnight: ${result} milliseconds`);
