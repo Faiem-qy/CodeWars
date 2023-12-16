@@ -2250,7 +2250,7 @@ function ifChuckSaysSo() {
 
 
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
-
+/*
 function likes(names) {
   if (names === null || names.length === 0) {
     return `no one likes this`;
@@ -2292,3 +2292,31 @@ const result = past(h, m, s);
 
 
 console.log(`Time since midnight: ${result} milliseconds`);
+
+*/
+
+/*The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.*/
+
+function duplicateEncode(word) {
+  word = word.toLowerCase();
+
+  let charCount = {};
+
+  for (let i = 0; i < word.length; i++) {
+    let char = word.charAt(i);
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  let result = '';
+  for (let i = 0; i < word.length; i++){
+    let char = word.charAt(i)
+    if(charCount[char] > 1) {
+      result += ")"
+    }else {
+      result += "("
+    }
+  }
+  return result
+}
+
+console.log(duplicateEncode("Success this is cool"))
