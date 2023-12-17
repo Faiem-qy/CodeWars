@@ -2308,15 +2308,31 @@ function duplicateEncode(word) {
   }
 
   let result = '';
-  for (let i = 0; i < word.length; i++){
-    let char = word.charAt(i)
-    if(charCount[char] > 1) {
-      result += ")"
-    }else {
-      result += "("
+  for (let i = 0; i < word.length; i++) {
+    let char = word.charAt(i);
+    if (charCount[char] > 1) {
+      result += ")";
+    } else {
+      result += "(";
     }
   }
-  return result
+  return result;
 }
 
-console.log(duplicateEncode("Success this is cool"))
+console.log(duplicateEncode("Success this is cool"));
+
+
+// rock paper scissors
+const rps = (p1, p2) => {
+
+  if (p1 === p2) {
+    return "Draw!";
+  } else if ((p1 === "rock" && p2 === "scissors") || (p1 === "scissors" && p2 === "paper") || (p1 === "paper" && p2 === "rock")
+  ) {
+    return "Player 1 won!";
+  } else {
+    return "Player 2 won!";
+  };
+};
+
+console.log(rps("paper", "rock"));
