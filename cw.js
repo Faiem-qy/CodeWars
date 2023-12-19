@@ -2336,3 +2336,16 @@ const rps = (p1, p2) => {
 };
 
 console.log(rps("paper", "rock"));
+
+
+/*0.5 litres of water per hour of cycling.
+
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.*/
+
+function litres(time) {
+  return Math.floor(time *.5)
+}
+
+console.log(litres(3));
+console.log(litres(6.7));
+console.log(litres(11.8));
