@@ -2343,9 +2343,26 @@ console.log(rps("paper", "rock"));
 You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.*/
 
 function litres(time) {
-  return Math.floor(time *.5)
+  return Math.floor(time * .5);
 }
 
 console.log(litres(3));
 console.log(litres(6.7));
 console.log(litres(11.8));
+
+function updateLight(current) {
+  switch (current) {
+    case "green":
+    return "yellow";
+    case "yellow":
+    return "red";
+    case "red":
+      return "green";
+    default:
+      return "unknown";
+  }
+}
+
+console.log(updateLight("red"));
+console.log(updateLight("green"));
+console.log(updateLight("yellow"));
