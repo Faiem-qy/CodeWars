@@ -2350,6 +2350,8 @@ console.log(litres(3));
 console.log(litres(6.7));
 console.log(litres(11.8));
 
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
 function updateLight(current) {
   switch (current) {
     case "green":
@@ -2366,3 +2368,15 @@ function updateLight(current) {
 console.log(updateLight("red"));
 console.log(updateLight("green"));
 console.log(updateLight("yellow"));
+
+
+function countBy(x,n) {
+  let z = []
+for (let i = 1; i <= n; i++) {
+  z.push(x * i)
+}
+  return z
+}
+
+console.log(countBy(1, 10))
+console.log(countBy(2, 5))
