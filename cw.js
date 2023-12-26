@@ -2380,3 +2380,24 @@ for (let i = 1; i <= n; i++) {
 
 console.log(countBy(1, 10))
 console.log(countBy(2, 5))
+
+
+function findNb(m) {
+  let n = 1;
+  let totalVolume = 0;
+
+  while (totalVolume < m) {
+    totalVolume += Math.pow(n, 3);
+    n++;
+  }
+
+  if (totalVolume === m) {
+    return n - 1;
+  } else {
+    return -1; // If there is no such n
+  }
+}
+
+// Examples
+console.log(findNb(1071225)); // 45
+console.log(findNb(91716553919377)); // -1
