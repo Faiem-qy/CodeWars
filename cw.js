@@ -2401,3 +2401,28 @@ function findNb(m) {
 // Examples
 console.log(findNb(1071225)); // 45
 console.log(findNb(91716553919377)); // -1
+
+
+function alphabetPosition(text) {
+  let result = '';
+
+  text = text.toLowerCase();
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text.charAt(i);
+
+    // Check if the character is a letter (a-z)
+    if (/^[a-z]$/.test(char)) {
+      // Calculate the position of the letter in the alphabet (a=1, b=2, ..., z=26)
+      const position = char.charCodeAt(0) - 96;
+      
+      // Append the position to the result string
+      result += position + ' ';
+    }
+  }
+
+  // Remove the trailing space and return the result
+  return result.trim();
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))
