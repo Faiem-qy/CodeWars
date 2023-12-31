@@ -2355,9 +2355,9 @@ console.log(litres(11.8));
 function updateLight(current) {
   switch (current) {
     case "green":
-    return "yellow";
+      return "yellow";
     case "yellow":
-    return "red";
+      return "red";
     case "red":
       return "green";
     default:
@@ -2370,16 +2370,16 @@ console.log(updateLight("green"));
 console.log(updateLight("yellow"));
 
 
-function countBy(x,n) {
-  let z = []
-for (let i = 1; i <= n; i++) {
-  z.push(x * i)
-}
-  return z
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i);
+  }
+  return z;
 }
 
-console.log(countBy(1, 10))
-console.log(countBy(2, 5))
+console.log(countBy(1, 10));
+console.log(countBy(2, 5));
 
 
 function findNb(m) {
@@ -2415,7 +2415,7 @@ function alphabetPosition(text) {
     if (/^[a-z]$/.test(char)) {
       // Calculate the position of the letter in the alphabet (a=1, b=2, ..., z=26)
       const position = char.charCodeAt(0) - 96;
-      
+
       // Append the position to the result string
       result += position + ' ';
     }
@@ -2425,4 +2425,21 @@ function alphabetPosition(text) {
   return result.trim();
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
+function sumDigits(number) {
+  const absoluteNumber = Math.abs(number);
+  const numberString = absoluteNumber.toString();
+  let sum = 0;
+
+  for (let i = 0; i < numberString.length; i++) {
+    // Convert each digit back to a number and add it to the sum
+    const digit = parseInt(numberString[i], 10);
+    sum += digit;
+  }
+  return sum;
+}
+
+console.log(sumDigits(10));   
+console.log(sumDigits(99)); 
+console.log(sumDigits(-32)); 
