@@ -2440,6 +2440,27 @@ function sumDigits(number) {
   return sum;
 }
 
-console.log(sumDigits(10));   
-console.log(sumDigits(99)); 
-console.log(sumDigits(-32)); 
+console.log(sumDigits(10));
+console.log(sumDigits(99));
+console.log(sumDigits(-32));
+
+
+const min = function(list) {
+  let minValue = list[0];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] < minValue) {
+      minValue = list[i];
+    }
+  }
+  return minValue;
+};
+
+const max = function(list) {
+  let maxValue = list[0];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] > maxValue){
+      maxValue = list[i];
+    }
+  }
+  return maxValue;
+};
