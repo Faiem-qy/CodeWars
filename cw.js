@@ -2297,6 +2297,7 @@ console.log(`Time since midnight: ${result} milliseconds`);
 
 /*The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.*/
 
+/*
 function duplicateEncode(word) {
   word = word.toLowerCase();
 
@@ -2336,12 +2337,13 @@ const rps = (p1, p2) => {
 };
 
 console.log(rps("paper", "rock"));
-
+*/
 
 /*0.5 litres of water per hour of cycling.
 
 You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.*/
 
+/*
 function litres(time) {
   return Math.floor(time * .5);
 }
@@ -2464,3 +2466,27 @@ const max = function(list) {
   }
   return maxValue;
 };
+*/
+
+
+function cantBeatSoJoin(arr) {
+  const result = [];
+
+  while (arr.length > 0) {
+    let maxIndex = 0;
+    let maxValue = arr[0].reduce((sum, val) => sum + val, 0); //Calculate the total value of the first array
+
+    for (let i = 1; i < arr.length; i++) {
+      const currentValue = arr[i].reduce((sum, val) => sum + val, 0);
+      if (currentValue > maxValue) {
+        maxIndex = i; //Update the index of the maximum value array
+        maxValue = currentValue;  // Update the maximum value
+      }
+    }
+    result.push(...arr[maxIndex]); // Push the elements of the array with the highest total value into the result
+    arr.splice(maxIndex, 1); // Remove the array that was added to the result from the input array
+  }
+  return result;
+}
+
+console.log(cantBeatSoJoin([[1, 2], [3, 4], [5, 6], [7, 8], [9]]));
