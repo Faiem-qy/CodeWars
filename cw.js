@@ -2490,3 +2490,20 @@ function cantBeatSoJoin(arr) {
 }
 
 console.log(cantBeatSoJoin([[1, 2], [3, 4], [5, 6], [7, 8], [9]]));
+
+function SeriesSum(n) {
+  let sum = 0;
+
+  for (let i = 0; i < n; i++) {
+    sum += 1 / (1 + i * 3);
+  }
+
+  // Round the sum to 2 decimal places
+  sum = Math.round(sum * 100) / 100;
+  // Convert the rounded sum to a string with 2 decimal places
+  return sum.toFixed(2);
+}
+
+console.log(SeriesSum(1)); // Output: "1.00"
+console.log(SeriesSum(2)); // Output: "1.25"
+console.log(SeriesSum(5)); // Output: "1.57"
