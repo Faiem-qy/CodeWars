@@ -2507,3 +2507,29 @@ function SeriesSum(n) {
 console.log(SeriesSum(1)); // Output: "1.00"
 console.log(SeriesSum(2)); // Output: "1.25"
 console.log(SeriesSum(5)); // Output: "1.57"
+
+
+// function sumTwoSmallestNumbers(numbers) {
+//   //Code here
+//   let min = Math.min(numbers[0], numbers[1]);
+//   let beforeMin = Math.max(numbers[0], numbers[1]);
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     if(numbers[i] < min){
+//       beforeMin = min
+//       min = numbers[i]
+//     }else if (numbers[i]< beforeMin) {
+//       beforeMin = numbers[i]
+//     }
+//   }
+//   return min + beforeMin
+// }
+
+// or
+
+function sumTwoSmallestNumbers(numbers) {
+  const [min, secondMin] = numbers.sort((a, b) => a - b).slice(0, 2);
+  return min + secondMin;
+}
+
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
