@@ -2533,3 +2533,16 @@ function sumTwoSmallestNumbers(numbers) {
 }
 
 console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  const ageGap = dadYearsOld - 2 * sonYearsOld;
+  const absoluteAgeGap = Math.abs(ageGap);
+  return absoluteAgeGap;
+}
+
+const dadAge = 40;
+const sonAge = 10;
+
+const yearsAgoOrInFuture = twiceAsOld(dadAge, sonAge);
+console.log(`The father was or will be twice as old as his son ${yearsAgoOrInFuture} years ago or in the future.`);
