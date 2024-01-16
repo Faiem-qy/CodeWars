@@ -2555,3 +2555,14 @@ let numberI = function(array) {
 };
 
 console.log(numberI(["a", "b", "c"]));
+
+function XO(str) {
+const lowerStr = str.toLowerCase();
+const countX = (lowerStr.match(/x/g) || []).length;
+const countO = (lowerStr.match(/o/g) || []).length;
+
+return countX === countO
+}
+
+console.log(XO("ooxx"));
+console.log(XO("xooxx"));
