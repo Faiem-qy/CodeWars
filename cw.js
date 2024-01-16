@@ -2546,3 +2546,12 @@ const sonAge = 10;
 
 const yearsAgoOrInFuture = twiceAsOld(dadAge, sonAge);
 console.log(`The father was or will be twice as old as his son ${yearsAgoOrInFuture} years ago or in the future.`);
+
+
+let numberI = function(array) {
+  return array.map(function(line, index) {
+    return (index + 1) + ": " + line;
+  });
+};
+
+console.log(numberI(["a", "b", "c"]));
