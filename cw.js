@@ -2566,3 +2566,23 @@ return countX === countO
 
 console.log(XO("ooxx"));
 console.log(XO("xooxx"));
+
+
+function getAge(inputString) {
+  // Use a regular expression to extract the age (a number between 0 and 9)
+  const ageRegex = /\b(\d)\s*year[s]?\s*old\b/;
+  const match = inputString.match(ageRegex);
+
+  // If a match is found, return the extracted age as an integer
+  if (match) {
+    return parseInt(match[1]);
+  }
+
+  // If no match is found, return -1 or handle the error as needed
+  return -1;
+}
+
+// Test cases
+console.log(getAge("1 year old")); // Output: 1
+console.log(getAge("5 years old")); // Output: 5
+console.log(getAge("3 year old")); // Output: 3
