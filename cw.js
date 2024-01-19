@@ -2557,11 +2557,11 @@ let numberI = function(array) {
 console.log(numberI(["a", "b", "c"]));
 
 function XO(str) {
-const lowerStr = str.toLowerCase();
-const countX = (lowerStr.match(/x/g) || []).length;
-const countO = (lowerStr.match(/o/g) || []).length;
+  const lowerStr = str.toLowerCase();
+  const countX = (lowerStr.match(/x/g) || []).length;
+  const countO = (lowerStr.match(/o/g) || []).length;
 
-return countX === countO
+  return countX === countO;
 }
 
 console.log(XO("ooxx"));
@@ -2586,3 +2586,20 @@ function getAge(inputString) {
 console.log(getAge("1 year old")); // Output: 1
 console.log(getAge("5 years old")); // Output: 5
 console.log(getAge("3 year old")); // Output: 3
+
+function XO(str) {
+  //code here
+  str = str.toLowerCase();
+
+  let xCount = 0;
+  let oCount = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'x') {
+      xCount++;
+    } else if (str[i] === 'o') {
+      oCount++;
+    }
+  }
+  return xCount === oCount;
+}
