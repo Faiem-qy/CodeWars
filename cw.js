@@ -2607,3 +2607,12 @@ function XO(str) {
 function saleHotdogs(n) {
   return n < 5 ? n * 100 : (n >= 5 && n < 10) ? n * 95 : n * 90;
 }
+
+
+function check(a, x) {
+return a.includes(x);
+}
+
+const result = check([1, 2, 3], 3);
+
+console.log(result ? "true" : "false")
