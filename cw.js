@@ -2610,9 +2610,22 @@ function saleHotdogs(n) {
 
 
 function check(a, x) {
-return a.includes(x);
+  return a.includes(x);
 }
 
 const result = check([1, 2, 3], 3);
 
-console.log(result ? "true" : "false")
+console.log(result ? "true" : "false");
+
+function findNextSquare(sq) {
+  // Check if the square root is an integer
+  const sqrt = Math.sqrt(sq);
+  if (Number.isInteger(sqrt)) {
+    // Calculate the next perfect square by squaring the next integer
+    const nextInteger = sqrt + 1;
+    return nextInteger * nextInteger;
+  } else {
+    // If not a perfect square, return -1
+    return -1;
+  }
+}
