@@ -2640,3 +2640,10 @@ function gooseFilter (birds) {
 };
 
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+function solution(str){
+  return str.split('').reverse().join('')
+}
+
+console.log(solution("world"));
