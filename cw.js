@@ -2631,19 +2631,29 @@ function findNextSquare(sq) {
 }
 
 // Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
-function gooseFilter (birds) {
+function gooseFilter(birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
   let filteredBirds = birds.filter(function(bird) {
-    return !geese.includes(bird)
-  })  
-  return filteredBirds
+    return !geese.includes(bird);
+  });
+  return filteredBirds;
 };
 
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
 
 
-function solution(str){
-  return str.split('').reverse().join('')
+function solution(str) {
+  return str.split('').reverse().join('');
 }
 
 console.log(solution("world"));
+
+function solution(nums) {
+  if (!nums || nums.length === 0) {
+    return [];
+  }
+  nums.sort(function(a, b) {
+    return a - b;
+  })
+  return nums
+}
