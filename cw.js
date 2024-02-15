@@ -2654,6 +2654,17 @@ function solution(nums) {
   }
   nums.sort(function(a, b) {
     return a - b;
-  })
-  return nums
+  });
+  return nums;
+}
+
+function openOrSenior(data){
+  return data.map(member => {
+    const [age, handicap] = member;
+    if (age >= 55 && handicap > 7) {
+      return "Senior";
+    } else {
+      return "Open";
+    }
+  });
 }
