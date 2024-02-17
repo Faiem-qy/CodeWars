@@ -2469,202 +2469,217 @@ const max = function(list) {
 */
 
 
-function cantBeatSoJoin(arr) {
-  const result = [];
+// function cantBeatSoJoin(arr) {
+//   const result = [];
 
-  while (arr.length > 0) {
-    let maxIndex = 0;
-    let maxValue = arr[0].reduce((sum, val) => sum + val, 0); //Calculate the total value of the first array
+//   while (arr.length > 0) {
+//     let maxIndex = 0;
+//     let maxValue = arr[0].reduce((sum, val) => sum + val, 0); //Calculate the total value of the first array
 
-    for (let i = 1; i < arr.length; i++) {
-      const currentValue = arr[i].reduce((sum, val) => sum + val, 0);
-      if (currentValue > maxValue) {
-        maxIndex = i; //Update the index of the maximum value array
-        maxValue = currentValue;  // Update the maximum value
-      }
-    }
-    result.push(...arr[maxIndex]); // Push the elements of the array with the highest total value into the result
-    arr.splice(maxIndex, 1); // Remove the array that was added to the result from the input array
-  }
-  return result;
-}
-
-console.log(cantBeatSoJoin([[1, 2], [3, 4], [5, 6], [7, 8], [9]]));
-
-function SeriesSum(n) {
-  let sum = 0;
-
-  for (let i = 0; i < n; i++) {
-    sum += 1 / (1 + i * 3);
-  }
-
-  // Round the sum to 2 decimal places
-  sum = Math.round(sum * 100) / 100;
-  // Convert the rounded sum to a string with 2 decimal places
-  return sum.toFixed(2);
-}
-
-console.log(SeriesSum(1)); // Output: "1.00"
-console.log(SeriesSum(2)); // Output: "1.25"
-console.log(SeriesSum(5)); // Output: "1.57"
-
-
-// function sumTwoSmallestNumbers(numbers) {
-//   //Code here
-//   let min = Math.min(numbers[0], numbers[1]);
-//   let beforeMin = Math.max(numbers[0], numbers[1]);
-
-//   for (let i = 0; i < numbers.length; i++) {
-//     if(numbers[i] < min){
-//       beforeMin = min
-//       min = numbers[i]
-//     }else if (numbers[i]< beforeMin) {
-//       beforeMin = numbers[i]
+//     for (let i = 1; i < arr.length; i++) {
+//       const currentValue = arr[i].reduce((sum, val) => sum + val, 0);
+//       if (currentValue > maxValue) {
+//         maxIndex = i; //Update the index of the maximum value array
+//         maxValue = currentValue;  // Update the maximum value
+//       }
 //     }
+//     result.push(...arr[maxIndex]); // Push the elements of the array with the highest total value into the result
+//     arr.splice(maxIndex, 1); // Remove the array that was added to the result from the input array
 //   }
-//   return min + beforeMin
+//   return result;
 // }
 
-// or
+// console.log(cantBeatSoJoin([[1, 2], [3, 4], [5, 6], [7, 8], [9]]));
 
-function sumTwoSmallestNumbers(numbers) {
-  const [min, secondMin] = numbers.sort((a, b) => a - b).slice(0, 2);
-  return min + secondMin;
-}
+// function SeriesSum(n) {
+//   let sum = 0;
 
-console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+//   for (let i = 0; i < n; i++) {
+//     sum += 1 / (1 + i * 3);
+//   }
 
+//   // Round the sum to 2 decimal places
+//   sum = Math.round(sum * 100) / 100;
+//   // Convert the rounded sum to a string with 2 decimal places
+//   return sum.toFixed(2);
+// }
 
-function twiceAsOld(dadYearsOld, sonYearsOld) {
-  const ageGap = dadYearsOld - 2 * sonYearsOld;
-  const absoluteAgeGap = Math.abs(ageGap);
-  return absoluteAgeGap;
-}
-
-const dadAge = 40;
-const sonAge = 10;
-
-const yearsAgoOrInFuture = twiceAsOld(dadAge, sonAge);
-console.log(`The father was or will be twice as old as his son ${yearsAgoOrInFuture} years ago or in the future.`);
+// console.log(SeriesSum(1)); // Output: "1.00"
+// console.log(SeriesSum(2)); // Output: "1.25"
+// console.log(SeriesSum(5)); // Output: "1.57"
 
 
-let numberI = function(array) {
-  return array.map(function(line, index) {
-    return (index + 1) + ": " + line;
-  });
-};
+// // function sumTwoSmallestNumbers(numbers) {
+// //   //Code here
+// //   let min = Math.min(numbers[0], numbers[1]);
+// //   let beforeMin = Math.max(numbers[0], numbers[1]);
 
-console.log(numberI(["a", "b", "c"]));
+// //   for (let i = 0; i < numbers.length; i++) {
+// //     if(numbers[i] < min){
+// //       beforeMin = min
+// //       min = numbers[i]
+// //     }else if (numbers[i]< beforeMin) {
+// //       beforeMin = numbers[i]
+// //     }
+// //   }
+// //   return min + beforeMin
+// // }
 
-function XO(str) {
-  const lowerStr = str.toLowerCase();
-  const countX = (lowerStr.match(/x/g) || []).length;
-  const countO = (lowerStr.match(/o/g) || []).length;
+// // or
 
-  return countX === countO;
-}
+// function sumTwoSmallestNumbers(numbers) {
+//   const [min, secondMin] = numbers.sort((a, b) => a - b).slice(0, 2);
+//   return min + secondMin;
+// }
 
-console.log(XO("ooxx"));
-console.log(XO("xooxx"));
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
 
 
-function getAge(inputString) {
-  // Use a regular expression to extract the age (a number between 0 and 9)
-  const ageRegex = /\b(\d)\s*year[s]?\s*old\b/;
-  const match = inputString.match(ageRegex);
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   const ageGap = dadYearsOld - 2 * sonYearsOld;
+//   const absoluteAgeGap = Math.abs(ageGap);
+//   return absoluteAgeGap;
+// }
 
-  // If a match is found, return the extracted age as an integer
-  if (match) {
-    return parseInt(match[1]);
+// const dadAge = 40;
+// const sonAge = 10;
+
+// const yearsAgoOrInFuture = twiceAsOld(dadAge, sonAge);
+// console.log(`The father was or will be twice as old as his son ${yearsAgoOrInFuture} years ago or in the future.`);
+
+
+// let numberI = function(array) {
+//   return array.map(function(line, index) {
+//     return (index + 1) + ": " + line;
+//   });
+// };
+
+// console.log(numberI(["a", "b", "c"]));
+
+// function XO(str) {
+//   const lowerStr = str.toLowerCase();
+//   const countX = (lowerStr.match(/x/g) || []).length;
+//   const countO = (lowerStr.match(/o/g) || []).length;
+
+//   return countX === countO;
+// }
+
+// console.log(XO("ooxx"));
+// console.log(XO("xooxx"));
+
+
+// function getAge(inputString) {
+//   // Use a regular expression to extract the age (a number between 0 and 9)
+//   const ageRegex = /\b(\d)\s*year[s]?\s*old\b/;
+//   const match = inputString.match(ageRegex);
+
+//   // If a match is found, return the extracted age as an integer
+//   if (match) {
+//     return parseInt(match[1]);
+//   }
+
+//   // If no match is found, return -1 or handle the error as needed
+//   return -1;
+// }
+
+// // Test cases
+// console.log(getAge("1 year old")); // Output: 1
+// console.log(getAge("5 years old")); // Output: 5
+// console.log(getAge("3 year old")); // Output: 3
+
+// function XO(str) {
+//   //code here
+//   str = str.toLowerCase();
+
+//   let xCount = 0;
+//   let oCount = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === 'x') {
+//       xCount++;
+//     } else if (str[i] === 'o') {
+//       oCount++;
+//     }
+//   }
+//   return xCount === oCount;
+// }
+
+// function saleHotdogs(n) {
+//   return n < 5 ? n * 100 : (n >= 5 && n < 10) ? n * 95 : n * 90;
+// }
+
+
+// function check(a, x) {
+//   return a.includes(x);
+// }
+
+// const result = check([1, 2, 3], 3);
+
+// console.log(result ? "true" : "false");
+
+// function findNextSquare(sq) {
+//   // Check if the square root is an integer
+//   const sqrt = Math.sqrt(sq);
+//   if (Number.isInteger(sqrt)) {
+//     // Calculate the next perfect square by squaring the next integer
+//     const nextInteger = sqrt + 1;
+//     return nextInteger * nextInteger;
+//   } else {
+//     // If not a perfect square, return -1
+//     return -1;
+//   }
+// }
+
+// // Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+// function gooseFilter(birds) {
+//   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//   let filteredBirds = birds.filter(function(bird) {
+//     return !geese.includes(bird);
+//   });
+//   return filteredBirds;
+// };
+
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+// function solution(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(solution("world"));
+
+// function solution(nums) {
+//   if (!nums || nums.length === 0) {
+//     return [];
+//   }
+//   nums.sort(function(a, b) {
+//     return a - b;
+//   });
+//   return nums;
+// }
+
+// function openOrSenior(data){
+//   return data.map(member => {
+//     const [age, handicap] = member;
+//     if (age >= 55 && handicap > 7) {
+//       return "Senior";
+//     } else {
+//       return "Open";
+//     }
+//   });
+// }
+
+function getSum(a, b) {
+  if (a > b) {
+    a = b;
+    b = temp;
   }
-
-  // If no match is found, return -1 or handle the error as needed
-  return -1;
-}
-
-// Test cases
-console.log(getAge("1 year old")); // Output: 1
-console.log(getAge("5 years old")); // Output: 5
-console.log(getAge("3 year old")); // Output: 3
-
-function XO(str) {
-  //code here
-  str = str.toLowerCase();
-
-  let xCount = 0;
-  let oCount = 0;
-
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === 'x') {
-      xCount++;
-    } else if (str[i] === 'o') {
-      oCount++;
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+      sum += i;
     }
+    return `${sum} --> (${a} + ${b} = ${sum})`;
   }
-  return xCount === oCount;
-}
-
-function saleHotdogs(n) {
-  return n < 5 ? n * 100 : (n >= 5 && n < 10) ? n * 95 : n * 90;
-}
 
 
-function check(a, x) {
-  return a.includes(x);
-}
-
-const result = check([1, 2, 3], 3);
-
-console.log(result ? "true" : "false");
-
-function findNextSquare(sq) {
-  // Check if the square root is an integer
-  const sqrt = Math.sqrt(sq);
-  if (Number.isInteger(sqrt)) {
-    // Calculate the next perfect square by squaring the next integer
-    const nextInteger = sqrt + 1;
-    return nextInteger * nextInteger;
-  } else {
-    // If not a perfect square, return -1
-    return -1;
-  }
-}
-
-// Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
-function gooseFilter(birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  let filteredBirds = birds.filter(function(bird) {
-    return !geese.includes(bird);
-  });
-  return filteredBirds;
-};
-
-console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
-
-
-function solution(str) {
-  return str.split('').reverse().join('');
-}
-
-console.log(solution("world"));
-
-function solution(nums) {
-  if (!nums || nums.length === 0) {
-    return [];
-  }
-  nums.sort(function(a, b) {
-    return a - b;
-  });
-  return nums;
-}
-
-function openOrSenior(data){
-  return data.map(member => {
-    const [age, handicap] = member;
-    if (age >= 55 && handicap > 7) {
-      return "Senior";
-    } else {
-      return "Open";
-    }
-  });
-}
+console.log(getSum(1, 2));
