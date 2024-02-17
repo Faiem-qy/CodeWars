@@ -2674,12 +2674,26 @@ function getSum(a, b) {
     a = b;
     b = temp;
   }
-    let sum = 0;
-    for (let i = a; i <= b; i++) {
-      sum += i;
-    }
-    return `${sum} --> (${a} + ${b} = ${sum})`;
+  let sum = 0;
+  for (let i = a; i <= b; i++) {
+    sum += i;
   }
+  return `${sum} --> (${a} + ${b} = ${sum})`;
+}
 
 
 console.log(getSum(1, 2));
+
+
+function shortcut(string) {
+  let result = '';
+  for (let i = 0; i < string.length; i++) {
+    if (!['a', 'e', 'i', 'o', 'u'].includes(string[i])) {
+      result += string[i];
+    }
+  }
+  return result;
+}
+
+console.log(shortcut("hello"));
+console.log(shortcut("goodbye"));
