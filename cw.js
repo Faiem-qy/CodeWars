@@ -2697,3 +2697,55 @@ function shortcut(string) {
 
 console.log(shortcut("hello"));
 console.log(shortcut("goodbye"));
+
+
+
+// Implement a pseudo-encryption algorithm which given a string S and an integer N concatenates all the odd-indexed characters of S with all the even-indexed characters of S, this process should be repeated N times.
+
+function encrypt(text, n) {
+  if (text === "" || n <= 0) {
+    return text;
+  }
+
+  let result = text;
+
+  for (let i = 0; i < n; i++) {
+    let odd = "";
+    let even = "";
+
+    for (let j = 0; j < result.length; j++) {
+      if (j % 2 === 1) {
+        odd += result[j];
+      } else {
+        even += result[j];
+      }
+    }
+    result = odd + even;
+  }
+  return result;
+}
+
+
+function decrypt(encryptedText, n) {
+  if (encryptedText === "" || n <= 0) {
+    return encryptedText;
+  }
+  const mid = Math.floor(encryptedText.length / 2);
+
+  for (let i = 0; i < n; i++) {
+    let odd = encryptedText.slice(0, mid);
+    let even = encryptedText.slice(mid);
+    encryptedText = "";
+
+    for (let j = 0; j < mid || j < even.length; j++) {
+      if (even[j]) {
+        encryptedText += even[j];
+      }
+      if (odd[j]) {
+        encryptedText += odd[j];
+      }
+    }
+  }
+  return encryptedText;
+}
+console.log(encrypt("012345", 1));  // Output: "135024"
