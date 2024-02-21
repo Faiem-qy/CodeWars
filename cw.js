@@ -2786,7 +2786,7 @@ console.log(switchItUp(3));
 function positiveSum(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i] > 0) {
+    if (arr[i] > 0) {
       sum += arr[i];
     }
   }
@@ -2794,3 +2794,14 @@ function positiveSum(arr) {
 }
 
 console.log(positiveSum([1, -4, 7, 12]));
+
+function getRealFloor(n) {
+  if (n <= 0) {
+    return n;
+  } else if (n < 13) {
+    return n - 1;
+  } else {
+    return n - 2;
+  }
+}
+console.log(getRealFloor(1))
