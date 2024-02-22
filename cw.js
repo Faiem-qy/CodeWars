@@ -2805,3 +2805,12 @@ function getRealFloor(n) {
   }
 }
 console.log(getRealFloor(1))
+
+function sortByLength (array) {
+  // Return an array containing the same strings,
+  // ordered from shortest to longest
+array.sort((a,b) => a.length = b.length)
+return array
+}
+
+console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"])); 
