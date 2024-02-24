@@ -2809,8 +2809,25 @@ console.log(getRealFloor(1))
 function sortByLength (array) {
   // Return an array containing the same strings,
   // ordered from shortest to longest
-array.sort((a,b) => a.length = b.length)
+array.sort((a,b) => a.length - b.length)
 return array
 }
 
 console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"])); 
+
+function solution(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+      // Check if the current character is uppercase
+      if (char === char.toUpperCase() && i !== 0) {
+          // Add a space before the uppercase character
+          result += ' ';
+      }
+      result += char;
+  }
+  return result;
+}
+
+// Test cases
+console.log(solution("camelCasing")); // Output: "camel Casing"
