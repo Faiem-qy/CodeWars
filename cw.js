@@ -2831,3 +2831,19 @@ function solution(str) {
 
 // Test cases
 console.log(solution("camelCasing")); // Output: "camel Casing"
+
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+function multiplyAndIncrease(value) {
+  // Check if the value is a string
+  if (typeof value !== 'number') {
+      return "Error";
+  }
+    return value * 50 + 6;
+}
+
+// Test cases
+console.log(multiplyAndIncrease(5));   // Output: 256 (5 * 50 + 6)
+console.log(multiplyAndIncrease(10));  // Output: 506 (10 * 50 + 6)
+console.log(multiplyAndIncrease("a")); // Output: "Error"
+
