@@ -2669,181 +2669,183 @@ const max = function(list) {
 //   });
 // }
 
-function getSum(a, b) {
-  if (a > b) {
-    a = b;
-    b = temp;
-  }
-  let sum = 0;
-  for (let i = a; i <= b; i++) {
-    sum += i;
-  }
-  return `${sum} --> (${a} + ${b} = ${sum})`;
-}
+// function getSum(a, b) {
+//   if (a > b) {
+//     a = b;
+//     b = temp;
+//   }
+//   let sum = 0;
+//   for (let i = a; i <= b; i++) {
+//     sum += i;
+//   }
+//   return `${sum} --> (${a} + ${b} = ${sum})`;
+// }
 
 
-console.log(getSum(1, 2));
+// console.log(getSum(1, 2));
 
 
-function shortcut(string) {
-  let result = '';
-  for (let i = 0; i < string.length; i++) {
-    if (!['a', 'e', 'i', 'o', 'u'].includes(string[i])) {
-      result += string[i];
-    }
-  }
-  return result;
-}
+// function shortcut(string) {
+//   let result = '';
+//   for (let i = 0; i < string.length; i++) {
+//     if (!['a', 'e', 'i', 'o', 'u'].includes(string[i])) {
+//       result += string[i];
+//     }
+//   }
+//   return result;
+// }
 
-console.log(shortcut("hello"));
-console.log(shortcut("goodbye"));
+// console.log(shortcut("hello"));
+// console.log(shortcut("goodbye"));
 
 
 
 // Implement a pseudo-encryption algorithm which given a string S and an integer N concatenates all the odd-indexed characters of S with all the even-indexed characters of S, this process should be repeated N times.
 
-function encrypt(text, n) {
-  if (text === "" || n <= 0) {
-    return text;
-  }
+// function encrypt(text, n) {
+//   if (text === "" || n <= 0) {
+//     return text;
+//   }
 
-  let result = text;
+//   let result = text;
 
-  for (let i = 0; i < n; i++) {
-    let odd = "";
-    let even = "";
+//   for (let i = 0; i < n; i++) {
+//     let odd = "";
+//     let even = "";
 
-    for (let j = 0; j < result.length; j++) {
-      if (j % 2 === 1) {
-        odd += result[j];
-      } else {
-        even += result[j];
-      }
-    }
-    result = odd + even;
-  }
-  return result;
-}
-
-
-function decrypt(encryptedText, n) {
-  if (encryptedText === "" || n <= 0) {
-    return encryptedText;
-  }
-  const mid = Math.floor(encryptedText.length / 2);
-
-  for (let i = 0; i < n; i++) {
-    let odd = encryptedText.slice(0, mid);
-    let even = encryptedText.slice(mid);
-    encryptedText = "";
-
-    for (let j = 0; j < mid || j < even.length; j++) {
-      if (even[j]) {
-        encryptedText += even[j];
-      }
-      if (odd[j]) {
-        encryptedText += odd[j];
-      }
-    }
-  }
-  return encryptedText;
-}
-console.log(encrypt("012345", 1));  // Output: "135024"
+//     for (let j = 0; j < result.length; j++) {
+//       if (j % 2 === 1) {
+//         odd += result[j];
+//       } else {
+//         even += result[j];
+//       }
+//     }
+//     result = odd + even;
+//   }
+//   return result;
+// }
 
 
-function switchItUp(number) {
-  //Write your own Code!
-  switch (number) {
-    case 0:
-      return "Zero";
-    case 1:
-      return "One";
-    case 2:
-      return "Two";
-    case 3:
-      return "Three";
-    case 4:
-      return "Four";
-    case 5:
-      return "Five";
-    case 6:
-      return "Six";
-    case 7:
-      return "Seven";
-    case 8:
-      return "Eight";
-    case 9:
-      return "Nine";
-    default:
-      return "Invalid number";
-  }
-}
+// function decrypt(encryptedText, n) {
+//   if (encryptedText === "" || n <= 0) {
+//     return encryptedText;
+//   }
+//   const mid = Math.floor(encryptedText.length / 2);
 
-console.log(switchItUp(1));
-console.log(switchItUp(3));
+//   for (let i = 0; i < n; i++) {
+//     let odd = encryptedText.slice(0, mid);
+//     let even = encryptedText.slice(mid);
+//     encryptedText = "";
+
+//     for (let j = 0; j < mid || j < even.length; j++) {
+//       if (even[j]) {
+//         encryptedText += even[j];
+//       }
+//       if (odd[j]) {
+//         encryptedText += odd[j];
+//       }
+//     }
+//   }
+//   return encryptedText;
+// }
+// console.log(encrypt("012345", 1));  // Output: "135024"
 
 
-function positiveSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      sum += arr[i];
-    }
-  }
-  return sum;
-}
+// function switchItUp(number) {
+//   //Write your own Code!
+//   switch (number) {
+//     case 0:
+//       return "Zero";
+//     case 1:
+//       return "One";
+//     case 2:
+//       return "Two";
+//     case 3:
+//       return "Three";
+//     case 4:
+//       return "Four";
+//     case 5:
+//       return "Five";
+//     case 6:
+//       return "Six";
+//     case 7:
+//       return "Seven";
+//     case 8:
+//       return "Eight";
+//     case 9:
+//       return "Nine";
+//     default:
+//       return "Invalid number";
+//   }
+// }
 
-console.log(positiveSum([1, -4, 7, 12]));
+// console.log(switchItUp(1));
+// console.log(switchItUp(3));
 
-function getRealFloor(n) {
-  if (n <= 0) {
-    return n;
-  } else if (n < 13) {
-    return n - 1;
+
+// function positiveSum(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       sum += arr[i];
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(positiveSum([1, -4, 7, 12]));
+
+// function getRealFloor(n) {
+//   if (n <= 0) {
+//     return n;
+//   } else if (n < 13) {
+//     return n - 1;
+//   } else {
+//     return n - 2;
+//   }
+// }
+// console.log(getRealFloor(1))
+
+// function sortByLength (array) {
+//   // Return an array containing the same strings,
+//   // ordered from shortest to longest
+// array.sort((a,b) => a.length - b.length)
+// return array
+// }
+
+// console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"])); 
+
+// function solution(str) {
+//   let result = '';
+//   for (let i = 0; i < str.length; i++) {
+//       const char = str[i];
+//       // Check if the current character is uppercase
+//       if (char === char.toUpperCase() && i !== 0) {
+//           // Add a space before the uppercase character
+//           result += ' ';
+//       }
+//       result += char;
+//   }
+//   return result;
+// }
+
+// // Test cases
+// console.log(solution("camelCasing")); // Output: "camel Casing"
+
+
+// // Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+function problem(x) {
+  if (typeof x === 'number') {
+      return x * 50 + 6;
   } else {
-    return n - 2;
-  }
-}
-console.log(getRealFloor(1))
-
-function sortByLength (array) {
-  // Return an array containing the same strings,
-  // ordered from shortest to longest
-array.sort((a,b) => a.length - b.length)
-return array
-}
-
-console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"])); 
-
-function solution(str) {
-  let result = '';
-  for (let i = 0; i < str.length; i++) {
-      const char = str[i];
-      // Check if the current character is uppercase
-      if (char === char.toUpperCase() && i !== 0) {
-          // Add a space before the uppercase character
-          result += ' ';
-      }
-      result += char;
-  }
-  return result;
-}
-
-// Test cases
-console.log(solution("camelCasing")); // Output: "camel Casing"
-
-
-// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
-function multiplyAndIncrease(value) {
-  // Check if the value is a string
-  if (typeof value !== 'number') {
       return "Error";
   }
-    return value * 50 + 6;
 }
 
 // Test cases
-console.log(multiplyAndIncrease(5));   // Output: 256 (5 * 50 + 6)
-console.log(multiplyAndIncrease(10));  // Output: 506 (10 * 50 + 6)
-console.log(multiplyAndIncrease("a")); // Output: "Error"
+console.log(problem(5));   // Output: 256 (5 * 50 + 6)
+console.log(problem(10));  // Output: 506 (10 * 50 + 6)
+console.log(problem("a")); // Output: "Error"
+
+
 
