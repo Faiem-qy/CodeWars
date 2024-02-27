@@ -2848,4 +2848,15 @@ console.log(problem(10));  // Output: 506 (10 * 50 + 6)
 console.log(problem("a")); // Output: "Error"
 
 
+function greet(name, owner) {
+  if (name === owner) {
+    return 'Hello boss';
+  } else {
+    return 'Hello guest';
+  }
+}
+
+// Test cases
+console.log(greet('John', 'John')); // Output: 'Hello boss'
+console.log(greet('Jane', 'John')); // Output: 'Hello guest'
 
