@@ -2860,3 +2860,12 @@ function greet(name, owner) {
 console.log(greet('John', 'John')); // Output: 'Hello boss'
 console.log(greet('Jane', 'John')); // Output: 'Hello guest'
 
+function disemvowel(str) {
+  // Define the regex pattern to match vowels (including capital vowels)
+  const vowels = /[aeiouAEIOU]/g;
+  
+  // Use the replace method to remove vowels from the string and return the updated string
+  return str.replace(vowels, "");
+}
+
+console.log(disemvowel("This website is for losers 😅"));
