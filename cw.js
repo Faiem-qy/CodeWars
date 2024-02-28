@@ -2833,39 +2833,57 @@ const max = function(list) {
 // console.log(solution("camelCasing")); // Output: "camel Casing"
 
 
-// // Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
-function problem(x) {
-  if (typeof x === 'number') {
-      return x * 50 + 6;
+// // // Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+// function problem(x) {
+//   if (typeof x === 'number') {
+//     return x * 50 + 6;
+//   } else {
+//     return "Error";
+//   }
+// }
+
+// // Test cases
+// console.log(problem(5));   // Output: 256 (5 * 50 + 6)
+// console.log(problem(10));  // Output: 506 (10 * 50 + 6)
+// console.log(problem("a")); // Output: "Error"
+
+
+// function greet(name, owner) {
+//   if (name === owner) {
+//     return 'Hello boss';
+//   } else {
+//     return 'Hello guest';
+//   }
+// }
+
+// // Test cases
+// console.log(greet('John', 'John')); // Output: 'Hello boss'
+// console.log(greet('Jane', 'John')); // Output: 'Hello guest'
+
+// function disemvowel(str) {
+//   // Define the regex pattern to match vowels (including capital vowels)
+//   const vowels = /[aeiouAEIOU]/g;
+
+//   // Use the replace method to remove vowels from the string and return the updated string
+//   return str.replace(vowels, "");
+// }
+
+// console.log(disemvowel("This website is for losers 😅"));
+
+function peopleWithAgeDrink(old) {
+  if (old < 14) {
+    return `${old} --> drink toddy`;
+  } else if (old < 18) {
+    return `${old} --> drink coke`;
+  } else if (old < 21) {
+   return `${old} --> drink beer`
   } else {
-      return "Error";
-  }
-}
+    return `${old} --> drink whisky`
+   }
+};
+// } else if (old < 18 && old > 18) {
 
-// Test cases
-console.log(problem(5));   // Output: 256 (5 * 50 + 6)
-console.log(problem(10));  // Output: 506 (10 * 50 + 6)
-console.log(problem("a")); // Output: "Error"
-
-
-function greet(name, owner) {
-  if (name === owner) {
-    return 'Hello boss';
-  } else {
-    return 'Hello guest';
-  }
-}
-
-// Test cases
-console.log(greet('John', 'John')); // Output: 'Hello boss'
-console.log(greet('Jane', 'John')); // Output: 'Hello guest'
-
-function disemvowel(str) {
-  // Define the regex pattern to match vowels (including capital vowels)
-  const vowels = /[aeiouAEIOU]/g;
-  
-  // Use the replace method to remove vowels from the string and return the updated string
-  return str.replace(vowels, "");
-}
-
-console.log(disemvowel("This website is for losers 😅"));
+console.log(peopleWithAgeDrink(13));
+console.log(peopleWithAgeDrink(17));
+console.log(peopleWithAgeDrink(20));
+console.log(peopleWithAgeDrink(30));
