@@ -2876,10 +2876,10 @@ function peopleWithAgeDrink(old) {
   } else if (old < 18) {
     return `${old} --> drink coke`;
   } else if (old < 21) {
-   return `${old} --> drink beer`
+    return `${old} --> drink beer`;
   } else {
-    return `${old} --> drink whisky`
-   }
+    return `${old} --> drink whisky`;
+  }
 };
 // } else if (old < 18 && old > 18) {
 
@@ -2887,3 +2887,26 @@ console.log(peopleWithAgeDrink(13));
 console.log(peopleWithAgeDrink(17));
 console.log(peopleWithAgeDrink(20));
 console.log(peopleWithAgeDrink(30));
+
+function peopleWithAgeDrink2(old) {
+  let drink;
+  switch (true) {
+    case old < 14:
+      drink = "toddy";
+      break;
+    case old < 18:
+      drink = "coke";
+      break;
+    case old < 21:
+      drink = "beer";
+      break;
+    default:
+      drink = "whisky";
+  }
+  return `${old} --> drink ${drink}`;
+}
+
+console.log(peopleWithAgeDrink2(13), '-switch-');
+console.log(peopleWithAgeDrink2(17), '-switch-');
+console.log(peopleWithAgeDrink2(20), '-switch-');
+console.log(peopleWithAgeDrink2(30), '-switch-');
