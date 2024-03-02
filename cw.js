@@ -2926,3 +2926,24 @@ function lovefunc(flower1, flower2) {
 console.log(lovefunc(5, 8));
 console.log(lovefunc(6, 8));
 console.log(lovefunc(15, 8));
+
+function arithmetic(a, b, operator) {
+  switch (operator) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      return a / b;
+    default:
+      return "Invalid operator";
+  }
+};
+
+
+console.log(arithmetic(5, 2, "add"));      
+console.log(arithmetic(5, 2, "subtract")); 
+console.log(arithmetic(5, 2, "multiply")); 
+console.log(arithmetic(5, 2, "divide"));   
