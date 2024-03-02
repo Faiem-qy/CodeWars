@@ -2910,3 +2910,19 @@ console.log(peopleWithAgeDrink2(13), '-switch-');
 console.log(peopleWithAgeDrink2(17), '-switch-');
 console.log(peopleWithAgeDrink2(20), '-switch-');
 console.log(peopleWithAgeDrink2(30), '-switch-');
+
+
+// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+function lovefunc(flower1, flower2) {
+  // moment of truth
+  if ((flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower1 % 2 !== 0 && flower2 % 2 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(lovefunc(5, 8));
+console.log(lovefunc(6, 8));
+console.log(lovefunc(15, 8));
