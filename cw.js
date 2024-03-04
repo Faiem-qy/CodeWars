@@ -2963,8 +2963,25 @@ function findUniq(arr) {
       break;
     }
   }
-  return uniqueNumber
+  return uniqueNumber;
 }
 
 console.log(findUniq([1, 1, 1, 2, 1, 1])); //=== 2
 console.log(findUniq([0, 0, 0.55, 0, 0])); //=== 0.55
+
+
+function boolToWord(bool) {
+  //...
+  if (bool === true) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+}
+function boolToWordTernary(bool) {
+  return bool === true ? "Yes" : "No";
+}
+console.log(boolToWord(true));
+console.log(boolToWord(false));
+console.log(boolToWordTernary(true), "-> ternary");
+console.log(boolToWordTernary(false), "-> ternary");
