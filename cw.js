@@ -2870,80 +2870,101 @@ const max = function(list) {
 
 // console.log(disemvowel("This website is for losers 😅"));
 
-function peopleWithAgeDrink(old) {
-  if (old < 14) {
-    return `${old} --> drink toddy`;
-  } else if (old < 18) {
-    return `${old} --> drink coke`;
-  } else if (old < 21) {
-    return `${old} --> drink beer`;
-  } else {
-    return `${old} --> drink whisky`;
-  }
-};
-// } else if (old < 18 && old > 18) {
+// function peopleWithAgeDrink(old) {
+//   if (old < 14) {
+//     return `${old} --> drink toddy`;
+//   } else if (old < 18) {
+//     return `${old} --> drink coke`;
+//   } else if (old < 21) {
+//     return `${old} --> drink beer`;
+//   } else {
+//     return `${old} --> drink whisky`;
+//   }
+// };
+// // } else if (old < 18 && old > 18) {
 
-console.log(peopleWithAgeDrink(13));
-console.log(peopleWithAgeDrink(17));
-console.log(peopleWithAgeDrink(20));
-console.log(peopleWithAgeDrink(30));
+// console.log(peopleWithAgeDrink(13));
+// console.log(peopleWithAgeDrink(17));
+// console.log(peopleWithAgeDrink(20));
+// console.log(peopleWithAgeDrink(30));
 
-function peopleWithAgeDrink2(old) {
-  let drink;
-  switch (true) {
-    case old < 14:
-      drink = "toddy";
-      break;
-    case old < 18:
-      drink = "coke";
-      break;
-    case old < 21:
-      drink = "beer";
-      break;
-    default:
-      drink = "whisky";
+// function peopleWithAgeDrink2(old) {
+//   let drink;
+//   switch (true) {
+//     case old < 14:
+//       drink = "toddy";
+//       break;
+//     case old < 18:
+//       drink = "coke";
+//       break;
+//     case old < 21:
+//       drink = "beer";
+//       break;
+//     default:
+//       drink = "whisky";
+//   }
+//   return `${old} --> drink ${drink}`;
+// }
+
+// console.log(peopleWithAgeDrink2(13), '-switch-');
+// console.log(peopleWithAgeDrink2(17), '-switch-');
+// console.log(peopleWithAgeDrink2(20), '-switch-');
+// console.log(peopleWithAgeDrink2(30), '-switch-');
+
+
+// // Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+// function lovefunc(flower1, flower2) {
+//   // moment of truth
+//   if ((flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower1 % 2 !== 0 && flower2 % 2 === 0)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(lovefunc(5, 8));
+// console.log(lovefunc(6, 8));
+// console.log(lovefunc(15, 8));
+
+// function arithmetic(a, b, operator) {
+//   switch (operator) {
+//     case "add":
+//       return a + b;
+//     case "subtract":
+//       return a - b;
+//     case "multiply":
+//       return a * b;
+//     case "divide":
+//       return a / b;
+//     default:
+//       return "Invalid operator";
+//   }
+// };
+
+
+// console.log(arithmetic(5, 2, "add"));      
+// console.log(arithmetic(5, 2, "subtract")); 
+// console.log(arithmetic(5, 2, "multiply")); 
+// console.log(arithmetic(5, 2, "divide"));   
+
+function findUniq(arr) {
+  // do magic
+  let uniqueNumber;
+  let counts = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    counts[num] = (counts[num] || 0) + 1;
   }
-  return `${old} --> drink ${drink}`;
+  for (let num in counts) {
+    if (counts[num] === 1) {
+      uniqueNumber = parseFloat(num);
+      break;
+    }
+  }
+  return uniqueNumber
 }
 
-console.log(peopleWithAgeDrink2(13), '-switch-');
-console.log(peopleWithAgeDrink2(17), '-switch-');
-console.log(peopleWithAgeDrink2(20), '-switch-');
-console.log(peopleWithAgeDrink2(30), '-switch-');
-
-
-// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
-
-function lovefunc(flower1, flower2) {
-  // moment of truth
-  if ((flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower1 % 2 !== 0 && flower2 % 2 === 0)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-console.log(lovefunc(5, 8));
-console.log(lovefunc(6, 8));
-console.log(lovefunc(15, 8));
-
-function arithmetic(a, b, operator) {
-  switch (operator) {
-    case "add":
-      return a + b;
-    case "subtract":
-      return a - b;
-    case "multiply":
-      return a * b;
-    case "divide":
-      return a / b;
-    default:
-      return "Invalid operator";
-  }
-};
-
-
-console.log(arithmetic(5, 2, "add"));      
-console.log(arithmetic(5, 2, "subtract")); 
-console.log(arithmetic(5, 2, "multiply")); 
-console.log(arithmetic(5, 2, "divide"));   
+console.log(findUniq([1, 1, 1, 2, 1, 1])); //=== 2
+console.log(findUniq([0, 0, 0.55, 0, 0])); //=== 0.55
