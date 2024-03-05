@@ -2985,3 +2985,17 @@ console.log(boolToWord(true));
 console.log(boolToWord(false));
 console.log(boolToWordTernary(true), "-> ternary");
 console.log(boolToWordTernary(false), "-> ternary");
+
+function points(games) {
+  let totalPoints = 0;
+  for (let match of games) {
+    let [x, y] = match.split(':').map(Number);
+    if (x > y) {
+      totalPoints += 3;
+    } else if (x === y) {
+      totalPoints += 1;
+    }
+  }
+  return totalPoints;
+}
+console.log(points(["3:1","2:3","5:1"]));
