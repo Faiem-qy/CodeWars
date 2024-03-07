@@ -2948,54 +2948,62 @@ const max = function(list) {
 // console.log(arithmetic(5, 2, "multiply")); 
 // console.log(arithmetic(5, 2, "divide"));   
 
-function findUniq(arr) {
-  // do magic
-  let uniqueNumber;
-  let counts = {};
+// function findUniq(arr) {
+//   // do magic
+//   let uniqueNumber;
+//   let counts = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
-    counts[num] = (counts[num] || 0) + 1;
-  }
-  for (let num in counts) {
-    if (counts[num] === 1) {
-      uniqueNumber = parseFloat(num);
-      break;
-    }
-  }
-  return uniqueNumber;
+//   for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
+//     counts[num] = (counts[num] || 0) + 1;
+//   }
+//   for (let num in counts) {
+//     if (counts[num] === 1) {
+//       uniqueNumber = parseFloat(num);
+//       break;
+//     }
+//   }
+//   return uniqueNumber;
+// }
+
+// console.log(findUniq([1, 1, 1, 2, 1, 1])); //=== 2
+// console.log(findUniq([0, 0, 0.55, 0, 0])); //=== 0.55
+
+
+// function boolToWord(bool) {
+//   //...
+//   if (bool === true) {
+//     return "Yes";
+//   } else {
+//     return "No";
+//   }
+// }
+// function boolToWordTernary(bool) {
+//   return bool === true ? "Yes" : "No";
+// }
+// console.log(boolToWord(true));
+// console.log(boolToWord(false));
+// console.log(boolToWordTernary(true), "-> ternary");
+// console.log(boolToWordTernary(false), "-> ternary");
+
+// function points(games) {
+//   let totalPoints = 0;
+//   for (let match of games) {
+//     let [x, y] = match.split(':').map(Number);
+//     if (x > y) {
+//       totalPoints += 3;
+//     } else if (x === y) {
+//       totalPoints += 1;
+//     }
+//   }
+//   return totalPoints;
+// }
+// console.log(points(["3:1", "2:3", "5:1"]));
+
+
+
+function sumMix(x) {
+  return x.map(Number).reduce((acc, curr) => acc + curr, 0 );
 }
 
-console.log(findUniq([1, 1, 1, 2, 1, 1])); //=== 2
-console.log(findUniq([0, 0, 0.55, 0, 0])); //=== 0.55
-
-
-function boolToWord(bool) {
-  //...
-  if (bool === true) {
-    return "Yes";
-  } else {
-    return "No";
-  }
-}
-function boolToWordTernary(bool) {
-  return bool === true ? "Yes" : "No";
-}
-console.log(boolToWord(true));
-console.log(boolToWord(false));
-console.log(boolToWordTernary(true), "-> ternary");
-console.log(boolToWordTernary(false), "-> ternary");
-
-function points(games) {
-  let totalPoints = 0;
-  for (let match of games) {
-    let [x, y] = match.split(':').map(Number);
-    if (x > y) {
-      totalPoints += 3;
-    } else if (x === y) {
-      totalPoints += 1;
-    }
-  }
-  return totalPoints;
-}
-console.log(points(["3:1","2:3","5:1"]));
+console.log(sumMix(["1","3", "5"]));
