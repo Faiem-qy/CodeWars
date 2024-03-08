@@ -3007,3 +3007,21 @@ function sumMix(x) {
 }
 
 console.log(sumMix(["1","3", "5"]));
+
+const uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+  if(!Array.isArray(iterable)) {
+    iterable = iterable.split('')
+  }
+
+  const uniqueArray = [];
+
+  for (let i =0; i < iterable.length; i++) {
+    if (iterable[i] !== iterable[i+1]) {
+      uniqueArray.push(iterable[i])
+    }
+  }
+  return uniqueArray
+}
+console.log(uniqueInOrder('AAAAAABBBCCCCCDDDAAABBB'));
+console.log(uniqueInOrder('ABBCcAD'));
