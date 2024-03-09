@@ -3003,25 +3003,42 @@ const max = function(list) {
 
 
 function sumMix(x) {
-  return x.map(Number).reduce((acc, curr) => acc + curr, 0 );
+  return x.map(Number).reduce((acc, curr) => acc + curr, 0);
 }
 
-console.log(sumMix(["1","3", "5"]));
+console.log(sumMix(["1", "3", "5"]));
 
-const uniqueInOrder=function(iterable){
+const uniqueInOrder = function(iterable) {
   //your code here - remember iterable can be a string or an array
-  if(!Array.isArray(iterable)) {
-    iterable = iterable.split('')
+  if (!Array.isArray(iterable)) {
+    iterable = iterable.split('');
   }
 
   const uniqueArray = [];
 
-  for (let i =0; i < iterable.length; i++) {
-    if (iterable[i] !== iterable[i+1]) {
-      uniqueArray.push(iterable[i])
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== iterable[i + 1]) {
+      uniqueArray.push(iterable[i]);
     }
   }
-  return uniqueArray
-}
+  return uniqueArray;
+};
 console.log(uniqueInOrder('AAAAAABBBCCCCCDDDAAABBB'));
 console.log(uniqueInOrder('ABBCcAD'));
+
+
+function longest(s1, s2) {
+  // your code
+  let combined = s1 + s2;
+  let uniqueChars = new Set(combined);
+  let sortedChars = [...uniqueChars].sort();
+  let result = sortedChars.join('');
+  return result;
+}
+
+let a = "xyaabbbccccdefww";
+let b = "xxxxyyyyabklmopq";
+console.log(longest(a, b)); 
+
+a = "abcdefghijklmnopqrstuvwxyz";
+console.log(longest(a, a));
