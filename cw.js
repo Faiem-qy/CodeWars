@@ -3038,7 +3038,20 @@ function longest(s1, s2) {
 
 let a = "xyaabbbccccdefww";
 let b = "xxxxyyyyabklmopq";
-console.log(longest(a, b)); 
+console.log(longest(a, b));
 
 a = "abcdefghijklmnopqrstuvwxyz";
 console.log(longest(a, a));
+
+function enough(cap, on, wait) {
+  // your code here
+  let availableSpace = cap - on;
+  if (availableSpace >= wait) {
+    return 0;
+  } else {
+    return wait - availableSpace;
+  }
+}
+
+console.log(enough(10, 5, 5));
+console.log(enough(100, 60, 50)); 
