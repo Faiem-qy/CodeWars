@@ -3002,64 +3002,83 @@ const max = function(list) {
 
 
 
-function sumMix(x) {
-  return x.map(Number).reduce((acc, curr) => acc + curr, 0);
-}
+// function sumMix(x) {
+//   return x.map(Number).reduce((acc, curr) => acc + curr, 0);
+// }
 
-console.log(sumMix(["1", "3", "5"]));
+// console.log(sumMix(["1", "3", "5"]));
 
-const uniqueInOrder = function(iterable) {
-  //your code here - remember iterable can be a string or an array
-  if (!Array.isArray(iterable)) {
-    iterable = iterable.split('');
+// const uniqueInOrder = function(iterable) {
+//   //your code here - remember iterable can be a string or an array
+//   if (!Array.isArray(iterable)) {
+//     iterable = iterable.split('');
+//   }
+
+//   const uniqueArray = [];
+
+//   for (let i = 0; i < iterable.length; i++) {
+//     if (iterable[i] !== iterable[i + 1]) {
+//       uniqueArray.push(iterable[i]);
+//     }
+//   }
+//   return uniqueArray;
+// };
+// console.log(uniqueInOrder('AAAAAABBBCCCCCDDDAAABBB'));
+// console.log(uniqueInOrder('ABBCcAD'));
+
+
+// function longest(s1, s2) {
+//   // your code
+//   let combined = s1 + s2;
+//   let uniqueChars = new Set(combined);
+//   let sortedChars = [...uniqueChars].sort();
+//   let result = sortedChars.join('');
+//   return result;
+// }
+
+// let a = "xyaabbbccccdefww";
+// let b = "xxxxyyyyabklmopq";
+// console.log(longest(a, b));
+
+// a = "abcdefghijklmnopqrstuvwxyz";
+// console.log(longest(a, a));
+
+// function enough(cap, on, wait) {
+//   // your code here
+//   let availableSpace = cap - on;
+//   if (availableSpace >= wait) {
+//     return 0;
+//   } else {
+//     return wait - availableSpace;
+//   }
+// }
+
+// console.log(enough(10, 5, 5));
+// console.log(enough(100, 60, 50)); 
+
+
+// function century(year) {
+//   let century = Math.ceil(year/100) 
+//   return century
+// }
+
+// console.log(century(1705));
+
+function duplicateCount(text) {
+  //...
+  const lowerText = text.toLowerCase();
+  const charCount = {};
+  for (const char of lowerText) {
+    charCount[char] = (charCount[char] || 0) + 1;
   }
-
-  const uniqueArray = [];
-
-  for (let i = 0; i < iterable.length; i++) {
-    if (iterable[i] !== iterable[i + 1]) {
-      uniqueArray.push(iterable[i]);
+  let duplicateCount = 0;
+  for (const char in charCount) {
+    if (charCount[char] > 1) {
+      duplicateCount++;
     }
   }
-  return uniqueArray;
-};
-console.log(uniqueInOrder('AAAAAABBBCCCCCDDDAAABBB'));
-console.log(uniqueInOrder('ABBCcAD'));
-
-
-function longest(s1, s2) {
-  // your code
-  let combined = s1 + s2;
-  let uniqueChars = new Set(combined);
-  let sortedChars = [...uniqueChars].sort();
-  let result = sortedChars.join('');
-  return result;
+  return duplicateCount;
 }
 
-let a = "xyaabbbccccdefww";
-let b = "xxxxyyyyabklmopq";
-console.log(longest(a, b));
-
-a = "abcdefghijklmnopqrstuvwxyz";
-console.log(longest(a, a));
-
-function enough(cap, on, wait) {
-  // your code here
-  let availableSpace = cap - on;
-  if (availableSpace >= wait) {
-    return 0;
-  } else {
-    return wait - availableSpace;
-  }
-}
-
-console.log(enough(10, 5, 5));
-console.log(enough(100, 60, 50)); 
-
-
-function century(year) {
-  let century = Math.ceil(year/100) 
-  return century
-}
-
-console.log(century(1705));
+console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabbcde"));
