@@ -3055,3 +3055,11 @@ function enough(cap, on, wait) {
 
 console.log(enough(10, 5, 5));
 console.log(enough(100, 60, 50)); 
+
+
+function century(year) {
+  let century = Math.ceil(year/100) 
+  return century
+}
+
+console.log(century(1705));
