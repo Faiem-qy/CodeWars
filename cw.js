@@ -3064,55 +3064,64 @@ const max = function(list) {
 
 // console.log(century(1705));
 
-function duplicateCount(text) {
-  //...
-  const lowerText = text.toLowerCase();
-  const charCount = {};
-  for (const char of lowerText) {
-    charCount[char] = (charCount[char] || 0) + 1;
-  }
-  let duplicateCount = 0;
-  for (const char in charCount) {
-    if (charCount[char] > 1) {
-      duplicateCount++;
-    }
-  }
-  return duplicateCount;
+// function duplicateCount(text) {
+//   //...
+//   const lowerText = text.toLowerCase();
+//   const charCount = {};
+//   for (const char of lowerText) {
+//     charCount[char] = (charCount[char] || 0) + 1;
+//   }
+//   let duplicateCount = 0;
+//   for (const char in charCount) {
+//     if (charCount[char] > 1) {
+//       duplicateCount++;
+//     }
+//   }
+//   return duplicateCount;
+// }
+
+// console.log(duplicateCount("abcde"));
+// console.log(duplicateCount("aabbcde"));
+
+// function high(x) {
+//   // Split the input string into words
+//   const words = x.split(' ');
+
+//   // Function to calculate the score of a word
+//   const wordScore = (word) => {
+//     let score = 0;
+//     for (const char of word) {
+//       score += char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+//     }
+//     return score;
+//   };
+
+//   // Initialize variables to keep track of the highest score and word
+//   let highestScore = 0;
+//   let highestWord = '';
+
+//   for (const word of words) {
+//     const score = wordScore(word);
+//     if (score > highestScore) {
+//       highestScore = score;
+//       highestWord = word;
+//     }
+//   }
+
+//   return highestWord;
+// }
+
+
+// console.log(high("man i need a taxi up to ubud"));
+// console.log(high("what time are we climbing up the volcano")); 
+// console.log(high("take me to semynak")); 
+// console.log(high("ABBA")); 
+
+
+function simpleMultiplication(number) {
+  // your code........
+return number % 2 === 0 ? number * 8 : number * 9
 }
 
-console.log(duplicateCount("abcde"));
-console.log(duplicateCount("aabbcde"));
-
-function high(x) {
-  // Split the input string into words
-  const words = x.split(' ');
-
-  // Function to calculate the score of a word
-  const wordScore = (word) => {
-    let score = 0;
-    for (const char of word) {
-      score += char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
-    }
-    return score;
-  };
-
-  // Initialize variables to keep track of the highest score and word
-  let highestScore = 0;
-  let highestWord = '';
-
-  for (const word of words) {
-    const score = wordScore(word);
-    if (score > highestScore) {
-      highestScore = score;
-      highestWord = word;
-    }
-  }
-
-  return highestWord;
-}
-
-
-console.log(high("man i need a taxi up to ubud"));
-console.log(high("what time are we climbing up the volcano")); 
-console.log(high("take me to semynak")); 
-console.log(high("ABBA")); 
+console.log(simpleMultiplication(5));
+console.log(simpleMultiplication(10));
