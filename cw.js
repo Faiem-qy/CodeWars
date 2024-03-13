@@ -3082,3 +3082,37 @@ function duplicateCount(text) {
 
 console.log(duplicateCount("abcde"));
 console.log(duplicateCount("aabbcde"));
+
+function high(x) {
+  // Split the input string into words
+  const words = x.split(' ');
+
+  // Function to calculate the score of a word
+  const wordScore = (word) => {
+    let score = 0;
+    for (const char of word) {
+      score += char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+    }
+    return score;
+  };
+
+  // Initialize variables to keep track of the highest score and word
+  let highestScore = 0;
+  let highestWord = '';
+
+  for (const word of words) {
+    const score = wordScore(word);
+    if (score > highestScore) {
+      highestScore = score;
+      highestWord = word;
+    }
+  }
+
+  return highestWord;
+}
+
+
+console.log(high("man i need a taxi up to ubud"));
+console.log(high("what time are we climbing up the volcano")); 
+console.log(high("take me to semynak")); 
+console.log(high("ABBA")); 
