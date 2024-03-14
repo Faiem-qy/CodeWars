@@ -3125,3 +3125,13 @@ return number % 2 === 0 ? number * 8 : number * 9
 
 console.log(simpleMultiplication(5));
 console.log(simpleMultiplication(10));
+
+
+// Given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+function opposite(number) {
+  //your code here
+    return -number
+}
+console.log(opposite(1));  // Output: -1
+console.log(opposite(14)); // Output: -14
+console.log(opposite(-34)); // Output: 34
