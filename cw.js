@@ -3142,3 +3142,13 @@ const quarterOf = (month) => {
 }
 
 console.log(quarterOf(11));
+
+function between(a,b) {
+  const numbers = []
+  for(let i = a; i <= b; i ++) {
+    numbers.push(i)
+  }
+  return numbers
+}
+
+console.log(between(1,50));
