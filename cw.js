@@ -3135,3 +3135,10 @@ function opposite(number) {
 console.log(opposite(1));  // Output: -1
 console.log(opposite(14)); // Output: -14
 console.log(opposite(-34)); // Output: 34
+
+const quarterOf = (month) => {
+  // Your code here
+  return Math.ceil(month/3)
+}
+
+console.log(quarterOf(11));
