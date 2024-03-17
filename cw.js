@@ -3118,37 +3118,50 @@ const max = function(list) {
 // console.log(high("ABBA")); 
 
 
-function simpleMultiplication(number) {
-  // your code........
-return number % 2 === 0 ? number * 8 : number * 9
-}
+// function simpleMultiplication(number) {
+//   // your code........
+//   return number % 2 === 0 ? number * 8 : number * 9;
+// }
 
-console.log(simpleMultiplication(5));
-console.log(simpleMultiplication(10));
+// console.log(simpleMultiplication(5));
+// console.log(simpleMultiplication(10));
 
 
-// Given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
-function opposite(number) {
-  //your code here
-    return -number
-}
-console.log(opposite(1));  // Output: -1
-console.log(opposite(14)); // Output: -14
-console.log(opposite(-34)); // Output: 34
+// // Given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+// function opposite(number) {
+//   //your code here
+//   return -number;
+// }
+// console.log(opposite(1));  // Output: -1
+// console.log(opposite(14)); // Output: -14
+// console.log(opposite(-34)); // Output: 34
 
-const quarterOf = (month) => {
-  // Your code here
-  return Math.ceil(month/3)
-}
+// const quarterOf = (month) => {
+//   // Your code here
+//   return Math.ceil(month / 3);
+// };
 
-console.log(quarterOf(11));
+// console.log(quarterOf(11));
 
-function between(a,b) {
-  const numbers = []
-  for(let i = a; i <= b; i ++) {
-    numbers.push(i)
+// function between(a, b) {
+//   const numbers = [];
+//   for (let i = a; i <= b; i++) {
+//     numbers.push(i);
+//   }
+//   return numbers;
+// }
+
+// console.log(between(1, 50));
+
+
+// Given a non-empty array of integers, return the result of multiplying the values together in order 
+
+function grow(x) {
+  if (!Array.isArray(x)) {
+    return 'not an array';
+  } else {
+    return x.reduce((accumulator, currentValue) => accumulator * currentValue, 1)
   }
-  return numbers
 }
 
-console.log(between(1,50));
+console.log(grow([1,2,3,4]));
