@@ -3165,3 +3165,15 @@ function grow(x) {
 }
 
 console.log(grow([1,2,3,4]));
+
+
+// Since each dragon takes 2 bullets to be defeated, the total number of bullets needed is dragons * 2. If the number of bullets the hero has is greater than or equal to this total, he will survive; otherwise, he will not.
+
+function hero(bullets, dragons){
+  //Get Coding!
+  return bullets >= 2 * dragons
+  }
+  
+
+  console.log(hero(10,5));
+  console.log(hero(7,4));
