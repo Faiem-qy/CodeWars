@@ -3184,3 +3184,12 @@ function findDifference(a, b) {
 }
 
 console.log(findDifference([2, 2, 3], [5, 4, 1])); // Output should be 8
+
+let isAnagram = function(test, original) {
+  const sortedTest = test.toLowerCase().split('').sort().join('');
+  const sortedOriginal = original.toLowerCase().split('').sort().join('');
+  return sortedTest === sortedOriginal;
+};
+
+
+
