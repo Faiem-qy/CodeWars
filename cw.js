@@ -3201,3 +3201,10 @@ function removeSmallest(numbers) {
   // Create a new array without the smallest element
   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
+
+
+function addFive(num) {
+  let total = num + 5
+  return total
+}
+
