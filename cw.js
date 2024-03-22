@@ -3192,4 +3192,12 @@ let isAnagram = function(test, original) {
 };
 
 
-
+function removeSmallest(numbers) {
+  if (numbers.length === 0) return [];
+  
+  // Find the index of the smallest element
+  const minIndex = numbers.indexOf(Math.min(...numbers));
+  
+  // Create a new array without the smallest element
+  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
+}
