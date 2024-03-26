@@ -3180,7 +3180,7 @@ console.log(hero(7, 4));
 
 function findDifference(a, b) {
   //loading...
-  return Math.abs(a.reduce((acc, val) => acc * val,1) - b.reduce((acc, val) => acc * val, 1))
+  return Math.abs(a.reduce((acc, val) => acc * val, 1) - b.reduce((acc, val) => acc * val, 1));
 }
 
 console.log(findDifference([2, 2, 3], [5, 4, 1])); // Output should be 8
@@ -3194,18 +3194,18 @@ let isAnagram = function(test, original) {
 
 function removeSmallest(numbers) {
   if (numbers.length === 0) return [];
-  
+
   // Find the index of the smallest element
   const minIndex = numbers.indexOf(Math.min(...numbers));
-  
+
   // Create a new array without the smallest element
   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
 }
 
 
 function addFive(num) {
-  let total = num + 5
-  return total
+  let total = num + 5;
+  return total;
 }
 
 function firstNonConsecutive(arr) {
@@ -3220,5 +3220,22 @@ function firstNonConsecutive(arr) {
 // You are given two interior angles (in degrees) of a triangle.Write a function to return the 3rd. Note: only positive integers will be tested.
 
 function otherAngle(a, b) {
-  return 180 -a -b;
+  return 180 - a - b;
 }
+
+function squareDigits(num) {
+  let numString = num.toString();
+  let result = '';
+
+  for (let i = 0; i < numString.length; i++) {
+    let squaredDigit = Math.pow(parseInt(numString[i]), 2).toString();
+
+    result += squaredDigit;
+  }
+
+  return parseInt(result);
+}
+
+// Example usage:
+console.log(squareDigits(9119)); // Output: 811181
+console.log(squareDigits(765));  // Output: 493625
