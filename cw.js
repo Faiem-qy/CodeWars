@@ -3239,3 +3239,8 @@ function squareDigits(num) {
 // Example usage:
 console.log(squareDigits(9119)); // Output: 811181
 console.log(squareDigits(765));  // Output: 493625
+
+function testEven(n) {
+  //Your awesome code here!
+  return n % 2 === 0 && Number.isInteger(n);
+}
