@@ -3244,3 +3244,19 @@ function testEven(n) {
   //Your awesome code here!
   return n % 2 === 0 && Number.isInteger(n);
 }
+
+function replace(s) {
+  //coding and coding....
+  let result = '';
+  for (let i = 0; i < s.length; i++) {
+    if ('aeiouAEIOU'.includes(s[i])) {
+      result += '!';
+    } else {
+      result += s[i];
+    }
+  }
+  return result;
+}
+
+
+console.log(replace("HI!"));
