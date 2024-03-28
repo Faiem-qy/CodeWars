@@ -3156,107 +3156,113 @@ const max = function(list) {
 
 // Given a non-empty array of integers, return the result of multiplying the values together in order 
 
-function grow(x) {
-  if (!Array.isArray(x)) {
-    return 'not an array';
-  } else {
-    return x.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
-  }
-}
+// function grow(x) {
+//   if (!Array.isArray(x)) {
+//     return 'not an array';
+//   } else {
+//     return x.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
+//   }
+// }
 
-console.log(grow([1, 2, 3, 4]));
-
-
-// Since each dragon takes 2 bullets to be defeated, the total number of bullets needed is dragons * 2. If the number of bullets the hero has is greater than or equal to this total, he will survive; otherwise, he will not.
-
-function hero(bullets, dragons) {
-  //Get Coding!
-  return bullets >= 2 * dragons;
-}
+// console.log(grow([1, 2, 3, 4]));
 
 
-console.log(hero(10, 5));
-console.log(hero(7, 4));
+// // Since each dragon takes 2 bullets to be defeated, the total number of bullets needed is dragons * 2. If the number of bullets the hero has is greater than or equal to this total, he will survive; otherwise, he will not.
 
-function findDifference(a, b) {
-  //loading...
-  return Math.abs(a.reduce((acc, val) => acc * val, 1) - b.reduce((acc, val) => acc * val, 1));
-}
-
-console.log(findDifference([2, 2, 3], [5, 4, 1])); // Output should be 8
-
-let isAnagram = function(test, original) {
-  const sortedTest = test.toLowerCase().split('').sort().join('');
-  const sortedOriginal = original.toLowerCase().split('').sort().join('');
-  return sortedTest === sortedOriginal;
-};
+// function hero(bullets, dragons) {
+//   //Get Coding!
+//   return bullets >= 2 * dragons;
+// }
 
 
-function removeSmallest(numbers) {
-  if (numbers.length === 0) return [];
+// console.log(hero(10, 5));
+// console.log(hero(7, 4));
 
-  // Find the index of the smallest element
-  const minIndex = numbers.indexOf(Math.min(...numbers));
+// function findDifference(a, b) {
+//   //loading...
+//   return Math.abs(a.reduce((acc, val) => acc * val, 1) - b.reduce((acc, val) => acc * val, 1));
+// }
 
-  // Create a new array without the smallest element
-  return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
-}
+// console.log(findDifference([2, 2, 3], [5, 4, 1])); // Output should be 8
+
+// let isAnagram = function(test, original) {
+//   const sortedTest = test.toLowerCase().split('').sort().join('');
+//   const sortedOriginal = original.toLowerCase().split('').sort().join('');
+//   return sortedTest === sortedOriginal;
+// };
 
 
-function addFive(num) {
-  let total = num + 5;
-  return total;
-}
+// function removeSmallest(numbers) {
+//   if (numbers.length === 0) return [];
 
-function firstNonConsecutive(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] !== arr[i - 1] + 1) {
-      return arr[i];
-    }
-  }
-  return null;
-}
+//   // Find the index of the smallest element
+//   const minIndex = numbers.indexOf(Math.min(...numbers));
 
-// You are given two interior angles (in degrees) of a triangle.Write a function to return the 3rd. Note: only positive integers will be tested.
+//   // Create a new array without the smallest element
+//   return numbers.slice(0, minIndex).concat(numbers.slice(minIndex + 1));
+// }
 
-function otherAngle(a, b) {
-  return 180 - a - b;
-}
 
-function squareDigits(num) {
-  let numString = num.toString();
-  let result = '';
+// function addFive(num) {
+//   let total = num + 5;
+//   return total;
+// }
 
-  for (let i = 0; i < numString.length; i++) {
-    let squaredDigit = Math.pow(parseInt(numString[i]), 2).toString();
+// function firstNonConsecutive(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] !== arr[i - 1] + 1) {
+//       return arr[i];
+//     }
+//   }
+//   return null;
+// }
 
-    result += squaredDigit;
-  }
+// // You are given two interior angles (in degrees) of a triangle.Write a function to return the 3rd. Note: only positive integers will be tested.
 
-  return parseInt(result);
-}
+// function otherAngle(a, b) {
+//   return 180 - a - b;
+// }
 
-// Example usage:
-console.log(squareDigits(9119)); // Output: 811181
-console.log(squareDigits(765));  // Output: 493625
+// function squareDigits(num) {
+//   let numString = num.toString();
+//   let result = '';
 
-function testEven(n) {
-  //Your awesome code here!
-  return n % 2 === 0 && Number.isInteger(n);
-}
+//   for (let i = 0; i < numString.length; i++) {
+//     let squaredDigit = Math.pow(parseInt(numString[i]), 2).toString();
 
-function replace(s) {
-  //coding and coding....
-  let result = '';
-  for (let i = 0; i < s.length; i++) {
-    if ('aeiouAEIOU'.includes(s[i])) {
-      result += '!';
-    } else {
-      result += s[i];
-    }
-  }
-  return result;
-}
+//     result += squaredDigit;
+//   }
 
+//   return parseInt(result);
+// }
+
+// // Example usage:
+// console.log(squareDigits(9119)); // Output: 811181
+// console.log(squareDigits(765));  // Output: 493625
+
+// function testEven(n) {
+//   //Your awesome code here!
+//   return n % 2 === 0 && Number.isInteger(n);
+// }
+
+// function replace(s) {
+//   //coding and coding....
+//   let result = '';
+//   for (let i = 0; i < s.length; i++) {
+//     if ('aeiouAEIOU'.includes(s[i])) {
+//       result += '!';
+//     } else {
+//       result += s[i];
+//     }
+//   }
+//   return result;
+// }
 
 console.log(replace("HI!"));
+
+
+function removeUrlAnchor(url) {
+  return url.split('#')[0];
+}
+
+console.log(removeUrlAnchor("www.codewars.com#about"));
