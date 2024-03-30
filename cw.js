@@ -3276,3 +3276,12 @@ function makeNegative(num) {
     return num;
   }
 }
+
+
+// Write a program that finds the summation of every number from 1 to num
+let summation = function (num) {
+  if (num < 0) {
+    return 0; 
+  }
+  return num * (num + 1) / 2;
+}
