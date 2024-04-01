@@ -3298,3 +3298,11 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
+
+
+// returning 5 without using any of the characters 
+function unusualFive() {
+  return 'abcde'.length;
+}
+
+console.log(unusualFive());
