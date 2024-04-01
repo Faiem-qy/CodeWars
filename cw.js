@@ -3258,7 +3258,7 @@ const max = function(list) {
 //   return result;
 // }
 
-console.log(replace("HI!"));
+// console.log(replace("HI!"));
 
 
 function removeUrlAnchor(url) {
@@ -3279,9 +3279,22 @@ function makeNegative(num) {
 
 
 // Write a program that finds the summation of every number from 1 to num
-let summation = function (num) {
+let summation = function(num) {
   if (num < 0) {
-    return 0; 
+    return 0;
   }
   return num * (num + 1) / 2;
+};
+
+function factorial(n) {
+  if (n < 0 || n > 12) {
+    throw new RangeError('The input should be a non-negative integer less than or equal to 12.');
+  }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
+
+console.log(factorial(5));
