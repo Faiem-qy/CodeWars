@@ -3306,3 +3306,19 @@ function unusualFive() {
 }
 
 console.log(unusualFive());
+
+
+function multiTable(number) {
+  let table = '';
+  if (number > 0 && number < 11) {
+    for (let i = 1; i <= 10; i++) {
+      table += `${i} * ${number} = ${i * number}`;
+      if (i !== 10) {
+        table += '\n'; // Add new line except for the last row
+      }
+    }
+  }
+  return table
+}
+
+console.log(multiTable(5));
