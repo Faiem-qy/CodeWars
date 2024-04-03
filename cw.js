@@ -3318,7 +3318,19 @@ function multiTable(number) {
       }
     }
   }
-  return table
+  return table;
 }
 
 console.log(multiTable(5));
+
+function multiTable2(number) {
+  let table = [];
+  if (number > 0 && number < 13) {
+    for (let i = 1; i < 13; i++) {
+      table.push(`${i} * ${number} = ${i * number}`);
+    }
+  } 
+  return table.join('\n');
+}
+
+console.log(multiTable2(12));
