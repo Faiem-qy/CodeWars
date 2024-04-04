@@ -3261,76 +3261,95 @@ const max = function(list) {
 // console.log(replace("HI!"));
 
 
-function removeUrlAnchor(url) {
-  return url.split('#')[0];
-}
+// function removeUrlAnchor(url) {
+//   return url.split('#')[0];
+// }
 
-console.log(removeUrlAnchor("www.codewars.com#about"));
-
-
-// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
-function makeNegative(num) {
-  if (num > 0) {
-    return -num;
-  } else {
-    return num;
-  }
-}
+// console.log(removeUrlAnchor("www.codewars.com#about"));
 
 
-// Write a program that finds the summation of every number from 1 to num
-let summation = function(num) {
-  if (num < 0) {
-    return 0;
-  }
-  return num * (num + 1) / 2;
-};
-
-function factorial(n) {
-  if (n < 0 || n > 12) {
-    throw new RangeError('The input should be a non-negative integer less than or equal to 12.');
-  }
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result *= i;
-  }
-  return result;
-}
-
-console.log(factorial(5));
+// // In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+// function makeNegative(num) {
+//   if (num > 0) {
+//     return -num;
+//   } else {
+//     return num;
+//   }
+// }
 
 
-// returning 5 without using any of the characters 
-function unusualFive() {
-  return 'abcde'.length;
-}
+// // Write a program that finds the summation of every number from 1 to num
+// let summation = function(num) {
+//   if (num < 0) {
+//     return 0;
+//   }
+//   return num * (num + 1) / 2;
+// };
 
-console.log(unusualFive());
+// function factorial(n) {
+//   if (n < 0 || n > 12) {
+//     throw new RangeError('The input should be a non-negative integer less than or equal to 12.');
+//   }
+//   let result = 1;
+//   for (let i = 2; i <= n; i++) {
+//     result *= i;
+//   }
+//   return result;
+// }
+
+// console.log(factorial(5));
 
 
-function multiTable(number) {
-  let table = '';
-  if (number > 0 && number < 11) {
-    for (let i = 1; i <= 10; i++) {
-      table += `${i} * ${number} = ${i * number}`;
-      if (i !== 10) {
-        table += '\n'; // Add new line except for the last row
-      }
+// // returning 5 without using any of the characters 
+// function unusualFive() {
+//   return 'abcde'.length;
+// }
+
+// console.log(unusualFive());
+
+
+// function multiTable(number) {
+//   let table = '';
+//   if (number > 0 && number < 11) {
+//     for (let i = 1; i <= 10; i++) {
+//       table += `${i} * ${number} = ${i * number}`;
+//       if (i !== 10) {
+//         table += '\n'; // Add new line except for the last row
+//       }
+//     }
+//   }
+//   return table;
+// }
+
+// console.log(multiTable(5));
+
+// function multiTable2(number) {
+//   let table = [];
+//   if (number > 0 && number < 13) {
+//     for (let i = 1; i < 13; i++) {
+//       table.push(`${i} * ${number} = ${i * number}`);
+//     }
+//   }
+//   return table.join('\n');
+// }
+
+// console.log(multiTable2(12));
+
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+function findShort(s) {
+  const words = s.split(' ');
+
+  let shortestLenght = Infinity;
+  for (let word of words) {
+    if (word.length < shortestLenght) {
+
+      shortestLenght = word.length;
     }
   }
-  return table;
+  return shortestLenght;
 }
 
-console.log(multiTable(5));
-
-function multiTable2(number) {
-  let table = [];
-  if (number > 0 && number < 13) {
-    for (let i = 1; i < 13; i++) {
-      table.push(`${i} * ${number} = ${i * number}`);
-    }
-  } 
-  return table.join('\n');
-}
-
-console.log(multiTable2(12));
+console.log(findShort("The quick brown fox jumps over the lazy dog"));
