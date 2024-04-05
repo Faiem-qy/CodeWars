@@ -3353,3 +3353,30 @@ function findShort(s) {
 }
 
 console.log(findShort("The quick brown fox jumps over the lazy dog"));
+
+
+
+let v1 = 10, v2 = 20, v3 = 30, v4 = 40, v5 = 50, v6 = 60;
+
+function equal1() {
+  return v1 + v1;
+}
+
+function equal2() {
+  return v4 - v5;
+}
+
+function equal3() {
+  return v1 * v3;
+}
+
+function equal4() {
+  return v5 / v2;
+}
+
+function equal5() {
+  return v3 % v1;
+}
+
+console.log(equal1()); // output: 20
+console.log(equal2()); // output: -10
