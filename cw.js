@@ -3380,3 +3380,16 @@ function equal5() {
 
 console.log(equal1()); // output: 20
 console.log(equal2()); // output: -10
+
+
+function minValue(values) {
+  const uniqueValues = [...new Set(values)];
+
+  uniqueValues.sort((a, b) => a - b);
+
+  const smallestNumber = parseInt(uniqueValues.join(''));
+
+  return smallestNumber;
+}
+
+console.log(minValue([1,3,1]));
