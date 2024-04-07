@@ -3338,58 +3338,67 @@ const max = function(list) {
 
 // Simple, given a string of words, return the length of the shortest word(s).
 
-// String will never be empty and you do not need to account for different data types.
-function findShort(s) {
-  const words = s.split(' ');
+// // String will never be empty and you do not need to account for different data types.
+// function findShort(s) {
+//   const words = s.split(' ');
 
-  let shortestLenght = Infinity;
-  for (let word of words) {
-    if (word.length < shortestLenght) {
+//   let shortestLenght = Infinity;
+//   for (let word of words) {
+//     if (word.length < shortestLenght) {
 
-      shortestLenght = word.length;
-    }
-  }
-  return shortestLenght;
+//       shortestLenght = word.length;
+//     }
+//   }
+//   return shortestLenght;
+// }
+
+// console.log(findShort("The quick brown fox jumps over the lazy dog"));
+
+
+
+// let v1 = 10, v2 = 20, v3 = 30, v4 = 40, v5 = 50, v6 = 60;
+
+// function equal1() {
+//   return v1 + v1;
+// }
+
+// function equal2() {
+//   return v4 - v5;
+// }
+
+// function equal3() {
+//   return v1 * v3;
+// }
+
+// function equal4() {
+//   return v5 / v2;
+// }
+
+// function equal5() {
+//   return v3 % v1;
+// }
+
+// console.log(equal1()); // output: 20
+// console.log(equal2()); // output: -10
+
+
+// function minValue(values) {
+//   const uniqueValues = [...new Set(values)];
+
+//   uniqueValues.sort((a, b) => a - b);
+
+//   const smallestNumber = parseInt(uniqueValues.join(''));
+
+//   return smallestNumber;
+// }
+
+// console.log(minValue([1,3,1]));
+
+function move (position, roll) {
+  // return the new position
+  let newPosition = position + roll * 2;
+
+  return newPosition
 }
 
-console.log(findShort("The quick brown fox jumps over the lazy dog"));
-
-
-
-let v1 = 10, v2 = 20, v3 = 30, v4 = 40, v5 = 50, v6 = 60;
-
-function equal1() {
-  return v1 + v1;
-}
-
-function equal2() {
-  return v4 - v5;
-}
-
-function equal3() {
-  return v1 * v3;
-}
-
-function equal4() {
-  return v5 / v2;
-}
-
-function equal5() {
-  return v3 % v1;
-}
-
-console.log(equal1()); // output: 20
-console.log(equal2()); // output: -10
-
-
-function minValue(values) {
-  const uniqueValues = [...new Set(values)];
-
-  uniqueValues.sort((a, b) => a - b);
-
-  const smallestNumber = parseInt(uniqueValues.join(''));
-
-  return smallestNumber;
-}
-
-console.log(minValue([1,3,1]));
+console.log(move(3,6));
