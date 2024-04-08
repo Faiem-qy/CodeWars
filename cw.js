@@ -3394,11 +3394,22 @@ const max = function(list) {
 
 // console.log(minValue([1,3,1]));
 
-function move (position, roll) {
-  // return the new position
-  let newPosition = position + roll * 2;
+// function move (position, roll) {
+//   // return the new position
+//   let newPosition = position + roll * 2;
 
-  return newPosition
+//   return newPosition
+// }
+
+// console.log(move(3,6));
+
+function mouthSize(animal) {
+  // code here
+  if (animal.toLowerCase() === 'alligator') {
+    return "small";
+  } else {
+    return "wide";
+  }
 }
 
-console.log(move(3,6));
+console.log(mouthSize('frog'));
