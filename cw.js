@@ -3413,3 +3413,11 @@ function mouthSize(animal) {
 }
 
 console.log(mouthSize('frog'));
+
+
+function makeUpperCase(str) {
+  // Code here
+return str.toUpperCase()
+}
+
+console.log(makeUpperCase("Shrimp"));
