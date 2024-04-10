@@ -3417,7 +3417,13 @@ console.log(mouthSize('frog'));
 
 function makeUpperCase(str) {
   // Code here
-return str.toUpperCase()
+  return str.toUpperCase();
 }
 
 console.log(makeUpperCase("Shrimp"));
+
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
+
+console.log(hexToDec("1A"));
