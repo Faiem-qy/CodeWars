@@ -3430,48 +3430,13 @@ console.log(hexToDec("1A"));
 
 
 function mergeArrays(arr1, arr2) {
-  let i = 0;
-  let j = 0;
-  const result = [];
+  // Concatenate both arrays and remove duplicates by using Set
+  const mergedSet = new Set([...arr1, ...arr2]);
 
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-      if (result.length === 0 || result[result.length - 1] !== arr1[i]) {
-        result.push(arr1[i]);
-      }
-      i++;
-    } else if (arr2[j] < arr1[i]) {
-      if (result.length === 0 || result[result.length - 1] !== arr2[j]) {
-        result.push(arr2[j]);
-      }
-      j++;
-    } else {
-      // When arr1[i] === arr2[j], add one and move both pointers
-      if (result.length === 0 || result[result.length - 1] !== arr1[i]) {
-        result.push(arr1[i]);
-      }
-      i++;
-      j++;
-    }
-  }
+  // Convert Set back to array and sort in ascending order
+  const mergedArray = [...mergedSet].sort((a, b) => a - b);
 
-  // Add remaining elements from arr1
-  while (i < arr1.length) {
-    if (result.length === 0 || result[result.length - 1] !== arr1[i]) {
-      result.push(arr1[i]);
-    }
-    i++;
-  }
-
-  // Add remaining elements from arr2
-  while (j < arr2.length) {
-    if (result.length === 0 || result[result.length - 1] !== arr2[j]) {
-      result.push(arr2[j]);
-    }
-    j++;
-  }
-
-  return result;
+  return mergedArray;
 }
 
 // Test cases
