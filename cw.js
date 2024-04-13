@@ -3403,41 +3403,55 @@ const max = function(list) {
 
 // console.log(move(3,6));
 
-function mouthSize(animal) {
-  // code here
-  if (animal.toLowerCase() === 'alligator') {
-    return "small";
-  } else {
-    return "wide";
+// function mouthSize(animal) {
+//   // code here
+//   if (animal.toLowerCase() === 'alligator') {
+//     return "small";
+//   } else {
+//     return "wide";
+//   }
+// }
+
+// console.log(mouthSize('frog'));
+
+
+// function makeUpperCase(str) {
+//   // Code here
+//   return str.toUpperCase();
+// }
+
+// console.log(makeUpperCase("Shrimp"));
+
+// function hexToDec(hexString) {
+//   return parseInt(hexString, 16);
+// }
+
+// console.log(hexToDec("1A"));
+
+
+// function mergeArrays(arr1, arr2) {
+//   // Concatenate both arrays and remove duplicates by using Set
+//   const mergedSet = new Set([...arr1, ...arr2]);
+
+//   // Convert Set back to array and sort in ascending order
+//   const mergedArray = [...mergedSet].sort((a, b) => a - b);
+
+//   return mergedArray;
+// }
+
+// // Test cases
+// console.log(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]));
+
+
+function rowSumOddNumbers(n) {
+  const firstNumber = n * n - n + 1;
+
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    const oddNumber = firstNumber + 2 * i;
+    sum += oddNumber;
   }
+  return sum;
 }
 
-console.log(mouthSize('frog'));
-
-
-function makeUpperCase(str) {
-  // Code here
-  return str.toUpperCase();
-}
-
-console.log(makeUpperCase("Shrimp"));
-
-function hexToDec(hexString) {
-  return parseInt(hexString, 16);
-}
-
-console.log(hexToDec("1A"));
-
-
-function mergeArrays(arr1, arr2) {
-  // Concatenate both arrays and remove duplicates by using Set
-  const mergedSet = new Set([...arr1, ...arr2]);
-
-  // Convert Set back to array and sort in ascending order
-  const mergedArray = [...mergedSet].sort((a, b) => a - b);
-
-  return mergedArray;
-}
-
-// Test cases
-console.log(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]))
+console.log(rowSumOddNumbers(3));
