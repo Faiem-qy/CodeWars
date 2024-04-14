@@ -3455,3 +3455,13 @@ function rowSumOddNumbers(n) {
 }
 
 console.log(rowSumOddNumbers(3));
+
+
+function validatePIN(pin) {
+  //return true or false
+  const pinRegex = /^\d{4}$|^\d{6}$/;
+  return pinRegex.test(pin);
+}
+
+console.log(validatePIN("1234"));
+console.log(validatePIN("12345"));  
