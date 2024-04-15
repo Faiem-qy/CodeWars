@@ -3464,4 +3464,14 @@ function validatePIN(pin) {
 }
 
 console.log(validatePIN("1234"));
-console.log(validatePIN("12345"));  
+console.log(validatePIN("12345"));
+
+function remove(str) {
+  if (str.endsWith('!')) {
+    return str.slice(0, -1);
+  } else {
+    return str;
+  }
+}
+
+console.log(remove('Hi!'));
