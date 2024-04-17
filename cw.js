@@ -3475,3 +3475,18 @@ function remove(str) {
 }
 
 console.log(remove('Hi!'));
+
+function position(letter) {
+  // Convert the input letter to lowercase (to handle uppercase input)
+  const lowercaseLetter = letter.toLowerCase();
+
+  // Calculate the position of the letter in the alphabet
+  const position = lowercaseLetter.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+
+  // Construct the output message
+  const output = `Position of alphabet: ${position}`;
+
+  return output;
+}
+
+console.log(position("z"));
