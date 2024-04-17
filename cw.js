@@ -3490,3 +3490,18 @@ function position(letter) {
 }
 
 console.log(position("z"));
+
+
+function expressionMatter(a, b, c) {
+  // Calculate three possible expressions and find the maximum result
+  const result1 = a * b * c; 
+  const result2 = (a + b) * c; 
+  const result3 = a * (b + c);  
+
+  // Find the maximum result among the three expressions
+  const maxResult = Math.max(result1, result2, result3);
+
+  return maxResult;
+}
+
+console.log(expressionMatter(5, 1, 3)); 
