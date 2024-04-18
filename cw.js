@@ -3505,3 +3505,13 @@ function expressionMatter(a, b, c) {
 }
 
 console.log(expressionMatter(5, 1, 3)); 
+
+function nameShuffler(str){
+  const words = str.split(' ');
+  if (words.length !== 2) {
+    return str
+  } 
+const [firstName, lastName] = words;
+const shuffledName = `${lastName} ${firstName}`
+return shuffledName
+}
