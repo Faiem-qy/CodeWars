@@ -3494,9 +3494,9 @@ console.log(position("z"));
 
 function expressionMatter(a, b, c) {
   // Calculate three possible expressions and find the maximum result
-  const result1 = a * b * c; 
-  const result2 = (a + b) * c; 
-  const result3 = a * (b + c);  
+  const result1 = a * b * c;
+  const result2 = (a + b) * c;
+  const result3 = a * (b + c);
 
   // Find the maximum result among the three expressions
   const maxResult = Math.max(result1, result2, result3);
@@ -3504,25 +3504,31 @@ function expressionMatter(a, b, c) {
   return maxResult;
 }
 
-console.log(expressionMatter(5, 1, 3)); 
+console.log(expressionMatter(5, 1, 3));
 
-function nameShuffler(str){
+function nameShuffler(str) {
   const words = str.split(' ');
   if (words.length !== 2) {
-    return str
-  } 
-const [firstName, lastName] = words;
-const shuffledName = `${lastName} ${firstName}`
-return shuffledName
+    return str;
+  }
+  const [firstName, lastName] = words;
+  const shuffledName = `${lastName} ${firstName}`;
+  return shuffledName;
 }
 
 
 function howManyLightsabersDoYouOwn(name) {
   if (name === "Zach") {
-      return 18;  
+    return 18;
   } else {
-      return 0;  
+    return 0;
   }
 }
 
-console.log(howManyLightsabersDoYouOwn("Zach")); 
+console.log(howManyLightsabersDoYouOwn("Zach"));
+
+function take(arr, n) {
+  // Your code here
+  return arr.slice(0, n);
+
+}
