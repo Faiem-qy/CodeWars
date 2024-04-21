@@ -3443,92 +3443,106 @@ const max = function(list) {
 // console.log(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]));
 
 
-function rowSumOddNumbers(n) {
-  const firstNumber = n * n - n + 1;
+// function rowSumOddNumbers(n) {
+//   const firstNumber = n * n - n + 1;
 
-  let sum = 0;
-  for (let i = 0; i < n; i++) {
-    const oddNumber = firstNumber + 2 * i;
-    sum += oddNumber;
+//   let sum = 0;
+//   for (let i = 0; i < n; i++) {
+//     const oddNumber = firstNumber + 2 * i;
+//     sum += oddNumber;
+//   }
+//   return sum;
+// }
+
+// console.log(rowSumOddNumbers(3));
+
+
+// function validatePIN(pin) {
+//   //return true or false
+//   const pinRegex = /^\d{4}$|^\d{6}$/;
+//   return pinRegex.test(pin);
+// }
+
+// console.log(validatePIN("1234"));
+// console.log(validatePIN("12345"));
+
+// function remove(str) {
+//   if (str.endsWith('!')) {
+//     return str.slice(0, -1);
+//   } else {
+//     return str;
+//   }
+// }
+
+// console.log(remove('Hi!'));
+
+// function position(letter) {
+//   // Convert the input letter to lowercase (to handle uppercase input)
+//   const lowercaseLetter = letter.toLowerCase();
+
+//   // Calculate the position of the letter in the alphabet
+//   const position = lowercaseLetter.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+
+//   // Construct the output message
+//   const output = `Position of alphabet: ${position}`;
+
+//   return output;
+// }
+
+// console.log(position("z"));
+
+
+// function expressionMatter(a, b, c) {
+//   // Calculate three possible expressions and find the maximum result
+//   const result1 = a * b * c;
+//   const result2 = (a + b) * c;
+//   const result3 = a * (b + c);
+
+//   // Find the maximum result among the three expressions
+//   const maxResult = Math.max(result1, result2, result3);
+
+//   return maxResult;
+// }
+
+// console.log(expressionMatter(5, 1, 3));
+
+// function nameShuffler(str) {
+//   const words = str.split(' ');
+//   if (words.length !== 2) {
+//     return str;
+//   }
+//   const [firstName, lastName] = words;
+//   const shuffledName = `${lastName} ${firstName}`;
+//   return shuffledName;
+// }
+
+
+// function howManyLightsabersDoYouOwn(name) {
+//   if (name === "Zach") {
+//     return 18;
+//   } else {
+//     return 0;
+//   }
+// }
+
+// console.log(howManyLightsabersDoYouOwn("Zach"));
+
+// function take(arr, n) {
+//   // Your code here
+//   return arr.slice(0, n);
+// }
+
+const findAverage = function (nums) {
+  // Code here
+  if(nums.length === 0) {
+    return 0
   }
-  return sum;
+
+  let sum = nums.reduce((acc, curr) => acc + curr, 0)
+
+  const mean = sum / nums.length
+  
+  return mean
 }
 
-console.log(rowSumOddNumbers(3));
-
-
-function validatePIN(pin) {
-  //return true or false
-  const pinRegex = /^\d{4}$|^\d{6}$/;
-  return pinRegex.test(pin);
-}
-
-console.log(validatePIN("1234"));
-console.log(validatePIN("12345"));
-
-function remove(str) {
-  if (str.endsWith('!')) {
-    return str.slice(0, -1);
-  } else {
-    return str;
-  }
-}
-
-console.log(remove('Hi!'));
-
-function position(letter) {
-  // Convert the input letter to lowercase (to handle uppercase input)
-  const lowercaseLetter = letter.toLowerCase();
-
-  // Calculate the position of the letter in the alphabet
-  const position = lowercaseLetter.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
-
-  // Construct the output message
-  const output = `Position of alphabet: ${position}`;
-
-  return output;
-}
-
-console.log(position("z"));
-
-
-function expressionMatter(a, b, c) {
-  // Calculate three possible expressions and find the maximum result
-  const result1 = a * b * c;
-  const result2 = (a + b) * c;
-  const result3 = a * (b + c);
-
-  // Find the maximum result among the three expressions
-  const maxResult = Math.max(result1, result2, result3);
-
-  return maxResult;
-}
-
-console.log(expressionMatter(5, 1, 3));
-
-function nameShuffler(str) {
-  const words = str.split(' ');
-  if (words.length !== 2) {
-    return str;
-  }
-  const [firstName, lastName] = words;
-  const shuffledName = `${lastName} ${firstName}`;
-  return shuffledName;
-}
-
-
-function howManyLightsabersDoYouOwn(name) {
-  if (name === "Zach") {
-    return 18;
-  } else {
-    return 0;
-  }
-}
-
-console.log(howManyLightsabersDoYouOwn("Zach"));
-
-function take(arr, n) {
-  // Your code here
-  return arr.slice(0, n);
-
-}
+console.log(findAverage([1,2,3,4,5]));
