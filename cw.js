@@ -3532,17 +3532,30 @@ const max = function(list) {
 //   return arr.slice(0, n);
 // }
 
-const findAverage = function (nums) {
+const findAverage = function(nums) {
   // Code here
-  if(nums.length === 0) {
-    return 0
+  if (nums.length === 0) {
+    return 0;
   }
 
-  let sum = nums.reduce((acc, curr) => acc + curr, 0)
+  let sum = nums.reduce((acc, curr) => acc + curr, 0);
 
-  const mean = sum / nums.length
-  
-  return mean
+  const mean = sum / nums.length;
+
+  return mean;
+};
+
+console.log(findAverage([1, 2, 3, 4, 5]));
+
+
+function rainAmount(mm) {
+  if (mm < 40) {
+    return "You need to give your plant " + (40 - mm) + "mm of water";
+  } else if (mm === 40) {
+    return "Your plants have received the perfect amount of water today!";
+  } else {
+    return "Your plant has had more than enough water for today!";
+  }
 }
 
-console.log(findAverage([1,2,3,4,5]));
+console.log(rainAmount(60));
