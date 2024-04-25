@@ -3583,3 +3583,15 @@ console.log(basicOp('+', 4, 7));
 console.log(basicOp('-', 15, 18));
 console.log(basicOp('*', 5, 5));
 console.log(basicOp('/', 49, 7));
+
+
+function flattenAndSort(array) {
+  // Good luck, brave code warrior!
+  const flattenedArray = array.reduce((acc, curr) => acc.concat(curr),[]);
+
+  const sortedArray = flattenedArray.sort((a, b) => a - b);
+
+  return sortedArray;
+}
+
+console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
