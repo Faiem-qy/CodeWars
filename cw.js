@@ -3587,7 +3587,7 @@ console.log(basicOp('/', 49, 7));
 
 function flattenAndSort(array) {
   // Good luck, brave code warrior!
-  const flattenedArray = array.reduce((acc, curr) => acc.concat(curr),[]);
+  const flattenedArray = array.reduce((acc, curr) => acc.concat(curr), []);
 
   const sortedArray = flattenedArray.sort((a, b) => a - b);
 
@@ -3595,3 +3595,19 @@ function flattenAndSort(array) {
 }
 
 console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+
+
+function updateLight(current) {
+  //your code here!
+  if (current === "green") {
+    return 'yellow';
+  } else if (current === 'yellow') {
+    return 'red';
+  } else if (current === 'red') {
+    return 'green';
+  } else {
+    return 'unknown'
+  }
+}
+
+console.log(updateLight('green'));
