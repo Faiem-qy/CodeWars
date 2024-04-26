@@ -3606,8 +3606,39 @@ function updateLight(current) {
   } else if (current === 'red') {
     return 'green';
   } else {
-    return 'unknown'
+    return 'unknown';
   }
 }
 
 console.log(updateLight('green'));
+
+
+function trafficLichtController() {
+  let currentLight = 'green';
+  let amountOfCycles = 0;
+
+  function updateLight() {
+    if (amountOfCycles < 3) {
+
+      if (currentLight === 'green') {
+        console.log("Green light -> Yellow light");
+        currentLight = 'yellow';
+        setTimeout(updateLight, 3000);
+      } else if (currentLight === 'yellow') {
+        console.log('Yellow light -> Red light');
+        currentLight = 'red';
+        setTimeout(updateLight, 2000);
+      } else if (currentLight === 'red') {
+        console.log('Red light -> Green light');
+        currentLight = 'green';
+        setTimeout(updateLight, 4000);
+        amountOfCycles++;
+      }
+    } else {
+      console.log('3 - Cycles completed');
+    }
+  }
+  updateLight();
+}
+
+trafficLichtController();
