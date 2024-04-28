@@ -3532,113 +3532,124 @@ const max = function(list) {
 //   return arr.slice(0, n);
 // }
 
-const findAverage = function(nums) {
-  // Code here
-  if (nums.length === 0) {
-    return 0;
-  }
+// const findAverage = function(nums) {
+//   // Code here
+//   if (nums.length === 0) {
+//     return 0;
+//   }
 
-  let sum = nums.reduce((acc, curr) => acc + curr, 0);
+//   let sum = nums.reduce((acc, curr) => acc + curr, 0);
 
-  const mean = sum / nums.length;
+//   const mean = sum / nums.length;
 
-  return mean;
-};
+//   return mean;
+// };
 
-console.log(findAverage([1, 2, 3, 4, 5]));
+// console.log(findAverage([1, 2, 3, 4, 5]));
 
 
-function rainAmount(mm) {
-  if (mm < 40) {
-    return "You need to give your plant " + (40 - mm) + "mm of water";
-  } else if (mm === 40) {
-    return "Your plants have received the perfect amount of water today!";
-  } else {
-    return "Your plant has had more than enough water for today!";
-  }
+// function rainAmount(mm) {
+//   if (mm < 40) {
+//     return "You need to give your plant " + (40 - mm) + "mm of water";
+//   } else if (mm === 40) {
+//     return "Your plants have received the perfect amount of water today!";
+//   } else {
+//     return "Your plant has had more than enough water for today!";
+//   }
+// }
+
+// console.log(rainAmount(60));
+
+
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//     case '+':
+//       return value1 + value2;
+//     case '-':
+//       return value1 - value2;
+//     case '*':
+//       return value1 * value2;
+//     case '/':
+//       if (value2 === 0) {
+//         return 'Division by zero is not allowed';
+//       }
+//       return value1 / value2;
+//     default:
+//       return 'Invalid operation';
+//   }
+// }
+
+// console.log(basicOp('+', 4, 7));
+// console.log(basicOp('-', 15, 18));
+// console.log(basicOp('*', 5, 5));
+// console.log(basicOp('/', 49, 7));
+
+
+// function flattenAndSort(array) {
+//   // Good luck, brave code warrior!
+//   const flattenedArray = array.reduce((acc, curr) => acc.concat(curr), []);
+
+//   const sortedArray = flattenedArray.sort((a, b) => a - b);
+
+//   return sortedArray;
+// }
+
+// console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+
+
+// function updateLight(current) {
+//   //your code here!
+//   if (current === "green") {
+//     return 'yellow';
+//   } else if (current === 'yellow') {
+//     return 'red';
+//   } else if (current === 'red') {
+//     return 'green';
+//   } else {
+//     return 'unknown';
+//   }
+// }
+
+// console.log(updateLight('green'));
+
+
+// function trafficLichtController() {
+//   let currentLight = 'green';
+//   let amountOfCycles = 0;
+
+//   function updateLight() {
+//     if (amountOfCycles < 3) {
+
+//       if (currentLight === 'green') {
+//         console.log("Green light -> Yellow light");
+//         currentLight = 'yellow';
+//         setTimeout(updateLight, 3000);
+//       } else if (currentLight === 'yellow') {
+//         console.log('Yellow light -> Red light');
+//         currentLight = 'red';
+//         setTimeout(updateLight, 2000);
+//       } else if (currentLight === 'red') {
+//         console.log('Red light -> Green light');
+//         currentLight = 'green';
+//         setTimeout(updateLight, 4000);
+//         amountOfCycles++;
+//       }
+//     } else {
+//       console.log('3 - Cycles completed');
+//     }
+//   }
+//   updateLight();
+// }
+
+// trafficLichtController();
+
+
+function addLength(str) {
+  const words = str.split(' ')
+  const result = words.map(word => `${word} ${word.length}`)
+
+  return result
 }
 
-console.log(rainAmount(60));
-
-
-function basicOp(operation, value1, value2) {
-  switch (operation) {
-    case '+':
-      return value1 + value2;
-    case '-':
-      return value1 - value2;
-    case '*':
-      return value1 * value2;
-    case '/':
-      if (value2 === 0) {
-        return 'Division by zero is not allowed';
-      }
-      return value1 / value2;
-    default:
-      return 'Invalid operation';
-  }
-}
-
-console.log(basicOp('+', 4, 7));
-console.log(basicOp('-', 15, 18));
-console.log(basicOp('*', 5, 5));
-console.log(basicOp('/', 49, 7));
-
-
-function flattenAndSort(array) {
-  // Good luck, brave code warrior!
-  const flattenedArray = array.reduce((acc, curr) => acc.concat(curr), []);
-
-  const sortedArray = flattenedArray.sort((a, b) => a - b);
-
-  return sortedArray;
-}
-
-console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
-
-
-function updateLight(current) {
-  //your code here!
-  if (current === "green") {
-    return 'yellow';
-  } else if (current === 'yellow') {
-    return 'red';
-  } else if (current === 'red') {
-    return 'green';
-  } else {
-    return 'unknown';
-  }
-}
-
-console.log(updateLight('green'));
-
-
-function trafficLichtController() {
-  let currentLight = 'green';
-  let amountOfCycles = 0;
-
-  function updateLight() {
-    if (amountOfCycles < 3) {
-
-      if (currentLight === 'green') {
-        console.log("Green light -> Yellow light");
-        currentLight = 'yellow';
-        setTimeout(updateLight, 3000);
-      } else if (currentLight === 'yellow') {
-        console.log('Yellow light -> Red light');
-        currentLight = 'red';
-        setTimeout(updateLight, 2000);
-      } else if (currentLight === 'red') {
-        console.log('Red light -> Green light');
-        currentLight = 'green';
-        setTimeout(updateLight, 4000);
-        amountOfCycles++;
-      }
-    } else {
-      console.log('3 - Cycles completed');
-    }
-  }
-  updateLight();
-}
-
-trafficLichtController();
+console.log(addLength('hi'));
+console.log(addLength('hi. How are you?'));
