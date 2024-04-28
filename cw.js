@@ -3644,12 +3644,18 @@ const max = function(list) {
 // trafficLichtController();
 
 
-function addLength(str) {
-  const words = str.split(' ')
-  const result = words.map(word => `${word} ${word.length}`)
+// function addLength(str) {
+//   const words = str.split(' ')
+//   const result = words.map(word => `${word} ${word.length}`)
 
-  return result
+//   return result
+// }
+
+// console.log(addLength('hi'));
+// console.log(addLength('hi. How are you?'));
+
+function main(verb, noun) {
+  return verb + noun
 }
 
-console.log(addLength('hi'));
-console.log(addLength('hi. How are you?'));
+console.log(main("built","Canada"));
