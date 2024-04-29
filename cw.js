@@ -3655,7 +3655,16 @@ const max = function(list) {
 // console.log(addLength('hi. How are you?'));
 
 function main(verb, noun) {
-  return verb + noun
+  return verb + noun;
 }
 
-console.log(main("built","Canada"));
+console.log(main("built", "Canada"));
+
+function hello(name) {
+  if (name && name.length > 0) {
+    name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    return `Hello, ${name}!`;
+  } else {
+    return `Hello, World!`;
+  }
+}
