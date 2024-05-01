@@ -3654,32 +3654,38 @@ const max = function(list) {
 // console.log(addLength('hi'));
 // console.log(addLength('hi. How are you?'));
 
-function main(verb, noun) {
-  return verb + noun;
+// function main(verb, noun) {
+//   return verb + noun;
+// }
+
+// console.log(main("built", "Canada"));
+
+// function hello(name) {
+//   if (name && name.length > 0) {
+//     name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+//     return `Hello, ${name}!`;
+//   } else {
+//     return `Hello, World!`;
+//   }
+// }
+
+
+// function strCount(str, letter) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(strCount("Hello", 'o'));
+// console.log(strCount("Hello", 'l'));
+// console.log(strCount("", 'z'));
+
+function correct(string) {
+  return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I');
 }
 
-console.log(main("built", "Canada"));
-
-function hello(name) {
-  if (name && name.length > 0) {
-    name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    return `Hello, ${name}!`;
-  } else {
-    return `Hello, World!`;
-  }
-}
-
-
-function strCount(str, letter) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
-
-console.log(strCount("Hello", 'o')); 
-console.log(strCount("Hello", 'l')); 
-console.log(strCount("", 'z'));
+console.log(correct("510"));
