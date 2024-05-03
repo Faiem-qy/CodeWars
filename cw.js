@@ -3689,3 +3689,10 @@ function correct(string) {
 }
 
 console.log(correct("510"));
+
+function plural(n) {
+  // ...
+return n !== 1;
+}
+
+plural(5)
