@@ -3712,4 +3712,15 @@ function bmi(weight, height) {
     return "Obese";
   }
 }
+
 console.log(bmi(80,1.8));
+
+
+function sayHello(name, city, state) {
+  // Join the name array into a single string
+  var fullName = name.join(' ');
+
+  // Return the welcome message
+  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
+}
+console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
