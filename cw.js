@@ -3749,3 +3749,11 @@ function popElement(arr){
   arr.pop()
   return arr
 }
+
+function invert(array) {
+  return array.map(x => x * -1);
+}
+
+console.log(invert([1,2,3,4,5]));
+console.log(invert([1,-2,3,-4,5])); 
+console.log(invert([])); 
