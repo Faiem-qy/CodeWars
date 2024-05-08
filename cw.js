@@ -3684,83 +3684,114 @@ const max = function(list) {
 // console.log(strCount("Hello", 'l'));
 // console.log(strCount("", 'z'));
 
-function correct(string) {
-  return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I');
-}
+// function correct(string) {
+//   return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I');
+// }
 
-console.log(correct("510"));
+// console.log(correct("510"));
 
-function plural(n) {
-  // ...
-  return n !== 1;
-}
+// function plural(n) {
+//   // ...
+//   return n !== 1;
+// }
 
-plural(5);
+// plural(5);
 
 
 
-function bmi(weight, height) {
-  let bmi = weight / (height * height);
+// function bmi(weight, height) {
+//   let bmi = weight / (height * height);
 
-  if (bmi <= 18.5) {
-    return "Underweight";
-  } else if (bmi <= 25.0) {
-    return "Normal";
-  } else if (bmi <= 30.0) {
-    return "Overweight";
+//   if (bmi <= 18.5) {
+//     return "Underweight";
+//   } else if (bmi <= 25.0) {
+//     return "Normal";
+//   } else if (bmi <= 30.0) {
+//     return "Overweight";
+//   } else {
+//     return "Obese";
+//   }
+// }
+
+// console.log(bmi(80, 1.8));
+
+
+// function sayHello(name, city, state) {
+//   // Join the name array into a single string
+//   var fullName = name.join(' ');
+
+//   // Return the welcome message
+//   return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
+// }
+// console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
+
+
+// function getLength(arr) {
+//   //return length of arr
+//   return arr.length;
+// }
+// function getFirst(arr) {
+//   //return the first element of arr
+//   return arr[0];
+// }
+// function getLast(arr) {
+//   //return the last element of arr
+//   return arr[arr.length - 1];
+// }
+// function pushElement(arr) {
+//   const el = 1;
+//   //push el to arr
+//   arr.push(el);
+//   return arr;
+// }
+// function popElement(arr) {
+//   //pop an element from arr
+//   arr.pop();
+//   return arr;
+// }
+
+// function invert(array) {
+//   return array.map(x => x * -1);
+// }
+
+// console.log(invert([1, 2, 3, 4, 5]));
+// console.log(invert([1, -2, 3, -4, 5]));
+// console.log(invert([]));
+
+
+// function animal(obj) {
+//   return "This " + obj.color + " " + obj.name + " has " + obj.legs + " legs.";
+// }
+
+// console.log(animal({ name: "dog", legs: 4, color: "white" }));
+
+function calculateAge1(age) {
+  let currentAge = 4;
+  if (age > currentAge) {
+    let newAge = currentAge + (age - currentAge);
+    return `You are ${newAge} years old`;
+  } else if(age < currentAge) {
+    let years = currentAge - age;
+    return `You are ${years} years old`;
   } else {
-    return "Obese";
+    return `You are ${currentAge} years old`;
+  }
+}
+console.log(calculateAge1(6));
+
+
+function calculateAge2(yearOfBirth, yearToCount) {
+  var difference = yearToCount - yearOfBirth;
+  if (difference > 0) {
+    return "You are " + difference + (difference > 1 ? " years" : " year") + " old.";
+  } else if (difference < 0) {
+    return "You will be born in " + Math.abs(difference) + (Math.abs(difference) > 1 ? " years." : " year.");
+  } else {
+    return "You were born this very year!";
   }
 }
 
-console.log(bmi(80,1.8));
 
-
-function sayHello(name, city, state) {
-  // Join the name array into a single string
-  var fullName = name.join(' ');
-
-  // Return the welcome message
-  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
-}
-console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
-
-
-function getLength(arr){
-  //return length of arr
-  return arr.length
-}
-function getFirst(arr){
-  //return the first element of arr
-  return arr[0]
-}
-function getLast(arr){
-  //return the last element of arr
-  return arr[arr.length -1]
-}
-function pushElement(arr){
-  const el=1;
-  //push el to arr
-  arr.push(el)
-  return arr
-}
-function popElement(arr){
-  //pop an element from arr
-  arr.pop()
-  return arr
-}
-
-function invert(array) {
-  return array.map(x => x * -1);
-}
-
-console.log(invert([1,2,3,4,5]));
-console.log(invert([1,-2,3,-4,5])); 
-console.log(invert([])); 
-
-
-function animal(obj){
-  return "This " + obj.color + " " + obj.name + " has " + obj.legs + " legs."
-}
-
-console.log(animal({name: "dog", legs:4, color:"white"}));
+console.log(calculateAge2(2017, 2025),'2nd version');
+console.log(calculateAge2(2025, 2017),'2nd version');  
+console.log(calculateAge2(2025, 2025),'2nd version');
