@@ -3781,7 +3781,7 @@ console.log(calculateAge1(6));
 
 
 function calculateAge2(yearOfBirth, yearToCount) {
-  var difference = yearToCount - yearOfBirth;
+  let difference = yearToCount - yearOfBirth;
   if (difference > 0) {
     return "You are " + difference + (difference > 1 ? " years" : " year") + " old.";
   } else if (difference < 0) {
