@@ -3805,3 +3805,12 @@ function replace(s) {
 }
 
 console.log(replace("this is a pen"));
+
+function reverse(string) {
+  //your code here
+
+  let words = string.split(' ');
+  let reverseWords = words.reverse();
+  let reversedString = reverseWords.joing(' ');
+  return reversedString;
+}
