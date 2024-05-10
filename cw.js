@@ -3770,7 +3770,7 @@ function calculateAge1(age) {
   if (age > currentAge) {
     let newAge = currentAge + (age - currentAge);
     return `You are ${newAge} years old`;
-  } else if(age < currentAge) {
+  } else if (age < currentAge) {
     let years = currentAge - age;
     return `You are ${years} years old`;
   } else {
@@ -3792,6 +3792,16 @@ function calculateAge2(yearOfBirth, yearToCount) {
 }
 
 
-console.log(calculateAge2(2017, 2025),'2nd version');
-console.log(calculateAge2(2025, 2017),'2nd version');  
-console.log(calculateAge2(2025, 2025),'2nd version');
+console.log(calculateAge2(2017, 2025), '2nd version');
+console.log(calculateAge2(2025, 2017), '2nd version');
+console.log(calculateAge2(2025, 2025), '2nd version');
+
+
+//replace vowel with !
+function replace(s) {
+  //coding and coding....
+  return s.replace(/[aeiouAEIOU]/g, '!');
+
+}
+
+console.log(replace("this is a pen"));
