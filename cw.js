@@ -3814,3 +3814,11 @@ function reverse(string) {
   let reversedString = reverseWords.joing(' ');
   return reversedString;
 }
+
+
+function solution(str, ending){
+  return str.endsWith(ending);
+}
+
+console.log(solution('abc', 'bc'));  
+console.log(solution('abc', 'd')); 
