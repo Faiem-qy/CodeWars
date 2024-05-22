@@ -3816,31 +3816,58 @@ function reverse(string) {
 }
 
 
-function solution(str, ending){
+function solution(str, ending) {
   return str.endsWith(ending);
 }
 
-console.log(solution('abc', 'bc'));  
-console.log(solution('abc', 'd')); 
+console.log(solution('abc', 'bc'));
+console.log(solution('abc', 'd'));
 
 
-var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
+var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E", e2 = "e", n1 = "N", n2 = "n";
 
-function Dad(){
+function Dad() {
   //select some variable to combine "Dad"
   return d1 + a2 + d2;
 }
 
-function Bee(){
+function Bee() {
   //select some variable to combine "Bee"
   return b1 + e2 + e2;
 }
 
-function banana(){
+function banana() {
   //select some variable to combine "banana"
   return b2 + a2 + n2 + a2 + n2 + a2;
 }
 
-console.log(Dad());  
-console.log(Bee());  
-console.log(banana())
+console.log(Dad());
+console.log(Bee());
+console.log(banana());
+
+
+
+
+function rowWeights(array) {
+  let team1 = 0, team2 = 0;
+
+
+  for (let i = 0; i < array.length; i++) {
+    // If the index is even, add the weight to team 1
+    if (i % 2 === 0) {
+      team1 += array[i];
+    }
+    // If the index is odd, add the weight to team 2
+    else {
+      team2 += array[i];
+    }
+  }
+
+  // Return an array with the total weights of team 1 and team 2
+  return [team1, team2];
+}
+
+
+
+
+console.log(rowWeights([50, 60, 70, 80])); 
