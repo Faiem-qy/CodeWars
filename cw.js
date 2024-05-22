@@ -3765,109 +3765,121 @@ const max = function(list) {
 
 // console.log(animal({ name: "dog", legs: 4, color: "white" }));
 
-function calculateAge1(age) {
-  let currentAge = 4;
-  if (age > currentAge) {
-    let newAge = currentAge + (age - currentAge);
-    return `You are ${newAge} years old`;
-  } else if (age < currentAge) {
-    let years = currentAge - age;
-    return `You are ${years} years old`;
+// function calculateAge1(age) {
+//   let currentAge = 4;
+//   if (age > currentAge) {
+//     let newAge = currentAge + (age - currentAge);
+//     return `You are ${newAge} years old`;
+//   } else if (age < currentAge) {
+//     let years = currentAge - age;
+//     return `You are ${years} years old`;
+//   } else {
+//     return `You are ${currentAge} years old`;
+//   }
+// }
+// console.log(calculateAge1(6));
+
+
+// function calculateAge2(yearOfBirth, yearToCount) {
+//   let difference = yearToCount - yearOfBirth;
+//   if (difference > 0) {
+//     return "You are " + difference + (difference > 1 ? " years" : " year") + " old.";
+//   } else if (difference < 0) {
+//     return "You will be born in " + Math.abs(difference) + (Math.abs(difference) > 1 ? " years." : " year.");
+//   } else {
+//     return "You were born this very year!";
+//   }
+// }
+
+
+// console.log(calculateAge2(2017, 2025), '2nd version');
+// console.log(calculateAge2(2025, 2017), '2nd version');
+// console.log(calculateAge2(2025, 2025), '2nd version');
+
+
+// //replace vowel with !
+// function replace(s) {
+//   //coding and coding....
+//   return s.replace(/[aeiouAEIOU]/g, '!');
+
+// }
+
+// console.log(replace("this is a pen"));
+
+// function reverse(string) {
+//   //your code here
+
+//   let words = string.split(' ');
+//   let reverseWords = words.reverse();
+//   let reversedString = reverseWords.joing(' ');
+//   return reversedString;
+// }
+
+
+// function solution(str, ending) {
+//   return str.endsWith(ending);
+// }
+
+// console.log(solution('abc', 'bc'));
+// console.log(solution('abc', 'd'));
+
+
+// var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E", e2 = "e", n1 = "N", n2 = "n";
+
+// function Dad() {
+//   //select some variable to combine "Dad"
+//   return d1 + a2 + d2;
+// }
+
+// function Bee() {
+//   //select some variable to combine "Bee"
+//   return b1 + e2 + e2;
+// }
+
+// function banana() {
+//   //select some variable to combine "banana"
+//   return b2 + a2 + n2 + a2 + n2 + a2;
+// }
+
+// console.log(Dad());
+// console.log(Bee());
+// console.log(banana());
+
+
+
+
+// function rowWeights(array) {
+//   let team1 = 0, team2 = 0;
+
+
+//   for (let i = 0; i < array.length; i++) {
+//     // If the index is even, add the weight to team 1
+//     if (i % 2 === 0) {
+//       team1 += array[i];
+//     }
+//     // If the index is odd, add the weight to team 2
+//     else {
+//       team2 += array[i];
+//     }
+//   }
+
+//   // Return an array with the total weights of team 1 and team 2
+//   return [team1, team2];
+// }
+
+// console.log(rowWeights([50, 60, 70, 80]));
+
+
+const areaOrPerimeter = function(l, w) {
+  // Return your answer
+  if (l === w) {
+    const square =  l * w;
+    return `The area of the square is ${square}m`
   } else {
-    return `You are ${currentAge} years old`;
+    const perimeter = 2 * (l + w)
+    return `The perimeter of the rectangle is ${perimeter}m`;
   }
-}
-console.log(calculateAge1(6));
+};
 
-
-function calculateAge2(yearOfBirth, yearToCount) {
-  let difference = yearToCount - yearOfBirth;
-  if (difference > 0) {
-    return "You are " + difference + (difference > 1 ? " years" : " year") + " old.";
-  } else if (difference < 0) {
-    return "You will be born in " + Math.abs(difference) + (Math.abs(difference) > 1 ? " years." : " year.");
-  } else {
-    return "You were born this very year!";
-  }
-}
-
-
-console.log(calculateAge2(2017, 2025), '2nd version');
-console.log(calculateAge2(2025, 2017), '2nd version');
-console.log(calculateAge2(2025, 2025), '2nd version');
-
-
-//replace vowel with !
-function replace(s) {
-  //coding and coding....
-  return s.replace(/[aeiouAEIOU]/g, '!');
-
-}
-
-console.log(replace("this is a pen"));
-
-function reverse(string) {
-  //your code here
-
-  let words = string.split(' ');
-  let reverseWords = words.reverse();
-  let reversedString = reverseWords.joing(' ');
-  return reversedString;
-}
-
-
-function solution(str, ending) {
-  return str.endsWith(ending);
-}
-
-console.log(solution('abc', 'bc'));
-console.log(solution('abc', 'd'));
-
-
-var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E", e2 = "e", n1 = "N", n2 = "n";
-
-function Dad() {
-  //select some variable to combine "Dad"
-  return d1 + a2 + d2;
-}
-
-function Bee() {
-  //select some variable to combine "Bee"
-  return b1 + e2 + e2;
-}
-
-function banana() {
-  //select some variable to combine "banana"
-  return b2 + a2 + n2 + a2 + n2 + a2;
-}
-
-console.log(Dad());
-console.log(Bee());
-console.log(banana());
-
-
-
-
-function rowWeights(array) {
-  let team1 = 0, team2 = 0;
-
-
-  for (let i = 0; i < array.length; i++) {
-    // If the index is even, add the weight to team 1
-    if (i % 2 === 0) {
-      team1 += array[i];
-    }
-    // If the index is odd, add the weight to team 2
-    else {
-      team2 += array[i];
-    }
-  }
-
-  // Return an array with the total weights of team 1 and team 2
-  return [team1, team2];
-}
-
-
-
-
-console.log(rowWeights([50, 60, 70, 80])); 
+console.log(areaOrPerimeter(6, 10));
+console.log(areaOrPerimeter(3, 3));
