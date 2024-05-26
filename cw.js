@@ -3873,13 +3873,26 @@ const max = function(list) {
 const areaOrPerimeter = function(l, w) {
   // Return your answer
   if (l === w) {
-    const square =  l * w;
-    return `The area of the square is ${square}m`
+    const square = l * w;
+    return `The area of the square is ${square}m`;
   } else {
-    const perimeter = 2 * (l + w)
+    const perimeter = 2 * (l + w);
     return `The perimeter of the rectangle is ${perimeter}m`;
   }
 };
 
 console.log(areaOrPerimeter(6, 10));
 console.log(areaOrPerimeter(3, 3));
+
+
+const capitals = function(word) {
+  let indices = [];
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word[i].toUpperCase()) {
+      indices.push(i);
+    }
+  }
+return indices;
+};
+
+console.log(capitals("CodEWaRs"));
