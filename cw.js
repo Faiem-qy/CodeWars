@@ -3911,9 +3911,19 @@ const humanYearsCatYearsDogYears = function(humanYears) {
     catYears = 15 + 9 + (humanYears - 2) * 4;
     catYears = 15 + 9 + (humanYears - 2) * 5;
   }
-return [humanYears, catYears, dogYears]
+  return [humanYears, catYears, dogYears];
 };
 
-console.log(humanYearsCatYearsDogYears(1));  
-console.log(humanYearsCatYearsDogYears(2));  
-console.log(humanYearsCatYearsDogYears(10)); 
+console.log(humanYearsCatYearsDogYears(1));
+console.log(humanYearsCatYearsDogYears(2));
+console.log(humanYearsCatYearsDogYears(10));
+
+
+function reverseWords(str) {
+  return str.split(' ').map(function(word) {
+    return word.split('').reverse().join('');
+  }).join(' ');
+}
+
+console.log(reverseWords("This is an example!"));  
+console.log(reverseWords("double  spaces"));
