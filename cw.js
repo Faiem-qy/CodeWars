@@ -3927,3 +3927,13 @@ function reverseWords(str) {
 
 console.log(reverseWords("This is an example!"));  
 console.log(reverseWords("double  spaces"));
+
+
+function printArray(array){
+  //show me the code!
+  return array.join(",");
+}
+
+const inputArray = ["h", "o", "l", "a"];
+const outputString = printArray(inputArray);
+console.log(outputString);
