@@ -3937,3 +3937,19 @@ function printArray(array){
 const inputArray = ["h", "o", "l", "a"];
 const outputString = printArray(inputArray);
 console.log(outputString);
+
+function getDrinkByProfession(param){
+  const professionToDrink = {
+      "jabroni": "Patron Tequila",
+      "school counselor": "Anything with Alcohol",
+      "programmer": "Hipster Craft Beer",
+      "bike gang member": "Moonshine",
+      "politician": "Your tax dollars",
+      "rapper": "Cristal"
+  };
+
+  const drink = professionToDrink[param.toLowerCase()];
+  return drink ? drink : "Beer";
+}
+
+console.log(getDrinkByProfession("Jabroni"));
