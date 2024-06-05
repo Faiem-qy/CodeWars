@@ -3953,3 +3953,15 @@ function getDrinkByProfession(param){
 }
 
 console.log(getDrinkByProfession("Jabroni"));
+
+function getRealFloor(n) {
+    if (n > 0 && n < 13) {
+        return n - 1;
+    } else if (n > 13) {
+        return n - 2;
+    } else {
+        return n;
+    }
+}
+
+console.log(getRealFloor(1));
