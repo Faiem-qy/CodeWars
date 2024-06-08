@@ -3925,11 +3925,11 @@ function reverseWords(str) {
   }).join(' ');
 }
 
-console.log(reverseWords("This is an example!"));  
+console.log(reverseWords("This is an example!"));
 console.log(reverseWords("double  spaces"));
 
 
-function printArray(array){
+function printArray(array) {
   //show me the code!
   return array.join(",");
 }
@@ -3938,14 +3938,14 @@ const inputArray = ["h", "o", "l", "a"];
 const outputString = printArray(inputArray);
 console.log(outputString);
 
-function getDrinkByProfession(param){
+function getDrinkByProfession(param) {
   const professionToDrink = {
-      "jabroni": "Patron Tequila",
-      "school counselor": "Anything with Alcohol",
-      "programmer": "Hipster Craft Beer",
-      "bike gang member": "Moonshine",
-      "politician": "Your tax dollars",
-      "rapper": "Cristal"
+    "jabroni": "Patron Tequila",
+    "school counselor": "Anything with Alcohol",
+    "programmer": "Hipster Craft Beer",
+    "bike gang member": "Moonshine",
+    "politician": "Your tax dollars",
+    "rapper": "Cristal"
   };
 
   const drink = professionToDrink[param.toLowerCase()];
@@ -3955,13 +3955,19 @@ function getDrinkByProfession(param){
 console.log(getDrinkByProfession("Jabroni"));
 
 function getRealFloor(n) {
-    if (n > 0 && n < 13) {
-        return n - 1;
-    } else if (n > 13) {
-        return n - 2;
-    } else {
-        return n;
-    }
+  if (n > 0 && n < 13) {
+    return n - 1;
+  } else if (n > 13) {
+    return n - 2;
+  } else {
+    return n;
+  }
 }
 
 console.log(getRealFloor(1));
+
+function multipleOfIndex(array) {
+  return array.filter((num, index) => num % index === 0 || num % index === 0);
+}
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
