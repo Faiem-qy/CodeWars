@@ -3971,3 +3971,8 @@ function multipleOfIndex(array) {
 }
 
 console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+function getChar(c){
+  // ...
+  return String.fromCharCode(c)
+}
