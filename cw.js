@@ -4022,3 +4022,7 @@ function betterThanAve(classPoints, yourPoints) {
   }
 }
 
+
+function include(arr, item){
+return arr.includes(item)
+}
