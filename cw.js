@@ -3972,37 +3972,53 @@ function multipleOfIndex(array) {
 
 console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
 
-function getChar(c){
+function getChar(c) {
   // ...
-  return String.fromCharCode(c)
+  return String.fromCharCode(c);
 }
 
 function hoopCount(n) {
   if (n >= 10) {
-      return "Great, now move on to tricks";
+    return "Great, now move on to tricks";
   } else {
-      return "Keep at it until you get it";
+    return "Keep at it until you get it";
   }
 }
 
 
-function whatday(num) { 
-  switch(num) {
-      case 1:
-          return "Sunday";
-      case 2:
-          return "Monday";
-      case 3:
-          return "Tuesday";
-      case 4:
-          return "Wednesday";
-      case 5:
-          return "Thursday";
-      case 6:
-          return "Friday";
-      case 7:
-          return "Saturday";
-      default:
-          return "Wrong, please enter a number between 1 and 7";
+function whatday(num) {
+  switch (num) {
+    case 1:
+      return "Sunday";
+    case 2:
+      return "Monday";
+    case 3:
+      return "Tuesday";
+    case 4:
+      return "Wednesday";
+    case 5:
+      return "Thursday";
+    case 6:
+      return "Friday";
+    case 7:
+      return "Saturday";
+    default:
+      return "Wrong, please enter a number between 1 and 7";
   }
 }
+
+function betterThanAve(classPoints, yourPoints) {
+  // Calculate the sum of the class points
+  let sum = classPoints.reduce((a, b) => a + b, 0);
+  
+  // Calculate the average score of the class
+  let average = sum / classPoints.length;
+  
+  // Compare your score with the average
+  if (yourPoints > average) {
+      return true;
+  } else {
+      return false;
+  }
+}
+
