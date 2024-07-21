@@ -4010,19 +4010,32 @@ function whatday(num) {
 function betterThanAve(classPoints, yourPoints) {
   // Calculate the sum of the class points
   let sum = classPoints.reduce((a, b) => a + b, 0);
-  
+
   // Calculate the average score of the class
   let average = sum / classPoints.length;
-  
+
   // Compare your score with the average
   if (yourPoints > average) {
-      return true;
+    return true;
   } else {
-      return false;
+    return false;
   }
 }
 
 
-function include(arr, item){
-return arr.includes(item)
+function include(arr, item) {
+  return arr.includes(item);
 }
+
+
+
+
+function gimme(triplet) {
+  const sortedTriplet = triplet.slice().sort((a, b) => a - b);
+  const middleValue = sortedTriplet[1];
+
+  return triplet.indexOf(middleValue);
+}
+
+console.log(gimme([2, 3, 1]));
+console.log(gimme([5, 10, 14]));
