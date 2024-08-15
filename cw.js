@@ -4055,3 +4055,10 @@ function sumArray(array) {
 
   return sum;
 }
+
+function remainder(n, m) {
+  let larger = Math.max(n, m);
+  let smaller = Math.min(n, m);
+  
+  return larger % smaller;
+}
