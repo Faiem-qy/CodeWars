@@ -4062,3 +4062,10 @@ function remainder(n, m) {
   
   return larger % smaller;
 }
+
+function findNeedle(haystack) {
+  const position = haystack.indexOf("needle");
+  return "found the needle at positipn" + position;
+}
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
