@@ -4069,3 +4069,15 @@ function findNeedle(haystack) {
 }
 
 console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+
+function spEng(sentence) {
+  const lowerCaseSentence = sentence.toLowerCase();
+  
+  return lowerCaseSentence.includes("english");
+}
+
+
+console.log(spEng("abcEnglishdef"));
+console.log(spEng("abcnEglishsef")); 
+console.log(spEng("eNglisH is fun!"));
