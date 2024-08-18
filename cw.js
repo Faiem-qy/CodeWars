@@ -4077,7 +4077,21 @@ function spEng(sentence) {
   return lowerCaseSentence.includes("english");
 }
 
-
 console.log(spEng("abcEnglishdef"));
 console.log(spEng("abcnEglishsef")); 
 console.log(spEng("eNglisH is fun!"));
+
+
+function dnaStrand(dna) {
+  const complements = {
+    'A': 'T',
+    'T': 'A',
+    'C': 'G',
+    'G': 'C'
+  };
+
+  return dna.split('').map(nucleotide => complements[nucleotide]).join('');
+}
+
+console.log(dnaStrand("ATTGC")); // Output: "TAACG"
+console.log(dnaStrand("GTAT"));  // Output: "CATA"
