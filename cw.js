@@ -4059,13 +4059,13 @@ function sumArray(array) {
 function remainder(n, m) {
   let larger = Math.max(n, m);
   let smaller = Math.min(n, m);
-  
+
   return larger % smaller;
 }
 
 function findNeedle(haystack) {
   const position = haystack.indexOf("needle");
-  return "found the needle at position " + position; 
+  return "found the needle at position " + position;
 }
 
 console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
@@ -4073,12 +4073,12 @@ console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "rand
 
 function spEng(sentence) {
   const lowerCaseSentence = sentence.toLowerCase();
-  
+
   return lowerCaseSentence.includes("english");
 }
 
 console.log(spEng("abcEnglishdef"));
-console.log(spEng("abcnEglishsef")); 
+console.log(spEng("abcnEglishsef"));
 console.log(spEng("eNglisH is fun!"));
 
 
@@ -4095,3 +4095,16 @@ function dnaStrand(dna) {
 
 console.log(dnaStrand("ATTGC")); // Output: "TAACG"
 console.log(dnaStrand("GTAT"));  // Output: "CATA"
+
+
+function sumOfDifferences(arr) {
+  arr.sort((a, b) => b - a);
+  
+  let sum = 0;
+  
+  for (let i = 0; i < arr.length - 1; i++) {
+      sum += arr[i] - arr[i + 1];
+  }
+  
+  return sum;
+}
