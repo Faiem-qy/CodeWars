@@ -4118,3 +4118,10 @@ function abbrevName(name) {
 
 console.log(abbrevName("Sam Harris"));  // Output: S.H
 console.log(abbrevName("patrick feeney"));  // Output: P.F
+
+function oddOrEven(array) {
+  //enter code here
+  const sum = array.reduce((acc, num) => acc + num, 0);
+  return sum % 2 === 0 ? "even" : "odd";
+}
+
