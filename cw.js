@@ -4125,3 +4125,14 @@ function oddOrEven(array) {
   return sum % 2 === 0 ? "even" : "odd";
 }
 
+function isEvenOrOdd(number) {
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+// Example usage:
+console.log(isEvenOrOdd(4)); // Output: "Even"
+console.log(isEvenOrOdd(7)); // Output: "Odd"
