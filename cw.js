@@ -4136,3 +4136,11 @@ function isEvenOrOdd(number) {
 // Example usage:
 console.log(isEvenOrOdd(4)); // Output: "Even"
 console.log(isEvenOrOdd(7)); // Output: "Odd"
+
+function highAndLow(numbers) {
+  const numArray = numbers.split(' ').map(Number);
+  const maxNum = Math.max(...numArray);
+  const minNum = Math.min(...numArray);
+  
+  return `${maxNum} ${minNum}`;
+}
