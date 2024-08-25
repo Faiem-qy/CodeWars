@@ -4149,3 +4149,9 @@ function xor(a, b) {
   // TODO: Program Me
   return (a || b) && !(a && b);
 }
+
+
+function stringClean(s) {
+  return s.replace(/[0-9]/g, '');
+}
+
