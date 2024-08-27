@@ -4155,3 +4155,10 @@ function stringClean(s) {
   return s.replace(/[0-9]/g, '');
 }
 
+function mango(quantity, price) {
+    const setsOf3 = Math.floor(quantity / 3); 
+    const totalCost = (setsOf3 * 2 + (quantity % 3)) * price;
+    
+    return totalCost;
+}
+
