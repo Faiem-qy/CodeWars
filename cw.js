@@ -4162,3 +4162,4 @@ function mango(quantity, price) {
     return totalCost;
 }
 
+const REGEXP = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
