@@ -4163,3 +4163,14 @@ function mango(quantity, price) {
 }
 
 const REGEXP = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+
+function wordsToMarks(string){
+  //your code here
+  let totalValue = 0
+  
+  for(let char of string) {
+    let charValue = char.charCodeAt(0) - 'a'.charCodeAt(0) + 1
+    totalValue += charValue
+  }
+return totalValue
+}
