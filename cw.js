@@ -4174,3 +4174,21 @@ function wordsToMarks(string){
   }
 return totalValue
 }
+
+
+function evaporator(content, evap_per_day, threshold) {
+  const thresholdFraction = threshold / 100;
+  const evapFraction = evap_per_day / 100;
+  
+  let days = 0;
+  
+  let currentContent = 1; /
+  
+  while (currentContent >= thresholdFraction) {
+    currentContent -= currentContent * evapFraction;
+   
+    days++;
+  }
+  
+  return days;
+}
