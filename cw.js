@@ -4192,3 +4192,11 @@ function evaporator(content, evap_per_day, threshold) {
   
   return days;
 }
+
+function getSize(width, height, depth) {
+  const surfaceArea = 2 * (width * height + height * depth + depth * width);
+  const volume = width * height * depth;
+  
+  return [surfaceArea, volume];
+}
+
