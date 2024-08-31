@@ -4200,3 +4200,10 @@ function getSize(width, height, depth) {
   return [surfaceArea, volume];
 }
 
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+  const ages = [age1, age2, age3, age4, age5, age6, age7, age8];
+  const sumOfSquares = ages.reduce((sum, age) => sum + age * age, 0);
+  const sqrt = Math.sqrt(sumOfSquares);
+  const result = sqrt / 2;
+  return Math.floor(result);
+}
