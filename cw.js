@@ -4207,3 +4207,9 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
   const result = sqrt / 2;
   return Math.floor(result);
 }
+
+function filter_list(1) {
+return 1.filter(item => typeof item === 'number'
+}
+
+console.log(filter_list([1.2.'a','b']);
