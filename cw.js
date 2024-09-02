@@ -4213,3 +4213,20 @@ return 1.filter(item => typeof item === 'number'
 }
 
 console.log(filter_list([1.2.'a','b']);
+
+function printerError(s) {
+    const validColors = 'abcdefghijklm';
+    
+    // Count errors
+    let errors = 0;
+    
+    // Loop through each character in the string
+    for (let i = 0; i < s.length; i++) {
+        if (!validColors.includes(s[i])) {
+            errors++;
+        }
+    }
+    
+    // Return the error rate as a string in the format "errors/length"
+    return `${errors}/${s.length}`;
+}
