@@ -4230,3 +4230,8 @@ function printerError(s) {
     // Return the error rate as a string in the format "errors/length"
     return `${errors}/${s.length}`;
 }
+
+function checkForFactor (base, factor) {
+  // code here
+  return base % factor === 0;
+}
