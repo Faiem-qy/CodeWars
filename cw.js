@@ -4235,3 +4235,15 @@ function checkForFactor (base, factor) {
   // code here
   return base % factor === 0;
 }
+
+function peopleWithAgeDrink(old) {
+  if (old < 14) {
+    return 'Drink Toddy';
+  } else if (old < 18) {
+    return 'Drink Coke';
+  } else if (old < 21) {
+    return 'Drink Beer';
+  } else {
+    return 'Drink Whisky';
+  }
+}
