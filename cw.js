@@ -4267,3 +4267,30 @@ function largestPairSum(numbers) {
 
   return max1 + max2;
 }
+
+function isSortedAndHow(array) {
+    if (array.length <= 1) {
+        return 'yes, ascending'; // Arrays with 0 or 1 element are considered sorted in ascending order
+    }
+
+    // Check if the array is sorted in ascending order
+    let isAscending = true;
+    // Check if the array is sorted in descending order
+    let isDescending = true;
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > array[i - 1]) {
+            isDescending = false;
+        } else if (array[i] < array[i - 1]) {
+            isAscending = false;
+        }
+    }
+
+    if (isAscending) {
+        return 'yes, ascending';
+    } else if (isDescending) {
+        return 'yes, descending';
+    } else {
+        return 'no';
+    }
+}
