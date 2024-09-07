@@ -4294,3 +4294,7 @@ function isSortedAndHow(array) {
         return 'no';
     }
 }
+
+function check(a, x) {
+  return a.includes(x);
+}
