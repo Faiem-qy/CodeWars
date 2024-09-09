@@ -4298,3 +4298,17 @@ function isSortedAndHow(array) {
 function check(a, x) {
   return a.includes(x);
 }
+
+function trilingualDemocracy(group) {
+  const languages = ['D', 'F', 'I', 'K'];
+
+  if (group[0] === group[1] && group[1] === group[2]) {
+    return group[0];
+  }
+
+  if (group[0] === group[1]) return group[2];
+  if (group[0] === group[2]) return group[1];
+  if (group[1] === group[2]) return group[0];
+
+  return languages.find(lang => !group.includes(lang));
+}
