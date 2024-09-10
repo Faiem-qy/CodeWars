@@ -4312,3 +4312,21 @@ function trilingualDemocracy(group) {
 
   return languages.find(lang => !group.includes(lang));
 }
+
+function duplicateCount(text) {
+    let lowerCaseText = text.toLowerCase();
+    let charCount = {};
+    
+    for (let char of lowerCaseText) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    
+    let duplicateCount = 0;
+    for (let char in charCount) {
+        if (charCount[char] > 1) {
+            duplicateCount++;
+        }
+    }
+    
+    return duplicateCount;
+}
