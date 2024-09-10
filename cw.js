@@ -4330,3 +4330,12 @@ function duplicateCount(text) {
     
     return duplicateCount;
 }
+
+function reverseWords(string) {
+  let words = string.trim().split(/\s+/);
+  let reversedWords = words.reverse();
+  let reversedString = reversedWords.join(' ');
+  return reversedString;
+}
+
+console.log(reverseWords("Hello World"));
