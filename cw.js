@@ -4388,3 +4388,9 @@ function factorial(n) {
   }
   return n * factorial(n - 1);
 }
+
+function sum (numbers) {
+    "use strict";
+    return numbers.reduce((acc, curr) => acc + curr, 0)
+    
+};
