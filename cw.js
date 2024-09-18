@@ -4394,3 +4394,20 @@ function sum (numbers) {
     return numbers.reduce((acc, curr) => acc + curr, 0)
     
 };
+
+function nbDig(n, d) {
+    let count = 0;
+    for (let k = 0; k <= n; k++) {
+        let square = (k * k).toString();
+        for (let char of square) {
+            if (char == d.toString()) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+// Example usage:
+console.log(nbDig(10, 1));
+console.log(nbDig(25, 1));
