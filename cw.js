@@ -4411,3 +4411,24 @@ function nbDig(n, d) {
 // Example usage:
 console.log(nbDig(10, 1));
 console.log(nbDig(25, 1));
+
+
+
+function meeting(s) {
+
+  let namesArray = s.split(';');
+  // Map each name to an array of last name, first name
+  let formattedNames = namesArray.map(name => {
+    let [firstName, lastName] = name.split(';');
+    return [lastName.toUpperCase(), firstName.toUpperCase()];
+  });
+
+  // Sort the array by last name then by first name
+  formattedNames.sort((a, b) => {
+    if (a[0] === b[0]) {
+      return a[1].localeCompare(b[1]);
+    }
+    return a[0].localeCompare(b[0]);
+
+  });
+}
