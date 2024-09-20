@@ -4432,3 +4432,8 @@ function meeting(s) {
 
   });
 }
+
+function evenNumbers(array, number) {
+  const evenNums = array.filter(num => num % 2 === 0);
+  return evenNums.slice(-number);
+}
