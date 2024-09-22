@@ -4461,3 +4461,8 @@ function exponent(a, b) {
 function subt(a, b) {
     return a - b;
 }
+
+
+function calculateTax(amount, taxRate) {
+    return amount * (taxRate / 100);
+}
