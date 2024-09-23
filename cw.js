@@ -4466,3 +4466,11 @@ function subt(a, b) {
 function calculateTax(amount, taxRate) {
     return amount * (taxRate / 100);
 }
+
+function numberToWords(number) {
+    const words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+    return words[number] || "Invalid number";
+}
+
+// Example usage:
+console.log(numberToWords(1));
