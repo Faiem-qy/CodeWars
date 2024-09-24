@@ -4474,3 +4474,11 @@ function numberToWords(number) {
 
 // Example usage:
 console.log(numberToWords(1));
+
+function derive(coefficient, exponent) {
+  let product = coefficient * exponent;
+  let newExponent = exponent -1;
+  return `${product}x^${newExponent}`
+}
+
+console.log(derive(7,8));
