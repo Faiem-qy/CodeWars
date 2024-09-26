@@ -4499,3 +4499,23 @@ function capitalize(s) {
 
   return [evenIndexed, oddIndexed];
 }
+
+function solve(s){
+  let lowerCount = 0;
+  let upperCount = 0;
+
+  for (let char of s) {
+    if (char === char.toLowerCase()) {
+      lowerCount++;
+    } else {
+      upperCount++
+    }
+  }
+  if (lowerCount >= upperCount) {
+    return s.toLowerCase()
+  } else {
+    return s.toUpperCase()
+  }
+}
+
+console.log(solve("coDE"));
