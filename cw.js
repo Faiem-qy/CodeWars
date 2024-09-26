@@ -4482,3 +4482,20 @@ function derive(coefficient, exponent) {
 }
 
 console.log(derive(7,8));
+
+function capitalize(s) {
+  let evenIndexed = '';
+  let oddIndexed = '';
+
+  for (let i = 0; i < s.length; i++) {
+    if (i % 2 === 0) {
+      evenIndexed += s[i].toUpperCase();
+      oddIndexed += s[i];
+    } else {
+      evenIndexed += s[i];
+      oddIndexed += s[i].toUpperCase();
+    }
+  }
+
+  return [evenIndexed, oddIndexed];
+}
