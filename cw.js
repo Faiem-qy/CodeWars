@@ -4519,3 +4519,19 @@ function solve(s){
 }
 
 console.log(solve("coDE"));
+
+function sayHello(name = 'Guest') { 
+  const currentHour = new Date().getHours();
+  let greeting;
+
+  if (currentHour < 12) {
+    greeting = 'Good morning'
+  } else if (currentHour < 18) {
+    greeting = 'Good afternoon';
+  } else {
+    greeting = 'Good evening'
+  }
+  return `${greeting}, ${name}!`
+ }
+
+ console.log(sayHello('Bob'));
