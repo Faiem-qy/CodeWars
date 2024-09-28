@@ -4535,3 +4535,18 @@ function sayHello(name = 'Guest') {
  }
 
  console.log(sayHello('Bob'));
+
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case '+':
+      return value1 + value2;
+    case '-':
+      return value1 - value2;
+    case '*':
+      return value1 * value2;
+    case '/':
+      return value1 / value2;
+    default:
+      return null; // or you can throw an error if the operation is invalid
+  }
+}
