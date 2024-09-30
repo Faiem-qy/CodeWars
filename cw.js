@@ -4572,3 +4572,9 @@ console.log(seven(times(five())));
 console.log(four(plus(nine()))); 
 console.log(eight(minus(three())));
 console.log(six(dividedBy(two())));
+
+
+function combineNames(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+console.log(combineNames("James", "Stevens")); 
