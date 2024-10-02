@@ -4578,3 +4578,10 @@ function combineNames(firstName, lastName) {
   return firstName + " " + lastName;
 }
 console.log(combineNames("James", "Stevens")); 
+
+function nearestSq(n) {
+  let sqrt = Math.round(Math.sqrt(n))
+  return sqrt * sqrt;
+}
+
+console.log(nearestSq(111));
