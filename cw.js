@@ -4585,3 +4585,12 @@ function nearestSq(n) {
 }
 
 console.log(nearestSq(111));
+
+function apple(x) {
+  let num = Number(x);
+  if (num * num > 1000) {
+    return "It's hotter than the sun!!";
+  } else {
+    return "Help yourself to a honeycomb Yorkie for the glovebox.";
+  }
+}
