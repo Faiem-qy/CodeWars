@@ -4594,3 +4594,15 @@ function apple(x) {
     return "Help yourself to a honeycomb Yorkie for the glovebox.";
   }
 }
+
+function pillars(numPill, dist, width) {
+  if (numPill === 1) {
+    return 0;
+  }
+  let distInCm = dist * 100;
+
+  let totalDistance = (numPill - 1) * distInCm + (numPill - 2) * width;
+  return totalDistance;
+}
+
+console.log(pillars(1, 20, 25))
