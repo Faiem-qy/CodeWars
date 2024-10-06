@@ -4639,3 +4639,13 @@ function sortArray(array) {
   const oddNumbers = array.filter(num => num % 2).sort((a, b) => a - b);
   return array.map(num => num % 2 ? oddNumbers.shift() : num);
 }
+
+
+function usdcny(usd) {
+  let conversion = (usd * 6.75).toFixed(2);
+
+  return `${conversion} Chinese Yuan`;
+}
+
+console.log(usdcny(15));
+console.log(usdcny(465));
