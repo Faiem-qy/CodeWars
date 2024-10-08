@@ -4654,3 +4654,7 @@ const stringToNumber = function(str){
   // put your code here
   return Number(str);
 }
+
+function noOdds(values) {
+  return values.filter(value => value % 2 === 0);
+}
