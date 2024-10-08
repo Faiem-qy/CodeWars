@@ -4649,3 +4649,8 @@ function usdcny(usd) {
 
 console.log(usdcny(15));
 console.log(usdcny(465));
+
+const stringToNumber = function(str){
+  // put your code here
+  return Number(str);
+}
