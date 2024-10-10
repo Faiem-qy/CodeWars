@@ -4658,3 +4658,24 @@ const stringToNumber = function(str){
 function noOdds(values) {
   return values.filter(value => value % 2 === 0);
 }
+
+function greet(name, message = "") {
+    const currentHour = new Date().getHours();
+    let timeOfDay;
+
+    if (currentHour < 12) {
+        timeOfDay = "morning";
+    } else if (currentHour < 18) {
+        timeOfDay = "afternoon";
+    } else {
+        timeOfDay = "evening";
+    }
+
+    const greeting = `Hello, ${name}! Good ${timeOfDay}.`;
+
+    if (message) {
+        return `${greeting} ${message}`;
+    } else {
+        return `${greeting} How are you doing today?`;
+    }
+}
