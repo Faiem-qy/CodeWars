@@ -4679,3 +4679,13 @@ function greet(name, message = "") {
         return `${greeting} How are you doing today?`;
     }
 }
+
+function stairsIn20(s){
+let one_year_total = 0
+for (let day of s) {
+  for (let stairs of day) {
+    one_year_total += stairs;
+  }
+}
+  return one_year_total * 20;
+}
