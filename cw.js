@@ -4689,3 +4689,8 @@ for (let day of s) {
 }
   return one_year_total * 20;
 }
+
+function shortcut(string) {
+  return string.replace(/[aeiou]/g, '');
+}
+
