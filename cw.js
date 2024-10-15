@@ -4724,3 +4724,30 @@ function defineSuit(card) {
       return 'unknown suit';
   }
 }
+
+const encryptThis = function(text) {
+    return text.split(' ').map(word => {
+        // Convert the first letter to its ASCII code
+        let encryptedWord = word.charCodeAt(0).toString();
+
+        // Process the rest of the word
+        if (word.length > 1) {
+            // Get the second and last letters
+            let secondLetter = word[1];
+            let lastLetter = word[word.length - 1];
+
+            // Swap the second and last letters
+            encryptedWord += lastLetter + word.slice(2, -1) + secondLetter;
+        } else if (word.length === 1) {
+            // If the word has only one letter, just keep the ASCII code
+            encryptedWord += '';
+        }
+
+        return encryptedWord;
+    }).join(' ');
+};
+
+// Examples
+console.log(encryptThis("Hello")); 
+console.log(encryptThis("good"));
+console.log(encryptThis("hello world"));
