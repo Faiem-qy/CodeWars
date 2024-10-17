@@ -4751,3 +4751,10 @@ const encryptThis = function(text) {
 console.log(encryptThis("Hello")); 
 console.log(encryptThis("good"));
 console.log(encryptThis("hello world"));
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  if (enteredCode !== correctCode) return false;
+  const current = new Date(currentDate);
+  const expiration = new Date(expirationDate);
+  return current <= expiration;
+}
