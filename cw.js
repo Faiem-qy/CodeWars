@@ -4758,3 +4758,12 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
   const expiration = new Date(expirationDate);
   return current <= expiration;
 }
+
+function squareSum(numbers) {
+  return numbers.reduce((sum, num) => {
+    if (typeof num !== 'number' || isNaN(num)) {
+      throw new Error('Invalid number in array');
+    }
+    return sum + Math.pow(num, 2);
+  }, 0);
+}
