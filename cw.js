@@ -4767,3 +4767,36 @@ function squareSum(numbers) {
     return sum + Math.pow(num, 2);
   }, 0);
 }
+
+function alphabetWar(fight) {
+    // Define the power values for each side
+    const leftPower = { 'w': 4, 'p': 3, 'b': 2, 's': 1 };
+    const rightPower = { 'm': 4, 'q': 3, 'd': 2, 'z': 1 };
+    
+    let leftScore = 0;
+    let rightScore = 0;
+    
+    // Calculate the scores based on the fight string
+    for (let letter of fight) {
+        if (leftPower[letter]) {
+            leftScore += leftPower[letter];
+        } else if (rightPower[letter]) {
+            rightScore += rightPower[letter];
+        }
+    }
+    
+    // Determine the winner
+    if (leftScore > rightScore) {
+        return "Left side wins!";
+    } else if (rightScore > leftScore) {
+        return "Right side wins!";
+    } else {
+        return "Let's fight again!";
+    }
+}
+
+// Example usage:
+console.log(alphabetWar("z"));           //=> "Right side wins!"
+console.log(alphabetWar("zdqmwpbs"));    //=> "Let's fight again!"
+console.log(alphabetWar("zzzzs"));       //=> "Right side wins!"
+console.log(alphabetWar("wwwwwwz"));     //=> "Left side wins!"
