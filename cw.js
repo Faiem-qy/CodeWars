@@ -4800,3 +4800,8 @@ console.log(alphabetWar("z"));           //=> "Right side wins!"
 console.log(alphabetWar("zdqmwpbs"));    //=> "Let's fight again!"
 console.log(alphabetWar("zzzzs"));       //=> "Right side wins!"
 console.log(alphabetWar("wwwwwwz"));     //=> "Left side wins!"
+
+function validateUsr(username) {
+  const res = /^[a-z0-9_]{4,16}$/.test(username);
+  return res;
+}
