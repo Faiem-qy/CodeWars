@@ -4805,3 +4805,17 @@ function validateUsr(username) {
   const res = /^[a-z0-9_]{4,16}$/.test(username);
   return res;
 }
+
+function pickIt(arr){
+  const odd=[],even=[];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i])
+    } else {
+      odd.push(arr[i])
+    }
+  }
+  
+  return [odd,even];
+}
