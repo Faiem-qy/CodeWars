@@ -4824,3 +4824,39 @@ function combat(health, damage) {
 return Math.max(0, health - damage)
 } 
 
+let v1 = 50,
+    v2 = 100,
+    v3 = 150,
+    v4 = 200,
+    v5 = 2,
+    v6 = 250;
+
+function equal1(){
+  let a = v1,   
+      b = v1;   
+  return a + b; // 50 + 50 = 100
+}
+
+function equal2(){
+  let a = v2, // 100
+      b = v1; // 50
+  return a - b; // 100 - 50 = 50
+}
+
+function equal3(){
+  let a = v5, // 2
+      b = v2; // 100
+  return a * b; // 2 * 50 = 100
+}
+
+function equal4(){
+  let a = v4, // 200
+      b = v2; // 100
+  return a / b; // 200 / 2 = 100
+}
+
+function equal5(){
+  let a = v3, // 150
+      b = v5; // 2
+  return a % b; // 150 % 50 = 0
+}
