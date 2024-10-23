@@ -4860,3 +4860,9 @@ function equal5(){
       b = v5; // 2
   return a % b; // 150 % 50 = 0
 }
+
+function flattenAndSort(array) {
+  return array.flat().sort((a,b) => a - b);
+}
+
+console.log(flattenAndSort([[3,2,1],[4,6,5],[],9,7,8]))
