@@ -4866,3 +4866,12 @@ function flattenAndSort(array) {
 }
 
 console.log(flattenAndSort([[3,2,1],[4,6,5],[],9,7,8]))
+
+function oddOrEven(array) {
+    const sum = array.reduce((acc, num) => acc + num, 0);
+    return sum % 2 === 0 ? 'even' : 'odd';
+}
+
+
+console.log(oddOrEven([1, 2, 3])); // Output: 'even'
+console.log(oddOrEven([1, 2, 3, 4])); // Output: 'odd'
