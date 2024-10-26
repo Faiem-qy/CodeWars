@@ -4875,3 +4875,9 @@ function oddOrEven(array) {
 
 console.log(oddOrEven([1, 2, 3])); // Output: 'even'
 console.log(oddOrEven([1, 2, 3, 4])); // Output: 'odd'
+
+const reverseSeq = n => {
+  return Array.from({ length: n }, (_, i) => n - i);
+};
+
+console.log(reverseSeq(5)); // Output: [5, 4, 3, 2, 1]
