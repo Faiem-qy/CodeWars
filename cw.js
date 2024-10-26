@@ -4881,3 +4881,9 @@ const reverseSeq = n => {
 };
 
 console.log(reverseSeq(5)); // Output: [5, 4, 3, 2, 1]
+
+// filter object to return friends with the name length of 4 letters
+function friend(friends){
+  //your code here
+return friends.filter(name => name.length === 4)  
+}
