@@ -4887,3 +4887,28 @@ function friend(friends){
   //your code here
 return friends.filter(name => name.length === 4)  
 }
+
+function calculator(a, b, sign) {
+   if (typeof a !== 'number' || typeof b !== 'number') {
+    return "unknown value";
+  }
+
+  if (sign === "/") {
+    return a / b;
+  } else if (sign === "+") {
+    return a + b;
+  } else if (sign === "*") {
+    return a * b;
+  } else if (sign === "-") {
+    return a - b;
+  } else {
+    return "unknown value";
+  }
+}
+
+console.log(calculator(1, 2, "/")); // 0.5
+console.log(calculator(1, 2, "+")); // 3
+console.log(calculator(1, 2, "*")); // 2
+console.log(calculator(1, 2, "-")); // -1
+console.log(calculator(1, 2, "^")); // "unknown value"
+console.log(calculator(1, "2", "+")); // "unknown value"
