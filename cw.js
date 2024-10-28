@@ -4912,3 +4912,15 @@ console.log(calculator(1, 2, "*")); // 2
 console.log(calculator(1, 2, "-")); // -1
 console.log(calculator(1, 2, "^")); // "unknown value"
 console.log(calculator(1, "2", "+")); // "unknown value"
+
+
+function binaryAsDecimal(b) {
+    const binaryStr = b.toString(2);  
+    const decimalRepresentation = parseInt(binaryStr, 10);
+    
+    return decimalRepresentation;
+}
+
+console.log(binaryAsDecimal(1));  // Output: 1
+console.log(binaryAsDecimal(5));  // Output: 101
+console.log(binaryAsDecimal(11)); // Output: 1011
