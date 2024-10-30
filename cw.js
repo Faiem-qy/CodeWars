@@ -4924,3 +4924,20 @@ function binaryAsDecimal(b) {
 console.log(binaryAsDecimal(1));  // Output: 1
 console.log(binaryAsDecimal(5));  // Output: 101
 console.log(binaryAsDecimal(11)); // Output: 1011
+
+function vowelIndices(word) {
+  //your code here
+  const vowles = "aeiouAEIOU";
+  const indicies = [];
+
+  for (let i = 0; i < word.length; i++) {
+    if (vowles.includes(word[i])) {
+      indicies.push(i + 1);
+    }
+  }
+  return indicies;
+}
+
+console.log(vowelIndices("super"));
+console.log(vowelIndices("alphabet"));
+console.log(vowelIndices("pokemon"));
