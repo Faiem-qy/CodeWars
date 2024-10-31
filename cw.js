@@ -4941,3 +4941,12 @@ function vowelIndices(word) {
 console.log(vowelIndices("super"));
 console.log(vowelIndices("alphabet"));
 console.log(vowelIndices("pokemon"));
+
+function binaryToDecimal(bin) {
+  let decimal = 0;
+
+  for (let i = 0; i < bin.length; i++) {
+    decimal += Number(bin[bin.length - 1 - i]) * Math.pow(2, i);
+  }
+  return decimal;
+}
