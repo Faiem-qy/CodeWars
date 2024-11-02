@@ -4950,3 +4950,16 @@ function binaryToDecimal(bin) {
   }
   return decimal;
 }
+
+function multiply(number) {
+  const numDigits = Math.abs(number).toString().length;
+  const multiplier = Math.pow(5, numDigits);
+  
+  return number * multiplier;
+}
+
+console.log(multiply(3));    // Output: 15
+console.log(multiply(10));   // Output: 250
+console.log(multiply(200));  // Output: 25000
+console.log(multiply(0));    // Output: 0
+console.log(multiply(-3));   // Output: -15
