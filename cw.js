@@ -4974,3 +4974,17 @@ let ball1 = new Ball();
 let ball2 = new Ball("super");
 
 console.log(ball1.ballType); //
+
+
+function contamination(text, char) {
+  if (text === '' || char === '') {
+    return '';
+  }
+  
+  return char.repeat(text.length);
+}
+
+console.log(contamination("abc", "z"));  // Output: "zzz"
+console.log(contamination("hello", "x")); // Output: "xxxxx"
+console.log(contamination("", "a"));      // Output: ""
+console.log(contamination("test", ""));   // Output: ""
