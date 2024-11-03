@@ -4963,3 +4963,14 @@ console.log(multiply(10));   // Output: 250
 console.log(multiply(200));  // Output: 25000
 console.log(multiply(0));    // Output: 0
 console.log(multiply(-3));   // Output: -15
+
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
+
+let ball1 = new Ball();
+let ball2 = new Ball("super");
+
+console.log(ball1.ballType); //
