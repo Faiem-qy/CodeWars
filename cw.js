@@ -4988,3 +4988,12 @@ console.log(contamination("abc", "z"));  // Output: "zzz"
 console.log(contamination("hello", "x")); // Output: "xxxxx"
 console.log(contamination("", "a"));      // Output: ""
 console.log(contamination("test", ""));   // Output: ""
+
+
+function _if(bool, func1, func2) {
+  if (bool) {
+    func1();
+  } else {
+    func2();
+  }
+}
