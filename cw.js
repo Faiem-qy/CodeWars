@@ -4997,3 +4997,14 @@ function _if(bool, func1, func2) {
     func2();
   }
 }
+
+function squareArea(A) {
+    // Calculate the radius using the given arc length A
+    let r = (2 * A) / Math.PI;
+    
+    // Calculate the area of the square
+    let area = r * r;
+    
+    // Return the result rounded to 2 decimal places
+    return parseFloat(area.toFixed(2));
+}
