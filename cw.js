@@ -5022,3 +5022,9 @@ function repeatStr(n, s) {
 
 console.log(repeatStr(6, "I"));      c
 console.log(repeatStr(5, "Hello"));  
+
+function smallEnough(a, limit) {
+  return a.every(num => num <= limit);
+}
+
+console.log(smallEnough([1, 2, 3], 3));
