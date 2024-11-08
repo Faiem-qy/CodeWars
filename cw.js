@@ -5015,3 +5015,10 @@ function arrayDiff(a, b) {
 
 console.log(arrayDiff([1, 2], [1]));     
 console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
+
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+
+console.log(repeatStr(6, "I"));      c
+console.log(repeatStr(5, "Hello"));  
