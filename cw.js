@@ -5041,3 +5041,33 @@ function sumMul(n, m) {
   
   return sum;
 }
+
+
+const greet = function(name = 'Guest', language = 'en') {
+  const currentHour = new Date().getHours();
+  
+  // Determine the time of day
+  let timeOfDay;
+  if (currentHour < 12) {
+    timeOfDay = 'Good morning';
+  } else if (currentHour < 18) {
+    timeOfDay = 'Good afternoon';
+  } else {
+    timeOfDay = 'Good evening';
+  }
+
+  // Language support for different greetings
+  const greetings = {
+    en: `${timeOfDay}, ${name}!`,
+    es: `${timeOfDay}, ${name}! (¡Hola!)`,
+    fr: `${timeOfDay}, ${name}! (Bonjour!)`,
+    de: `${timeOfDay}, ${name}! (Guten Tag!)`,
+  };
+
+  // Default to English if language isn't recognized
+  const greetingMessage = greetings[language] || greetings['en'];
+
+  return greetingMessage;
+};
+
+console.log(greet("Bonjour!"))
