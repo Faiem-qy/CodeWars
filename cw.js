@@ -5071,3 +5071,21 @@ const greet = function(name = 'Guest', language = 'en') {
 };
 
 console.log(greet("Bonjour!"))
+
+
+function getDrinkByProfession(param) {
+  const profession = param.toLowerCase();
+
+  // Create a mapping of professions to drinks
+  const professionToDrink = {
+    jabroni: "Patron Tequila",
+    "school counselor": "Anything with Alcohol",
+    programmer: "Hipster Craft Beer",
+    "bike gang member": "Moonshine",
+    politician: "Your tax dollars",
+    rapper: "Cristal"
+  };
+  return professionToDrink[profession] || "Beer";
+}
+
+console.log(getDrinkByProfession("School Counselor"))
