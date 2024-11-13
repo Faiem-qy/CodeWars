@@ -5089,3 +5089,11 @@ function getDrinkByProfession(param) {
 }
 
 console.log(getDrinkByProfession("School Counselor"))
+
+function bump(x) {
+  // Count the number of 'n' characters in the string, representing bumps
+  const bumpCount = x.split('').filter(char => char === 'n').length;
+  
+  // If bumpCount is 15 or less, return "Woohoo!", otherwise "Car Dead"
+  return bumpCount <= 15 ? "Woohoo!" : "Car Dead";
+}
