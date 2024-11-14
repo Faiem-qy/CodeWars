@@ -5097,3 +5097,12 @@ function bump(x) {
   // If bumpCount is 15 or less, return "Woohoo!", otherwise "Car Dead"
   return bumpCount <= 15 ? "Woohoo!" : "Car Dead";
 }
+
+function paperwork(n, m) {
+  // If n or m is less than 0, return 0
+  if (n < 0 || m < 0) {
+    return 0;
+  }
+  // Otherwise, return the product of n and m
+  return n * m;
+}
