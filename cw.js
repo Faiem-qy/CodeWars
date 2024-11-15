@@ -5111,3 +5111,8 @@ function longest(s1, s2) {
   // Combine both strings, remove duplicates using a Set, and then sort alphabetically
   return [...new Set(s1 + s2)].sort().join('');
 }
+
+function removeExclamationMarks(s) {
+  // Replace all exclamation marks with an empty string using a global regular expression
+  return s.replace(/!/g, '');
+}
