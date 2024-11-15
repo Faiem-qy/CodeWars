@@ -5106,3 +5106,8 @@ function paperwork(n, m) {
   // Otherwise, return the product of n and m
   return n * m;
 }
+
+function longest(s1, s2) {
+  // Combine both strings, remove duplicates using a Set, and then sort alphabetically
+  return [...new Set(s1 + s2)].sort().join('');
+}
