@@ -5116,3 +5116,18 @@ function removeExclamationMarks(s) {
   // Replace all exclamation marks with an empty string using a global regular expression
   return s.replace(/!/g, '');
 }
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    // Validate the inputs to ensure they are positive numbers
+    if (typeof length !== 'number' || typeof width !== 'number' || typeof height !== 'number') {
+      throw new Error('All dimensions must be numbers.');
+    }
+    if (length <= 0 || width <= 0 || height <= 0) {
+      throw new Error('Dimensions must be positive numbers.');
+    }
+
+    // Calculate the volume of the cuboid
+    return length * width * height;
+  }
+}
