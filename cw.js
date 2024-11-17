@@ -5131,3 +5131,29 @@ class Kata {
     return length * width * height;
   }
 }
+
+function duplicateCount(text) {
+  // Create an object to store the frequency of each character
+  const freqMap = {};
+  let duplicateCount = 0;
+
+  // Loop through the input string
+  for (let char of text.toLowerCase()) {
+    // If the character is already in the frequency map, increment its count
+    if (freqMap[char]) {
+      freqMap[char]++;
+    } else {
+      // Otherwise, add the character to the map with a count of 1
+      freqMap[char] = 1;
+    }
+  }
+
+  // Count how many characters have a frequency greater than 1
+  for (let key in freqMap) {
+    if (freqMap[key] > 1) {
+      duplicateCount++;
+    }
+  }
+
+  return duplicateCount;
+}
