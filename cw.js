@@ -5157,3 +5157,22 @@ function duplicateCount(text) {
 
   return duplicateCount;
 }
+
+const countAnimals = function(num, animal = 'sheep', verbose = false) {
+  // Edge case: Handle zero or negative input
+  if (num <= 0) {
+    return "No animals to count!";
+  }
+
+  let result = '';
+  for (let i = 1; i <= num; i++) {
+    if (verbose) {
+      result += `I can hear ${i} ${animal}... `;
+    } else {
+      result += `${i} ${animal}... `;
+    }
+  }
+
+  // Remove the trailing space after the last animal count
+  return result.trim();
+}
