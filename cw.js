@@ -5176,3 +5176,17 @@ const countAnimals = function(num, animal = 'sheep', verbose = false) {
   // Remove the trailing space after the last animal count
   return result.trim();
 }
+
+function rentalCarCost(d) {
+  // Base cost is $40 per day
+  let cost = d * 40;
+
+  // Apply discount if applicable
+  if (d >= 7) {
+    cost -= 50;  // $50 off if renting for 7 or more days
+  } else if (d >= 3) {
+    cost -= 20;  // $20 off if renting for 3 or more days
+  }
+
+  return cost;
+}
