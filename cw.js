@@ -5190,3 +5190,19 @@ function rentalCarCost(d) {
 
   return cost;
 }
+
+function pipeFix(numbers) {
+  // Find the minimum and maximum values
+  let min = numbers[0];
+  let max = numbers[numbers.length - 1];
+  
+  // Create an array with numbers from min to max (inclusive)
+  let result = [];
+  for (let i = min; i <= max; i++) {
+    result.push(i);
+  }
+  
+  return result;
+}
+
+
