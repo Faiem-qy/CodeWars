@@ -5205,4 +5205,7 @@ function pipeFix(numbers) {
   return result;
 }
 
+function reverseList(list) {
+  return list.reverse();
+}
 
