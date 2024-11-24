@@ -5239,3 +5239,16 @@ function findSmallestInt(arr, returnAbsolute = false) {
 
   return smallest;
 }
+
+function race(v1, v2, g) {
+  // If the chaser is slower or moving at the same speed as the target, they will never catch up
+  if (v1 <= v2) {
+    return null;
+  }
+  
+  // Calculate the time to catch up
+  let time = g / (v1 - v2);
+  
+  // Return the time, rounded to two decimal places for precision
+  return Math.floor(time);
+}
