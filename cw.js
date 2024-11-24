@@ -5216,3 +5216,26 @@ function sumTwoSmallestNumbers(numbers) {
   // Return the sum of the first two elements
   return numbers[0] + numbers[1];
 }
+
+function findSmallestInt(arr, returnAbsolute = false) {
+  // Check if the array is empty
+  if (arr.length === 0) {
+    throw new Error('Array cannot be empty');
+  }
+  
+  // Initial value for smallest integer (set to Infinity)
+  let smallest = Infinity;
+  
+  // Traverse through the array
+  for (let i = 0; i < arr.length; i++) {
+    // If we need to consider the absolute value, take that into account
+    const value = returnAbsolute ? Math.abs(arr[i]) : arr[i];
+    
+    // Update the smallest value found so far
+    if (value < smallest) {
+      smallest = value;
+    }
+  }
+
+  return smallest;
+}
