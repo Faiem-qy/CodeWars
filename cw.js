@@ -5261,3 +5261,16 @@ function nbYear(p0, percent, aug, p) {
     }
     return years;
 }
+
+function nbYear(p0, percent, aug, p) {
+    let years = 0; // Initialize the counter for the number of years
+    percent = percent / 100; // Convert the percent to a decimal
+
+    // Simulate the growth year by year
+    while (p0 < p) {
+        p0 = Math.floor(p0 * (1 + percent) + aug); // Calculate the new population and round down
+        years++; // Increment the year count
+    }
+
+    return years; // Return the number of years
+}
