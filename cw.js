@@ -5274,3 +5274,16 @@ function nbYear(p0, percent, aug, p) {
 
     return years; // Return the number of years
 }
+
+function number(busStops) {
+    let totalPeople = 0; // Initialize the total number of people on the bus
+    
+    // Loop through each bus stop in the array
+    for (let i = 0; i < busStops.length; i++) {
+        totalPeople += busStops[i][0]; // Add the number of people getting on the bus
+        totalPeople -= busStops[i][1]; // Subtract the number of people getting off the bus
+    }
+    
+    // Ensure the number of people is never negative
+    return totalPeople >= 0 ? totalPeople : 0;
+}
