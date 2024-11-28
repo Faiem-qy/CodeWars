@@ -5287,3 +5287,16 @@ function number(busStops) {
     // Ensure the number of people is never negative
     return totalPeople >= 0 ? totalPeople : 0;
 }
+
+function getMiddle(s) {
+  const length = s.length;
+  const middleIndex = Math.floor(length / 2);
+  
+  if (length % 2 === 0) {
+    // string has even length, return two middle characters
+    return s.slice(middleIndex - 1, middleIndex + 1);
+  } else {
+    // string has odd length, return the middle character
+    return s[middleIndex];
+  }
+}
