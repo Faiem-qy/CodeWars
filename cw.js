@@ -5300,3 +5300,27 @@ function getMiddle(s) {
     return s[middleIndex];
   }
 }
+
+function numberToString(num) {
+  // Check if the input is a number
+  if (typeof num !== 'number' || isNaN(num)) {
+    return 'Invalid input'; // Return an error message if the input is not a valid number
+  }
+
+  // Handle negative numbers and non-integer numbers
+  let isNegative = num < 0;
+  num = Math.abs(num);
+
+  // Convert the number to a string with commas for thousands and limit decimal places
+  let str = num.toLocaleString(undefined, {
+    minimumFractionDigits: 0, // Removes unnecessary decimals
+    maximumFractionDigits: 2  // Limits the decimal places to 2
+  });
+
+  // Add a negative sign back if the number was negative
+  if (isNegative) {
+    str = '-' + str;
+  }
+
+  return str;
+}
