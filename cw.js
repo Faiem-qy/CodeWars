@@ -5324,3 +5324,21 @@ function numberToString(num) {
 
   return str;
 }
+
+function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false;
+  }
+
+  let northSouth = 0;
+  let eastWest = 0;
+
+  for (let direction of walk) {
+    if (direction === 'n') northSouth++;
+    if (direction === 's') northSouth--;
+    if (direction === 'e') eastWest++;
+    if (direction === 'w') eastWest--;
+  }
+
+  return northSouth === 0 && eastWest === 0;
+}
