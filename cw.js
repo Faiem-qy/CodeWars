@@ -5342,3 +5342,11 @@ function isValidWalk(walk) {
 
   return northSouth === 0 && eastWest === 0;
 }
+
+function antSpeed(s) {
+  // Convert speed from km/h to cm/s
+  let speedInCms = (s * 100000) / 3600;
+  
+  // Return the floored value (rounded down)
+  return Math.floor(speedInCms);
+}
