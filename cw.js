@@ -5350,3 +5350,17 @@ function antSpeed(s) {
   // Return the floored value (rounded down)
   return Math.floor(speedInCms);
 }
+
+function noBoringZeros(n) {
+  // Handle the case where the number is zero
+  if (n === 0) {
+    return 0;
+  }
+  
+  // Remove trailing zeros for non-zero numbers
+  while (n % 10 === 0) {
+    n = n / 10;
+  }
+  
+  return n;
+}
