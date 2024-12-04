@@ -5364,3 +5364,11 @@ function noBoringZeros(n) {
   
   return n;
 }
+
+function predictAge(...ages) {
+  // Step 1: Square each age and sum them up
+  const sumOfSquares = ages.reduce((sum, age) => sum + age ** 2, 0);
+
+  // Step 2: Take the square root of the sum, divide by two, and round down
+  return Math.floor(Math.sqrt(sumOfSquares) / 2);
+}
