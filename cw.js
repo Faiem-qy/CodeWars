@@ -5372,3 +5372,7 @@ function predictAge(...ages) {
   // Step 2: Take the square root of the sum, divide by two, and round down
   return Math.floor(Math.sqrt(sumOfSquares) / 2);
 }
+
+function sumOfMinimums(arr) {
+  return arr.reduce((sum, subArray) => sum + Math.min(...subArray), 0);
+}
