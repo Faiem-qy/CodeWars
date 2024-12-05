@@ -5376,3 +5376,10 @@ function predictAge(...ages) {
 function sumOfMinimums(arr) {
   return arr.reduce((sum, subArray) => sum + Math.min(...subArray), 0);
 }
+
+function isPowerOfTwo(n) {
+  if (n <= 0) {
+    return false;
+  }
+  return (n & (n - 1)) === 0;
+}
