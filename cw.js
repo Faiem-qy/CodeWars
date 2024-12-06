@@ -5383,3 +5383,7 @@ function isPowerOfTwo(n) {
   }
   return (n & (n - 1)) === 0;
 }
+
+const binaryArrayToNumber = arr => {
+  return arr.reduce((acc, bit) => (acc << 1) | bit, 0);
+};
