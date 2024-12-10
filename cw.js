@@ -5417,3 +5417,10 @@ const humanYearsCatYearsDogYears = function(humanYears) {
 
   return [humanYears, catYears, dogYears];
 };
+
+function abbrevName(name) {
+    // Split the name into words and take the first letter of each, then uppercase it
+    const initials = name.split(' ').map(word => word.charAt(0).toUpperCase()).join('.');
+
+    return initials;
+}
