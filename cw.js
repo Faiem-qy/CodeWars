@@ -5424,3 +5424,26 @@ function abbrevName(name) {
 
     return initials;
 }
+
+function expandedForm(num) {
+  // Convert the number to a string to iterate through each digit
+  let numStr = num.toString();
+  
+  // Initialize an array to store each expanded part
+  let expandedParts = [];
+  
+  // Loop through the digits of the number
+  for (let i = 0; i < numStr.length; i++) {
+    let digit = numStr[i];
+    // Calculate the place value (number of zeros to append)
+    let placeValue = numStr.length - i - 1;
+    
+    // If the digit is non-zero, add its expanded form to the array
+    if (digit !== '0') {
+      expandedParts.push(digit + '0'.repeat(placeValue));
+    }
+  }
+  
+  // Join the parts with " + " and return the result
+  return expandedParts.join(' + ');
+}
