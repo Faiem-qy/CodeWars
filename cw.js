@@ -5456,3 +5456,17 @@ console.log(checkForFactor(6, 2)); // true, because 2 is a factor of 6 (6 % 2 ==
 console.log(checkForFactor(6, 3)); // true, because 3 is a factor of 6 (6 % 3 == 0)
 console.log(checkForFactor(7, 2)); // false, because 2 is not a factor of 7 (7 % 2 == 1)
 console.log(checkForFactor(10, 5)); // true, because 5 is a factor of 10 (10 % 5 == 0)
+
+
+function towerBuilder(nFloors) {
+  let tower = [];
+  
+  for (let i = 1; i <= nFloors; i++) {
+    let stars = '*'.repeat(2 * i - 1);
+    let spaces = ' '.repeat(nFloors - i); 
+    tower.push(spaces + stars + spaces);
+  }
+  
+  return tower;
+}
+console.log(towerBuilder(6));
