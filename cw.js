@@ -5493,3 +5493,17 @@ function mxdiflg(a1, a2) {
 
 a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
 a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+
+function correct(string) {
+  const replacements = {
+    '5': 'S', '0': 'O', '1': 'I',
+    '2': 'Z', '3': 'E', '4': 'A',
+    '6': 'G', '7': 'T', '8': 'B',
+    '9': 'P', 's': 'S', 'o': 'O',
+    'i': 'I', 'z': 'Z', 'e': 'E',
+    'a': 'A', 'g': 'G', 't': 'T',
+    'b': 'B', 'p': 'P'
+  };
+
+  return string.split('').map(char => replacements[char] || char).join('');
+}
