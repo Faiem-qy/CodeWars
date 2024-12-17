@@ -5507,3 +5507,21 @@ function correct(string) {
 
   return string.split('').map(char => replacements[char] || char).join('');
 }
+
+function checkExam(array1, array2) {
+  let score = 0;
+  
+  // Iterate over the arrays and calculate the score
+  for (let i = 0; i < array1.length; i++) {
+    if (array2[i] === array1[i]) {
+      score += 4;  // Correct answer
+    } else if (array2[i] === "") {
+      score += 0;  // Blank answer (no points)
+    } else {
+      score -= 1;  // Incorrect answer
+    }
+  }
+  
+  // If the score is negative, return 0
+  return score < 0 ? 0 : score;
+}
