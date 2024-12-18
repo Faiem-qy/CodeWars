@@ -5525,3 +5525,24 @@ function checkExam(array1, array2) {
   // If the score is negative, return 0
   return score < 0 ? 0 : score;
 }
+
+function isIsogram(str) {
+  // Convert the string to lowercase to ignore letter case
+  str = str.toLowerCase();
+
+  // Create an empty set to keep track of the letters we've seen
+  let seen = new Set();
+
+  // Loop through each character in the string
+  for (let char of str) {
+    // If the character has already been seen, return false
+    if (seen.has(char)) {
+      return false;
+    }
+    // Otherwise, add the character to the set
+    seen.add(char);
+  }
+
+  // If no duplicates were found, return true
+  return true;
+}
