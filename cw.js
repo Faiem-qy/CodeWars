@@ -5546,3 +5546,21 @@ function isIsogram(str) {
   // If no duplicates were found, return true
   return true;
 }
+
+function order(words) {
+  if (!words) {
+    return "";
+  }
+
+  return words.split(' ')
+              .sort((a, b) => {
+                const numA = a.match(/\d/);
+                const numB = b.match(/\d/);
+                return numA - numB;
+              })
+              .join(' ');
+}
+
+order("is2 Thi1s T4est 3a"); 
+order("4of Fo1r pe6ople g3ood th5e the2"); 
+order("");
