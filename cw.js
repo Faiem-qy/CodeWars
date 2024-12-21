@@ -5570,3 +5570,29 @@ function shortenToDate(longDate) {
 }
 
 console.log(shortenToDate("Friday May 2, 7pm")); // "Friday May 2"
+
+function greet(language) {
+  const languages = {
+    "english": "Welcome",
+    "czech": "Vitejte",
+    "danish": "Velkomst",
+    "dutch": "Welkom",
+    "estonian": "Tere tulemast",
+    "french": "Bienvenue",
+    "german": "Willkommen",
+    "irish": "Failte",
+    "latvian": "Gaidits",
+    "lithuanian": "Laukiamas",
+    "polish": "Witamy",
+    "swedish": "Valkommen",
+    "welsh": "Croeso"
+  };
+  
+  return languages[language] || "Welcome";
+}
+
+// Example usage
+console.log(greet("czech"));    // "Vitejte"
+console.log(greet("japanese")); // "Welcome" (default)
+console.log(greet("german"));   // "Willkommen"
+console.log(greet(""));         // "Welcome" (default)
