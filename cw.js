@@ -5610,3 +5610,18 @@ console.log(roundToNext5(21));  // 25
 console.log(roundToNext5(30));  // 30
 console.log(roundToNext5(-2));  // 0
 console.log(roundToNext5(-5));  // -5
+
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0;
+  while (principal < desired) {
+    const profit = principal * interest;
+    const netProfit = profit * (1 - tax);
+    principal += netProfit;
+    years++;
+  }
+  return years;
+}
+
+
+console.log(calculateYears(1000, 0.05, 0.18, 1100));  // 3
+console.log(calculateYears(1000, 0.05, 0.18, 1200));  // 6
