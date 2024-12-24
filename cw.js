@@ -5625,3 +5625,10 @@ function calculateYears(principal, interest, tax, desired) {
 
 console.log(calculateYears(1000, 0.05, 0.18, 1100));  // 3
 console.log(calculateYears(1000, 0.05, 0.18, 1200));  // 6
+
+function sayHello(name, city, state) {
+  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
+}
+
+
+console.log(sayHello(['John', 'Doe'], 'Los Angeles', 'California')); // "Hello, John Doe! Welcome to Los Angeles, California!"
