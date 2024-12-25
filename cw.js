@@ -5641,3 +5641,5 @@ function filter_list(l) {
 console.log(filter_list([1, 2, 'a', 'b']));
 console.log(filter_list([1, 'a', 'b', 0, 15]));
 console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+
+function _if(bool, func1, func2) { return bool ? func1() : func2(); }
