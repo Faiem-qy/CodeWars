@@ -5650,3 +5650,24 @@ function validateUsr(username) {
   const res = /^[a-z0-9_]{4,16}$/.test(username); 
   return res; 
 }
+
+function primeFactors(n) {
+  const factors = [];
+  let divisor = 2;
+
+  while (n >= 2) {
+    if (n % divisor === 0) {
+      factors.push(divisor);
+      n = n / divisor;
+    } else {
+      divisor++;
+    }
+  }
+  
+  return factors;
+}
+
+
+console.log(primeFactors(28));
+console.log(primeFactors(60));
+console.log(primeFactors(45));
