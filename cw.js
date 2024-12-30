@@ -5678,3 +5678,24 @@ function findLongest(array) {
     return current.length > longest.length ? current : longest;
   }, "");
 }
+
+function getDrinkByProfession(param) {
+    switch(param.toLowerCase()) {
+        case "programmer":
+            return "Coffee";
+        case "teacher":
+            return "Tea";
+        case "doctor":
+            return "Water";
+        case "artist":
+            return "Smoothie";
+        default:
+            return "Unknown drink";
+    }
+}
+
+
+console.log(getDrinkByProfession("Programmer"));
+console.log(getDrinkByProfession("Teacher"));
+console.log(getDrinkByProfession("Doctor"));
+console.log(getDrinkByProfession("Artist"));
