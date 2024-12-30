@@ -5671,3 +5671,10 @@ function primeFactors(n) {
 console.log(primeFactors(28));
 console.log(primeFactors(60));
 console.log(primeFactors(45));
+
+
+function findLongest(array) {
+  return array.reduce((longest, current) => {
+    return current.length > longest.length ? current : longest;
+  }, "");
+}
