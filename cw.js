@@ -5699,3 +5699,19 @@ console.log(getDrinkByProfession("Programmer"));
 console.log(getDrinkByProfession("Teacher"));
 console.log(getDrinkByProfession("Doctor"));
 console.log(getDrinkByProfession("Artist"));
+
+function smallEnough(a, limit) {
+  const failedElements = a.filter(element => element > limit);
+
+  if (failedElements.length > 0) {
+    return {
+      result: false,
+      failedElements: failedElements
+    };
+  } else {
+    return {
+      result: true,
+      failedElements: []
+    };
+  }
+}
